@@ -1,17 +1,26 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Serializable]
+    public struct DrunkenessLayer
+    {
+        public float Speed;
+        public float Amplitude;
+    }
+
     [Header("Dependencies")]
-    [SerializeField] public Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [Header("Configuration")]
-    [SerializeField] public float movementSpeed = 8f;
-    [SerializeField] public float movementSpeedSmoothTime = 0.03f;
+    public float movementSpeed = 8f;
+    public float movementSpeedSmoothTime = 0.03f;
 
-    [SerializeField] public float drunkenessSpeed = 1f;
-    [SerializeField] public float drunkenessIntensity = 30f;
+    public List<DrunkenessLayer> drunkenessLayers = new();
+    public float drunkenessAmplitudeMultiplier = new();
 
     private Vector2 velocitySmoothing;
 
@@ -31,12 +40,15 @@ public class PlayerMovement : MonoBehaviour
         targetVelocity *= movementSpeed;
 
         // Apply drunkeness
-        var drunkenessNoise = Mathf.PerlinNoise1D(Time.time * drunkenessSpeed).Dump();
-        var drunkenessAngleVariance = ShipState.Instance.playerDrunkeness * drunkenessIntensity * drunkenessNoise;
-        drunkenessAngleVariance.Dump();
-        targetVelocity.Dump();
-        targetVelocity = Quaternion.AngleAxis(drunkenessAngleVariance, Vector3.right) * targetVelocity;
-        targetVelocity.Dump();
+        var drunkeness = 0f;
+        foreach (var drunkenessLayer in drunkenessLayers)
+        {
+            drunkeness += Mathf.Sin(Time.time * drunkenessLayer.Speed) * drunkenessLayer.Amplitude;
+        }
+
+        drunkeness *= ShipState.Instance.playerDrunkeness;
+        drunkeness *= drunkenessAmplitudeMultiplier;
+        targetVelocity = Quaternion.AngleAxis(drunkeness, Vector3.forward) * targetVelocity;
 
         // Apply velocity
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, movementSpeedSmoothTime);
