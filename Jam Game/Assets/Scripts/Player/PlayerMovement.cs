@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Dependencies")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
     [Header("Configuration")]
-    [SerializeField] private float movementSpeed = 8f;
-    [SerializeField] private float movementSpeedSmoothTime = 0.03f;
+    [SerializeField] public float movementSpeed = 8f;
+    [SerializeField] public float movementSpeedSmoothTime = 0.03f;
 
     private Vector2 velocitySmoothing;
 
