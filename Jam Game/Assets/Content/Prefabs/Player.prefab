@@ -106,8 +106,8 @@ MonoBehaviour:
   drunkenessSpeedMultiplier: 3
   drunkenessMaxAngle: 60
   drunkenessMovementSpeedIntensity: 0.8
-  timeBeforeSlipping: 0.5
-  sprintSlipHazardMultiplier: 3
+  timeBeforeSlipping: 0.6
+  sprintSlipHazardMultiplier: 5
   slipVelocityCurve:
     serializedVersion: 2
     m_Curve:
@@ -132,8 +132,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  slipVelocityMultiplier: 4
-  slipDuration: 0.4
+  slipVelocityMultiplier: 1.5
+  slipDuration: 0.8
   slipMaxRandomAngle: 180
 --- !u!1 &8326513249236723639
 GameObject:
