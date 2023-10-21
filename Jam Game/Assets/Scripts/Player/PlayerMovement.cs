@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,9 +19,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dependencies")]
     public Rigidbody2D rb;
 
-    [Header("Configuration")]
+    [Header("Basic")]
     public float movementSpeed = 8f;
     public float movementSpeedSmoothTime = 0.03f;
+
+    [Header("Sprinting")]
+    public float sprintMovementSpeedMultiplier = 1.5f;
 
     // This code totally looks drunk
     [Header("Drunkeness")]
@@ -40,13 +45,24 @@ public class PlayerMovement : MonoBehaviour
     private float maxDrunkenessEncountered = float.Epsilon;
     private Vector2 velocitySmoothing;
 
-    private HashSet<SlipperyArea> slipperyAreas = new();
+    [Header("Slipping")]
+    public float timeBeforeSlipping = 0.5f;
+    public float sprintSlipHazardMultiplier = 3f;
+
+    public float slipVelocity = 5f;
+    public float slipDuration = 0.25f;
+
+    private float timeSpentWalkingInWaterWithoutSlipping = 0;
+
+    private HashSet<IceArea> iceAreas = new();
+    private HashSet<WaterPuddleArea> waterPuddleAreas = new();
 
     private void Update()
     {
         var targetVelocity = Vector2.zero;
         var targetMovementSpeed = movementSpeed;
         var effectiveMovementSpeedSmoothTime = movementSpeedSmoothTime;
+        var isSprinting = Input.GetKey(ShipState.Instance.input.sprint);
 
         // Get input
         targetVelocity.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
@@ -60,13 +76,11 @@ public class PlayerMovement : MonoBehaviour
         ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed);
 
         // Apply slipperyness
-        var slipperyness = 0f;
-        foreach (var area in slipperyAreas)
-        {
-            slipperyness = Mathf.Max(area.slipperyness, slipperyness);
-        }
+        ApplyIceSlipping(ref effectiveMovementSpeedSmoothTime);
+        ApplyWaterPuddleSlipping(targetMovementSpeed, isSprinting);
 
-        effectiveMovementSpeedSmoothTime += slipperyness;
+        // Apply sprinting
+        targetMovementSpeed *= isSprinting ? sprintMovementSpeedMultiplier : 1f;
 
         // Apply movement speed
         targetVelocity *= targetMovementSpeed;
@@ -119,19 +133,72 @@ public class PlayerMovement : MonoBehaviour
         targetVelocity = Quaternion.AngleAxis(drunkeness * drunkenessMaxAngle, Vector3.forward) * targetVelocity;
     }
 
+    private void ApplyIceSlipping(ref float effectiveMovementSpeedSmoothTime)
+    {
+        var slipperyness = 0f;
+        foreach (var area in iceAreas)
+        {
+            slipperyness = Mathf.Max(area.slipperyness, slipperyness);
+        }
+
+        effectiveMovementSpeedSmoothTime += slipperyness;
+    }
+
+    private void ApplyWaterPuddleSlipping(float targetMovementSpeed, bool isSprinting)
+    {
+        if (targetMovementSpeed < 0.1f || waterPuddleAreas.Count == 0)
+        {
+            return;
+        }
+
+        timeSpentWalkingInWaterWithoutSlipping += Time.deltaTime * (isSprinting ? sprintSlipHazardMultiplier : 1);
+
+        if (timeSpentWalkingInWaterWithoutSlipping > timeBeforeSlipping)
+        {
+            // Slipped
+            timeSpentWalkingInWaterWithoutSlipping = 0;
+            StartCoroutine(Slip());
+        }
+    }
+
+    private IEnumerator Slip()
+    {
+        var timer = 0f;
+        var initialDirection = rb.velocity.normalized;
+        rb.velocity = Vector2.zero;
+
+        while (timer < slipDuration)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(initialDirection * slipVelocity);
+
+            yield return null;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out SlipperyArea area))
+        if (other.TryGetComponent(out IceArea iceArea))
         {
-            slipperyAreas.Add(area);
+            iceAreas.Add(iceArea);
+        }
+
+        if (other.TryGetComponent(out WaterPuddleArea waterPuddleArea))
+        {
+            waterPuddleAreas.Add(waterPuddleArea);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.TryGetComponent(out SlipperyArea area))
+        if (other.TryGetComponent(out IceArea iceArea))
         {
-            slipperyAreas.Remove(area);
+            iceAreas.Remove(iceArea);
+        }
+
+        if (other.TryGetComponent(out WaterPuddleArea waterPuddleArea))
+        {
+            waterPuddleAreas.Remove(waterPuddleArea);
         }
     }
 }
