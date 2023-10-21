@@ -68,12 +68,12 @@ public class SteeringWheel : MonoBehaviour
         if (!playerSteering)
         {
             //TODO: Guaranteed way to disable/lock player decided by player. Perhaps state machine.
-            ShipState.Instance.stopPlayerRequests.Add(this);
+            ShipState.Instance.stopPlayerMovementRequests.Add(this);
             playerSteering = true;
         }
         else
         {
-            ShipState.Instance.stopPlayerRequests.Remove(this);
+            ShipState.Instance.stopPlayerMovementRequests.Remove(this);
             playerSteering = false;
         }
     }

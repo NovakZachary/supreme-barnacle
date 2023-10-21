@@ -14,7 +14,7 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-1, 1)]
     public float playerDrunkenessNoise = 0;
 
-    public HashSet<object> stopPlayerRequests = new HashSet<object>();
+    public HashSet<object> stopPlayerMovementRequests = new HashSet<object>();
 
     public PlayerInputMap input;
     

@@ -63,13 +63,17 @@ public class PlayerMovement : MonoBehaviour
         var targetMovementSpeed = movementSpeed;
         var effectiveMovementSpeedSmoothTime = movementSpeedSmoothTime;
         var isSprinting = Input.GetKey(ShipState.Instance.input.sprint);
+        var canMove = ShipState.Instance.stopPlayerMovementRequests.Count == 0;
 
         // Get input
-        targetVelocity.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
-        targetVelocity.x += Input.GetKey(ShipState.Instance.input.moveRight) ? 1 : 0;
-        targetVelocity.y += Input.GetKey(ShipState.Instance.input.moveUp) ? 1 : 0;
-        targetVelocity.y -= Input.GetKey(ShipState.Instance.input.moveDown) ? 1 : 0;
-        targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
+        if (canMove)
+        {
+            targetVelocity.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
+            targetVelocity.x += Input.GetKey(ShipState.Instance.input.moveRight) ? 1 : 0;
+            targetVelocity.y += Input.GetKey(ShipState.Instance.input.moveUp) ? 1 : 0;
+            targetVelocity.y -= Input.GetKey(ShipState.Instance.input.moveDown) ? 1 : 0;
+            targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
+        }
 
         // Apply drunkeness
         CalculateDrunkeness();
@@ -167,6 +171,8 @@ public class PlayerMovement : MonoBehaviour
         var initialDirection = rb.velocity.normalized;
         rb.velocity = Vector2.zero;
 
+        var stopPlayerMovementRequest = "Player slipped";
+        ShipState.Instance.stopPlayerMovementRequests.Add(stopPlayerMovementRequest);
         while (timer < slipDuration)
         {
             timer += Time.deltaTime;
@@ -174,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
             yield return null;
         }
+        ShipState.Instance.stopPlayerMovementRequests.Remove(stopPlayerMovementRequest);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
