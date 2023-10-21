@@ -9,5 +9,9 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(0, 1)]
     public float playerDrunkeness = 0;
 
+    [Tooltip("Automatically calculated. Higher when the player is more drunk.")]
+    [Range(-1, 1)]
+    public float playerDrunkenessNoise = 0;
+
     public PlayerInputMap input;
 }
