@@ -8,4 +8,6 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Tooltip("How drunk the player is. Affects player movement.")]
     [Range(0, 1)]
     public float playerDrunkeness = 0;
+
+    public float horizontalSpeed = 0;
 }

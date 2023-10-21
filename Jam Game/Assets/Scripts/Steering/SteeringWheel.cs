@@ -7,13 +7,19 @@ using UnityEngine.InputSystem;
 public class SteeringWheel : MonoBehaviour
 {
     public KeyCode InteractKey;
+
+    [Header("Configuration")]
+    [SerializeField] private float turnStrength = 1f;
+    [SerializeField] private float steeringSmoothTime = 0.1f;
     
     private PlayerMovement playerMovement;
     private bool playerSteering = false;
-    
-    private void OnTriggerEnter(Collider other)
+    private float horizontalVelocity;
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.TryGetComponent<PlayerMovement>(out var player) && player != null)
+        Debug.Log("Hello");
+        if (col.attachedRigidbody != null && col.attachedRigidbody.TryGetComponent<PlayerMovement>(out var player) && player != null)
         {
             playerMovement = player;
         }
@@ -33,11 +39,23 @@ public class SteeringWheel : MonoBehaviour
         
         if (playerSteering)
         {
+            //Left
+            if (Input.GetKey(KeyCode.A))
+            {
+                float targetSpeed = -turnStrength; 
+                ShipState.Instance.horizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.horizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
+            }
             
+            if (Input.GetKey(KeyCode.D))
+            {
+                float targetSpeed = turnStrength; 
+                ShipState.Instance.horizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.horizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
+            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject == playerMovement.gameObject)
         {

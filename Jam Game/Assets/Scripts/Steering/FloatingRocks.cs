@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FloatingRocks : MonoBehaviour
 {
+    [Header("Configuration")]
     [Header("Velocity relative to world")]
     [SerializeField] private float speedUnitsPerSecond = 1f;
     [SerializeField] private Vector3 velocityDirection;
