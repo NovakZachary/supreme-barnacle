@@ -56,8 +56,7 @@ public class PlayerMovement : MonoBehaviour
         targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
 
         // Apply drunkeness
-        ShipState.Instance.playerDrunkenessNoise = CalculateDrunkeness();
-
+        CalculateDrunkeness();
         ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed);
 
         // Apply movement speed
@@ -70,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
     }
 
-    private float CalculateDrunkeness()
+    private void CalculateDrunkeness()
     {
         // Calculate effects of layering noises and waves
         var drunkeness = 0f;
@@ -100,15 +99,15 @@ public class PlayerMovement : MonoBehaviour
         maxDrunkenessEncountered = Mathf.Max(drunkeness, maxDrunkenessEncountered);
         drunkeness /= maxDrunkenessEncountered;
 
-        return drunkeness;
+        // Apply global drunkeness value
+        drunkeness *= ShipState.Instance.playerDrunkeness;
+        
+        ShipState.Instance.playerDrunkenessNoise = drunkeness;
     }
 
     private void ApplyDrunkeness(ref Vector2 targetVelocity, ref float targetMovementSpeed)
     {
         var drunkeness = ShipState.Instance.playerDrunkenessNoise;
-
-        // Apply global drunkeness value
-        drunkeness *= ShipState.Instance.playerDrunkeness;
 
         targetMovementSpeed = Mathf.Lerp(targetMovementSpeed, Mathf.Lerp(0, targetMovementSpeed, (drunkeness + 1) / 2), drunkenessMovementSpeedIntensity);
         targetVelocity = Quaternion.AngleAxis(drunkeness * drunkenessMaxAngle, Vector3.forward) * targetVelocity;
