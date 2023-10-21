@@ -6,6 +6,10 @@ public class ShipState : SingletonBehaviour<ShipState>
     // Put global values here
     // Eg: Ship health, time, whether the player is drunk/etc, etc
 
+    [Header("Input")]
+    public PlayerInputMap input = new();
+
+    [Header("Drunkeness")]
     [Tooltip("How drunk the player is. Affects player movement.")]
     [Range(0, 1)]
     public float playerDrunkeness = 0;
@@ -14,9 +18,9 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-1, 1)]
     public float playerDrunkenessNoise = 0;
 
+    [Header("Player movement")]
     public HashSet<object> stopPlayerMovementRequests = new HashSet<object>();
 
-    public PlayerInputMap input;
-    
+    [Header("Ship movement")]
     public Vector2 shipSpeed = Vector2.zero;
 }
