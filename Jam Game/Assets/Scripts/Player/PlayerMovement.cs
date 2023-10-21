@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -49,8 +50,11 @@ public class PlayerMovement : MonoBehaviour
     public float timeBeforeSlipping = 0.5f;
     public float sprintSlipHazardMultiplier = 3f;
 
-    public float slipVelocity = 5f;
+    [FormerlySerializedAs("slipVelocityMultiplierCurve")]
+    public AnimationCurve slipVelocityCurve = new();
+    public float slipVelocityMultiplier = 0.25f;
     public float slipDuration = 0.25f;
+    public float slipMaxRandomAngle = 30f;
 
     private float timeSpentWalkingInWaterWithoutSlipping = 0;
 
@@ -81,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply slipperyness
         ApplyIceSlipping(ref effectiveMovementSpeedSmoothTime);
-        ApplyWaterPuddleSlipping(targetMovementSpeed, isSprinting);
+        ApplyWaterPuddleSlipping(targetVelocity, isSprinting);
 
         // Apply sprinting
         targetMovementSpeed *= isSprinting ? sprintMovementSpeedMultiplier : 1f;
@@ -148,10 +152,12 @@ public class PlayerMovement : MonoBehaviour
         effectiveMovementSpeedSmoothTime += slipperyness;
     }
 
-    private void ApplyWaterPuddleSlipping(float targetMovementSpeed, bool isSprinting)
+    private void ApplyWaterPuddleSlipping(Vector2 targetVelocity, bool isSprinting)
     {
-        if (targetMovementSpeed < 0.1f || waterPuddleAreas.Count == 0)
+        if (targetVelocity.magnitude < 0.1f || waterPuddleAreas.Count == 0)
         {
+            timeSpentWalkingInWaterWithoutSlipping = 0;
+
             return;
         }
 
@@ -168,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Slip()
     {
         var timer = 0f;
-        var initialDirection = rb.velocity.normalized;
+        var initialVelocity = rb.velocity;
+        var initialDirection = Quaternion.AngleAxis(Random.Range(-slipMaxRandomAngle, slipMaxRandomAngle), Vector3.forward) * initialVelocity.normalized;
         rb.velocity = Vector2.zero;
 
         var stopPlayerMovementRequest = "Player slipped";
@@ -176,7 +183,9 @@ public class PlayerMovement : MonoBehaviour
         while (timer < slipDuration)
         {
             timer += Time.deltaTime;
-            rb.AddForce(initialDirection * slipVelocity);
+
+            var slipVelocity = slipVelocityCurve.Evaluate(timer / slipDuration);
+            rb.AddForce(initialVelocity.magnitude * slipVelocity * slipVelocityMultiplier * initialDirection);
 
             yield return null;
         }
