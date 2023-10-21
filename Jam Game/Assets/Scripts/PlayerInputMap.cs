@@ -9,4 +9,5 @@ public class PlayerInputMap
     public KeyCode moveDown = KeyCode.S;
     public KeyCode moveLeft = KeyCode.A;
     public KeyCode moveRight = KeyCode.D;
+    public KeyCode interact = KeyCode.E;
 }

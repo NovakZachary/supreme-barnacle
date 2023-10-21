@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipState : SingletonBehaviour<ShipState>
@@ -13,7 +14,9 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-1, 1)]
     public float playerDrunkenessNoise = 0;
 
+    public HashSet<object> stopPlayerRequests = new HashSet<object>();
+
     public PlayerInputMap input;
     
-    public float shipHorizontalSpeed = 0;
+    public Vector2 shipSpeed = Vector2.zero;
 }

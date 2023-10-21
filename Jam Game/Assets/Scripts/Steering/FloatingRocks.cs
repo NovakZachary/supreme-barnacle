@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class FloatingRocks : MonoBehaviour
 {
     [Header("Configuration")]
+    public bool IsMatchingBoatSpeed = true;
+
     [Header("Velocity relative to world")]
     [SerializeField] private float speedUnitsPerSecond = 1f;
     [SerializeField] private Vector3 velocityDirection;
@@ -20,6 +24,14 @@ public class FloatingRocks : MonoBehaviour
     
     private void Update()
     {
+        if (IsMatchingBoatSpeed)
+        {
+            var shipSpeed = ShipState.Instance.shipSpeed;
+            speedUnitsPerSecond = shipSpeed.magnitude;
+            //Ship turning left, rock moves right. Vice versa. 
+            velocityDirection = -shipSpeed.normalized;
+        }
+        
         transform.RotateAround(pivotPosition, Vector3.forward, rotationDegreesPerSecond * Time.deltaTime);
         
         velocityDirection = Vector3.ClampMagnitude(velocityDirection, 1);

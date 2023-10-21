@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb1e20bbcd4eb4d8bcb2c2546b686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsMatchingBoatSpeed: 1
   speedUnitsPerSecond: 1
   velocityDirection: {x: 0, y: -1, z: 0}
   additionalVelocity: {x: 0, y: 0, z: 0}
@@ -743,8 +744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractKey: 101
-  turnStrength: 0
-  steeringSmoothTime: 0
+  turnStrength: 1
+  steeringSmoothTime: 1
 --- !u!50 &1369646345
 Rigidbody2D:
   serializedVersion: 4
