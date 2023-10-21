@@ -15,6 +15,8 @@ public class Sound {
     [Range(.1f, 3f)] //Range of pich
     public float pitch;
 
+    public bool loop;
+
     [HideInInspector] //Don't want it cluttering at runtime esp since it's populated automatically
     public AudioSource source;
 
