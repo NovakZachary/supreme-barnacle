@@ -19,7 +19,7 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-1, 1)]
     public float playerDrunkenessNoise = 0;
 
-    [Header("Player movement")] // Note: This won't be rendered because stopPlayerMovementRequests is not serialized
+    [Header("Player movement")]
     public HashSet<object> stopPlayerMovementRequests = new HashSet<object>();
 
     [Header("Ship movement")]
@@ -53,10 +53,49 @@ public class ShipState : SingletonBehaviour<ShipState>
     /// </summary>
     public float currentDayTimeNormalized => currentDayTime / 24;
 
+    [Header("Ship components")]
+    [Tooltip("All damage taken by the ship will be multiplied by this")]
+    public float shipDamageTakenMultiplier = 1;
+
+    [Space]
+    [Tooltip("The current health of the ship. Automatically calculated from ship components.")]
+    public float shipHealth = 1;
+    [Tooltip("The max health of the ship. Automatically calculated from ship components.")]
+    public float shipMaxHealth = 1;
+    [Range(0, 1)]
+    [Tooltip("The percentage of remaining health that the ship will sink at, causing the player to lose the game.")]
+    public float shipSinkThreshold = 0.4f;
+
+    /// <summary>
+    /// The effective health of the ship, based on <see cref="shipHealth"/> and <see cref="shipSinkThreshold"/>. Range of [0, 1]
+    /// Once this reaches 0, the ship will sink, causing the player to lose the game.
+    /// </summary>
+    [Range(0, 1)]
+    public float shipIntegrity;
+
+    public HashSet<ShipComponent> shipComponents = new();
+
     private void Update()
     {
         // Probably better to not update values from here, but it's a game jam
 
         timeSurvivedSeconds += Time.deltaTime;
+        shipHealth = 0;
+        shipMaxHealth = 0;
+        foreach (var shipComponent in shipComponents)
+        {
+            if (shipComponent.isStructural)
+            {
+                shipHealth += Mathf.Max(0, shipComponent.health);
+                shipMaxHealth += shipComponent.maxHealth;
+            }
+        }
+
+        shipIntegrity = (shipHealth - shipMaxHealth * shipSinkThreshold) / (shipMaxHealth - shipMaxHealth * shipSinkThreshold);
+
+        if (shipIntegrity < float.Epsilon)
+        {
+            Debug.Log("Game lost");
+        }
     }
 }
