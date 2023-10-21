@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class SteeringWheel : MonoBehaviour
 {
-    public KeyCode InteractKey;
-
     [Header("Configuration")]
     [SerializeField] private float turnStrength = 1f;
     [SerializeField] private float steeringSmoothTime = 0.1f;
