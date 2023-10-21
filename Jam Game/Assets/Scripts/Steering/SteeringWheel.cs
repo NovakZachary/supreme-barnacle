@@ -43,13 +43,13 @@ public class SteeringWheel : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 float targetSpeed = -turnStrength; 
-                ShipState.Instance.horizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.horizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
+                ShipState.Instance.shipHorizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.shipHorizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
             }
             
             if (Input.GetKey(KeyCode.D))
             {
                 float targetSpeed = turnStrength; 
-                ShipState.Instance.horizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.horizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
+                ShipState.Instance.shipHorizontalSpeed = Mathf.SmoothDamp(ShipState.Instance.shipHorizontalSpeed, targetSpeed, ref horizontalVelocity, steeringSmoothTime);
             }
         }
     }
