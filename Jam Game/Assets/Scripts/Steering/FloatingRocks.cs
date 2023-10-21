@@ -26,16 +26,17 @@ public class FloatingRocks : MonoBehaviour
     {
         if (IsMatchingBoatSpeed)
         {
-            var shipSpeed = ShipState.Instance.shipSpeed;
-            speedUnitsPerSecond = shipSpeed.magnitude;
-            //Ship turning left, rock moves right. Vice versa. 
-            velocityDirection = -shipSpeed.normalized;
+            additionalVelocity = new Vector3(
+                    -ShipState.Instance.shipSpeed.x, //Ship turning left -> rock moves right. Vice versa. 
+                    additionalVelocity.y,
+                    additionalVelocity.z
+                );
         }
         
         transform.RotateAround(pivotPosition, Vector3.forward, rotationDegreesPerSecond * Time.deltaTime);
         
         velocityDirection = Vector3.ClampMagnitude(velocityDirection, 1);
-        transform.position += velocityDirection * (speedUnitsPerSecond * Time.deltaTime) + additionalVelocity;
+        transform.position += (velocityDirection * speedUnitsPerSecond + additionalVelocity) * Time.deltaTime;
 
         if (destroyWhenFarFromPivot && Vector3.Distance(transform.position, pivotPosition) > distanceFromPivotUntilDestroyed)
         {
