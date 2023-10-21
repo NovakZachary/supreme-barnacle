@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     private float maxDrunkenessEncountered = float.Epsilon;
     private Vector2 velocitySmoothing;
 
+    private float totalSlipperyness = 0;
+
     private void Update()
     {
         var targetVelocity = Vector2.zero;
@@ -47,10 +49,10 @@ public class PlayerMovement : MonoBehaviour
         var effectiveMovementSpeedSmoothTime = movementSpeedSmoothTime;
 
         // Get input
-        targetVelocity.x -= Input.GetKey(KeyCode.A) ? 1 : 0;
-        targetVelocity.x += Input.GetKey(KeyCode.D) ? 1 : 0;
-        targetVelocity.y += Input.GetKey(KeyCode.W) ? 1 : 0;
-        targetVelocity.y -= Input.GetKey(KeyCode.S) ? 1 : 0;
+        targetVelocity.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
+        targetVelocity.x += Input.GetKey(ShipState.Instance.input.moveRight) ? 1 : 0;
+        targetVelocity.y += Input.GetKey(ShipState.Instance.input.moveUp) ? 1 : 0;
+        targetVelocity.y -= Input.GetKey(ShipState.Instance.input.moveDown) ? 1 : 0;
         targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
 
         // Apply drunkeness
@@ -98,5 +100,21 @@ public class PlayerMovement : MonoBehaviour
 
         targetMovementSpeed = Mathf.Lerp(targetMovementSpeed, Mathf.Lerp(0, targetMovementSpeed, (drunkeness + 1) / 2), drunkenessMovementSpeedIntensity);
         targetVelocity = Quaternion.AngleAxis(drunkeness * drunkenessMaxAngle, Vector3.forward) * targetVelocity;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out SlipperyArea area))
+        {
+            totalSlipperyness += area.slipperyness;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out SlipperyArea area))
+        {
+            totalSlipperyness -= area.slipperyness;
+        }
     }
 }
