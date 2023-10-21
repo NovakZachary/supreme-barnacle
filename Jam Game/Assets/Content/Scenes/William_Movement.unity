@@ -517,6 +517,10 @@ PrefabInstance:
       propertyPath: drunkenessMovementSpeedIntensityMultiplier
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
+      propertyPath: drunkenessMovementSpeedSmoothTimeFlatIncrease
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

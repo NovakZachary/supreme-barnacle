@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,17 +26,11 @@ public class PlayerMovement : MonoBehaviour
     public List<DrunkenessLayer> drunkenessLayers = new();
     public float drunkenessSpeedMultiplier = 1;
 
-    [FormerlySerializedAs("drunkenessAngleIntensity")]
-    [FormerlySerializedAs("drunkenessAngleIntensityMultiplier")]
     [Space]
     [Range(0, 360)]
     public float drunkenessMaxAngle = 1;
-    [FormerlySerializedAs("drunkenessMovementSpeedIntensityMultiplier")]
     [Range(0, 1)]
     public float drunkenessMovementSpeedIntensity = 1;
-    [FormerlySerializedAs("drunkenessMovementSpeedSmoothTimeIntensityMultiplier")]
-    [Range(0, 1)]
-    public float drunkenessMovementSpeedSmoothTimeIntensity = 1;
 
     /// <summary>
     /// It's hard to calculate what the max value for drunkeness is.
@@ -61,16 +54,16 @@ public class PlayerMovement : MonoBehaviour
         targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
 
         // Apply drunkeness
-        ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed, ref effectiveMovementSpeedSmoothTime);
+        ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed);
 
         // Apply movement speed
         targetVelocity *= targetMovementSpeed;
 
         // Apply velocity
-        rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, movementSpeedSmoothTime);
+        rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
     }
 
-    private void ApplyDrunkeness(ref Vector2 targetVelocity, ref float targetMovementSpeed, ref float effectiveMovementSpeedSmoothTime)
+    private void ApplyDrunkeness(ref Vector2 targetVelocity, ref float targetMovementSpeed)
     {
         // Calculate effects of layering noises and waves
         var drunkeness = 0f;
@@ -96,18 +89,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        maxDrunkenessEncountered = Mathf.Max(drunkeness, maxDrunkenessEncountered);
-
         // Normalize value back to [-1,1] range
+        maxDrunkenessEncountered = Mathf.Max(drunkeness, maxDrunkenessEncountered);
         drunkeness /= maxDrunkenessEncountered;
 
         // Apply global drunkeness value
         drunkeness *= ShipState.Instance.playerDrunkeness;
 
-        drunkeness.Dump();
-
         targetMovementSpeed = Mathf.Lerp(targetMovementSpeed, Mathf.Lerp(0, targetMovementSpeed, (drunkeness + 1) / 2), drunkenessMovementSpeedIntensity);
         targetVelocity = Quaternion.AngleAxis(drunkeness * drunkenessMaxAngle, Vector3.forward) * targetVelocity;
-        effectiveMovementSpeedSmoothTime += Mathf.Lerp(0, (drunkeness + 1) / 2, drunkenessMovementSpeedSmoothTimeIntensity);
     }
 }
