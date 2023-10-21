@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private float maxDrunkenessEncountered = float.Epsilon;
     private Vector2 velocitySmoothing;
 
-    private float totalSlipperyness = 0;
+    private HashSet<SlipperyArea> slipperyAreas = new();
 
     private void Update()
     {
@@ -59,11 +59,17 @@ public class PlayerMovement : MonoBehaviour
         CalculateDrunkeness();
         ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed);
 
+        // Apply slipperyness
+        var slipperyness = 0f;
+        foreach (var area in slipperyAreas)
+        {
+            slipperyness = Mathf.Max(area.slipperyness, slipperyness);
+        }
+
+        effectiveMovementSpeedSmoothTime += slipperyness;
+
         // Apply movement speed
         targetVelocity *= targetMovementSpeed;
-
-        // Apply slipperyness
-        effectiveMovementSpeedSmoothTime += totalSlipperyness;
 
         // Apply velocity
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
@@ -101,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply global drunkeness value
         drunkeness *= ShipState.Instance.playerDrunkeness;
-        
+
         ShipState.Instance.playerDrunkenessNoise = drunkeness;
     }
 
@@ -117,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.TryGetComponent(out SlipperyArea area))
         {
-            totalSlipperyness += area.slipperyness;
+            slipperyAreas.Add(area);
         }
     }
 
@@ -125,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.TryGetComponent(out SlipperyArea area))
         {
-            totalSlipperyness -= area.slipperyness;
+            slipperyAreas.Remove(area);
         }
     }
 }
