@@ -1287,24 +1287,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipDuration
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: slipVelocity
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: timeBeforeSlipping
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessMaxAmplitude
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityMultiplier
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessReversalSpeed
@@ -1313,10 +1301,6 @@ PrefabInstance:
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessAngleIntensity
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: sprintSlipHazardMultiplier
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenesAmplitudeMultiplier
