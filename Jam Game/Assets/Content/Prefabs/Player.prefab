@@ -77,13 +77,34 @@ MonoBehaviour:
   movementSpeed: 8
   movementSpeedSmoothTime: 0.03
   drunkenessLayers:
-  - Speed: 1
-    Amplitude: 0.7
-  - Speed: 2
-    Amplitude: 0.3
-  - Speed: 4
-    Amplitude: 0.2
-  drunkenessAmplitudeMultiplier: 1
+  - amplitude: 0.7
+    speed: -1
+    offset: 0
+    multiply: 0
+    perlin: 1
+  - amplitude: 0.3
+    speed: 2
+    offset: 0
+    multiply: 0
+    perlin: 0
+  - amplitude: 0.2
+    speed: 4
+    offset: 0
+    multiply: 0
+    perlin: 0
+  - amplitude: 0.1
+    speed: 10
+    offset: 0
+    multiply: 0
+    perlin: 0
+  - amplitude: 1
+    speed: 3
+    offset: 0
+    multiply: 1
+    perlin: 0
+  drunkenessSpeedMultiplier: 3
+  drunkenessMaxAngle: 60
+  drunkenessMovementSpeedIntensity: 0.8
 --- !u!1 &8326513249236723639
 GameObject:
   m_ObjectHideFlags: 0

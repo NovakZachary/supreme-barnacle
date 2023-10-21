@@ -418,10 +418,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessMaxAngle
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessMaxAmplitude
       value: 60
       objectReference: {fileID: 0}
@@ -434,14 +430,6 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessSpeedMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenesAmplitudeMultiplier
       value: 100
       objectReference: {fileID: 0}
@@ -450,68 +438,16 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessMovementSpeedIntensity
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessAngleIntensityMultiplier
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[0].speed
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[1].speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[2].speed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessLayers.Array.data[3].Speed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[3].speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[4].speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[0].perlin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[4].multiply
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[0].amplitude
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[1].amplitude
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[2].amplitude
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessLayers.Array.data[3].Amplitude
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[3].amplitude
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: drunkenessLayers.Array.data[4].amplitude
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessMovementSpeedIntensityMultiplier
