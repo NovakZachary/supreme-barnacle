@@ -1287,24 +1287,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipDuration
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: slipVelocity
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipMaxRandomAngle
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessMaxAmplitude
       value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityMultiplier
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessReversalSpeed
@@ -1331,10 +1319,6 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessLayers.Array.data[3].Amplitude
       value: 0.1
       objectReference: {fileID: 0}
@@ -1343,56 +1327,12 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].time
-      value: 0.99816895
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: drunkenessMovementSpeedSmoothTimeFlatIncrease
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[0].value
-      value: 1.0065918
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].value
-      value: 0.028656006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: slipVelocityMultiplierCurve.m_Curve.Array.size
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[0].inSlope
-      value: -0.9797297
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].inSlope
-      value: -0.9797297
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[0].outSlope
-      value: -0.9797297
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].outSlope
-      value: -0.9797297
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
-      propertyPath: slipVelocityCurve.m_Curve.Array.data[1].tangentMode
-      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5007939473288746762, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: slipVelocityMultiplierCurve.m_Curve.Array.data[0].time

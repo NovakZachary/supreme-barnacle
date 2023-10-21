@@ -76,6 +76,7 @@ MonoBehaviour:
   rb: {fileID: 418987177290881145}
   movementSpeed: 8
   movementSpeedSmoothTime: 0.03
+  sprintMovementSpeedMultiplier: 1.5
   drunkenessLayers:
   - amplitude: 0.7
     speed: -1
@@ -105,6 +106,35 @@ MonoBehaviour:
   drunkenessSpeedMultiplier: 3
   drunkenessMaxAngle: 60
   drunkenessMovementSpeedIntensity: 0.8
+  timeBeforeSlipping: 0.5
+  sprintSlipHazardMultiplier: 3
+  slipVelocityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.0065918
+      inSlope: -0.9797297
+      outSlope: -0.9797297
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99816895
+      value: 0.028656006
+      inSlope: -0.9797297
+      outSlope: -0.9797297
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  slipVelocityMultiplier: 4
+  slipDuration: 0.4
+  slipMaxRandomAngle: 180
 --- !u!1 &8326513249236723639
 GameObject:
   m_ObjectHideFlags: 0
