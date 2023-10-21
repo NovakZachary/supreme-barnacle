@@ -80,8 +80,8 @@ public class ShipState : SingletonBehaviour<ShipState>
         // Probably better to not update values from here, but it's a game jam
 
         timeSurvivedSeconds += Time.deltaTime;
-        shipHealth = 0;
-        shipMaxHealth = 0;
+        shipHealth = float.Epsilon;
+        shipMaxHealth = float.Epsilon;
         foreach (var shipComponent in shipComponents)
         {
             if (shipComponent.isStructural)
