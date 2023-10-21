@@ -161,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        timeSpentWalkingInWaterWithoutSlipping += Time.deltaTime * (isSprinting ? sprintSlipHazardMultiplier : 1);
+        timeSpentWalkingInWaterWithoutSlipping += Time.deltaTime * (isSprinting ? sprintSlipHazardMultiplier : 1) * (ShipState.Instance.playerDrunkeness + 1);
 
         if (timeSpentWalkingInWaterWithoutSlipping > timeBeforeSlipping)
         {
