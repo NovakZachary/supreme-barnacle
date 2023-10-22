@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2562308411230737717, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -503211681, guid: 37565ab998e35e44bb8b2d385dec7a34, type: 3}
     - target: {fileID: 4842969661312661766, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -323,6 +327,10 @@ PrefabInstance:
     - target: {fileID: 4842969661312661766, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326513249236723639, guid: 894da31dd0f31d94898ccc83a71bba2f, type: 3}
+      propertyPath: m_Name
+      value: Collider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
