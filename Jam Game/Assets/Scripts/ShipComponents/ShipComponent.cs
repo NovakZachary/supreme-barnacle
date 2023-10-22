@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ShipComponent : MonoBehaviour
 {
+    public string displayName = "Ship Component";
+
     public float health = 100;
     public float maxHealth = 100;
     public float damageTakenPerSecond = 1;
