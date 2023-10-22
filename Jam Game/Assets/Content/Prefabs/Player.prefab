@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 4842969661312661766}
   - component: {fileID: 418987177290881145}
   - component: {fileID: 5007939473288746762}
+  - component: {fileID: 5519399777223086017}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -243,6 +244,18 @@ MonoBehaviour:
   slipDuration: 0.8
   slipMaxRandomAngle: 180
   animator: {fileID: 3019921972672205054}
+--- !u!210 &5519399777223086017
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968019219175047612}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &8326513249236723639
 GameObject:
   m_ObjectHideFlags: 0
