@@ -7,15 +7,10 @@ using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Serializable]
-    public struct DrunkenessLayer
-    {
-        public float amplitude;
-        public float speed;
-        public float offset;
-        public bool multiply;
-        public bool perlin;
-    }
+    private static readonly int IsWalkingRight = Animator.StringToHash("IsWalkingRight");
+    private static readonly int IsWalkingUp = Animator.StringToHash("IsWalkingUp");
+    private static readonly int IsWalkingLeft = Animator.StringToHash("IsWalkingLeft");
+    private static readonly int IsWalkingDown = Animator.StringToHash("IsWalkingDown");
 
     [Header("Dependencies")]
     public Rigidbody2D rb;
@@ -56,6 +51,9 @@ public class PlayerMovement : MonoBehaviour
     public float slipDuration = 0.25f;
     public float slipMaxRandomAngle = 30f;
 
+    [Header("Animations")]
+    public Animator animator;
+
     private float timeSpentWalkingInWaterWithoutSlipping = 0;
 
     private HashSet<IceArea> iceAreas = new();
@@ -63,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        var movementInput = Vector2.zero;
         var targetVelocity = Vector2.zero;
         var targetMovementSpeed = movementSpeed;
         var effectiveMovementSpeedSmoothTime = movementSpeedSmoothTime;
@@ -72,11 +71,12 @@ public class PlayerMovement : MonoBehaviour
         // Get input
         if (canMove)
         {
-            targetVelocity.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
-            targetVelocity.x += Input.GetKey(ShipState.Instance.input.moveRight) ? 1 : 0;
-            targetVelocity.y += Input.GetKey(ShipState.Instance.input.moveUp) ? 1 : 0;
-            targetVelocity.y -= Input.GetKey(ShipState.Instance.input.moveDown) ? 1 : 0;
-            targetVelocity = Vector2.ClampMagnitude(targetVelocity, 1);
+            movementInput.x -= Input.GetKey(ShipState.Instance.input.moveLeft) ? 1 : 0;
+            movementInput.x += Input.GetKey(ShipState.Instance.input.moveRight) ? 1 : 0;
+            movementInput.y += Input.GetKey(ShipState.Instance.input.moveUp) ? 1 : 0;
+            movementInput.y -= Input.GetKey(ShipState.Instance.input.moveDown) ? 1 : 0;
+
+            targetVelocity = Vector2.ClampMagnitude(movementInput, 1);
         }
 
         // Apply drunkeness
@@ -95,6 +95,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply velocity
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
+
+        UpdateWalkingAnimation(movementInput);
     }
 
     private void CalculateDrunkeness()
@@ -192,6 +194,42 @@ public class PlayerMovement : MonoBehaviour
         ShipState.Instance.stopPlayerMovementRequests.Remove(stopPlayerMovementRequest);
     }
 
+    private void UpdateWalkingAnimation(Vector2 movementInput)
+    {
+        animator.SetBool(IsWalkingRight, false);
+        animator.SetBool(IsWalkingLeft, false);
+        animator.SetBool(IsWalkingUp, false);
+        animator.SetBool(IsWalkingDown, false);
+
+        if (movementInput.x > 0)
+        {
+            animator.SetBool(IsWalkingRight, true);
+
+            return;
+        }
+
+        if (movementInput.x < 0)
+        {
+            animator.SetBool(IsWalkingLeft, true);
+
+            return;
+        }
+
+        if (movementInput.y > 0)
+        {
+            animator.SetBool(IsWalkingUp, true);
+
+            return;
+        }
+
+        if (movementInput.y < 0)
+        {
+            animator.SetBool(IsWalkingDown, true);
+
+            return;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out IceArea iceArea))
@@ -216,5 +254,15 @@ public class PlayerMovement : MonoBehaviour
         {
             waterPuddleAreas.Remove(waterPuddleArea);
         }
+    }
+
+    [Serializable]
+    public struct DrunkenessLayer
+    {
+        public float amplitude;
+        public float speed;
+        public float offset;
+        public bool multiply;
+        public bool perlin;
     }
 }

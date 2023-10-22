@@ -242,6 +242,7 @@ MonoBehaviour:
   slipVelocityMultiplier: 1.5
   slipDuration: 0.8
   slipMaxRandomAngle: 180
+  animator: {fileID: 3019921972672205054}
 --- !u!1 &8326513249236723639
 GameObject:
   m_ObjectHideFlags: 0
