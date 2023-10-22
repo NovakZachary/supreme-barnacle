@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ocean
+    uniqueID: 774831579
+    locked: 0
+  - name: Ground
+    uniqueID: 3626970865
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: AboveGround
+    uniqueID: 999626733
+    locked: 0
+  - name: WorldUI
+    uniqueID: 167259301
     locked: 0
