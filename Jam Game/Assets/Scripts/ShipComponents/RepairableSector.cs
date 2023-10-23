@@ -4,19 +4,13 @@ public class RepairableSector : InteractableSector
 {
     [SerializeField] private float repairHealthPerSecond = 10f;
 
-    private void Update()
+    protected virtual void Update()
     {
         if (Player.Instance.interaction.activeInteractable == this)
         {
-            var healAmount = repairHealthPerSecond - (repairHealthPerSecond * ShipState.Instance.playerDrunkeness);
+            var healAmount = Mathf.Lerp(repairHealthPerSecond, 0, ShipState.Instance.playerDrunkeness);
             ShipComponent.health += healAmount * Time.deltaTime;
         }
-    }
-
-    public override void StartInteracting()
-    {
-        base.StartInteracting();
-        ShipComponent.health += repairHealthPerSecond - (repairHealthPerSecond * ShipState.Instance.playerDrunkeness);
     }
 
     public override KeyCode GetInteractKey()
