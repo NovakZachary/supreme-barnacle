@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(ShipComponent))]
-public abstract class InteractableSector : MonoBehaviour
+public class InteractableSector : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private Item interactionItem;
