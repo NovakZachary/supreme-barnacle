@@ -17,5 +17,10 @@ public class WaterBucketProjectile : MonoBehaviour
 
         transform.position += transform.right * distance;
         bucket.transform.rotation *= Quaternion.Euler(0, 0, rotationSpeed * Time.deltaTime);
+
+        if (distanceTraveled > maxDistance)
+        {
+            Destroy(gameObject);
+        }
     }
 }

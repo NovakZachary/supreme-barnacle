@@ -5,11 +5,6 @@ public class WaterBucketItem : Item
 {
     [SerializeField] private WaterBucketProjectile projectilePrefab;
 
-    public override void OnPickup()
-    {
-        // Do nothing
-    }
-
     public override void OnDrop()
     {
         var mouseScreenPosition = Input.mousePosition;

@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public abstract class InteractableSector : MonoBehaviour
 {
     [Header("Dependencies")]
+    [SerializeField] private Item interactionItem;
     [SerializeField] private InteractableCollider collider;
     
     [Header("Configuration")]
@@ -65,12 +66,14 @@ public abstract class InteractableSector : MonoBehaviour
 
     public virtual void StartInteracting()
     {
+        Player.Instance.items.heldItem = interactionItem;
         ShipState.Instance.stopPlayerMovementRequests.Add(this);
         PlayerIsInteracting = true;
     }
 
     public virtual void StopInteracting()
     {
+        Player.Instance.items.heldItem = null;
         ShipState.Instance.stopPlayerMovementRequests.Remove(this);
         PlayerIsInteracting = false;
     }
