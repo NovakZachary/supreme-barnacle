@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -8,6 +9,7 @@ public class FloatingRocks : MonoBehaviour
 {
     [Header("Configuration")]
     public bool IsMatchingBoatSpeed = true;
+    public float damageOnCollision;
 
     [Header("Velocity relative to world")]
     [SerializeField] private float speedUnitsPerSecond = 1f;
@@ -41,6 +43,14 @@ public class FloatingRocks : MonoBehaviour
         if (destroyWhenFarFromPivot && Vector3.Distance(transform.position, pivotPosition) > distanceFromPivotUntilDestroyed)
         {
             Destroy(gameObject);
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.TryGetComponent<Railing>(out var railing))
+        {
+            railing.DamageShip(damageOnCollision, col.GetContact(0).point);
         }
     }
 }
