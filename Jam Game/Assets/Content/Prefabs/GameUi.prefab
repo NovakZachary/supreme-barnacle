@@ -1243,19 +1243,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023eff4adecae4b3eaf74d73c8e6e69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNight: 0
   DayNightIndicator: {fileID: 3150741528131970119}
   dayImage: {fileID: 21300000, guid: ec3eb9bb4dda14e2d856f1a5dd29c02e, type: 3}
   nightImage: {fileID: 21300000, guid: 6e2f8f9d208da4c45943eb8396998e01, type: 3}
   isEvent: 0
   eventIndicator: {fileID: 1854907075488321852}
-  maxHealth: 0
-  health: 0
-  bar: {fileID: 758543916868742299}
+  healthBar: {fileID: 758543916868742299}
   shipAngle: 0
   tiltBar: {fileID: 6040231400842811701}
   distance: 0
-  text: {fileID: 1592146058205604228}
+  distanceText: {fileID: 1592146058205604228}
+  speed: 0
+  speedText: {fileID: 1085534045678420099}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,7 +1492,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

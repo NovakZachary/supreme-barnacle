@@ -28,6 +28,10 @@ public class UIInterface : MonoBehaviour
     [FormerlySerializedAs("text")]
     public TMP_Text distanceText;
 
+    [Header("Speed Tracker")]
+    public float speed;
+    public TMP_Text speedText;
+
     private void Update()
     {
         // Day/night indicator
@@ -54,6 +58,9 @@ public class UIInterface : MonoBehaviour
         distanceText.text = $"{distance} m";
 
         healthBar.value = ShipState.Instance.shipIntegrity;
+
+        speed = ShipState.Instance.shipSpeed.y;
+        speedText.text = $"{speed} m :Speed";
 
         shipAngle = ShipState.Instance.shipAngle;
         tiltBar.value = (shipAngle + 90) / 180;
