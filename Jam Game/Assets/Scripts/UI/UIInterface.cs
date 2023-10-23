@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class UIInterface : MonoBehaviour
 {
@@ -12,6 +13,27 @@ public class UIInterface : MonoBehaviour
     [Header("Event Indicator")]
     public bool isEvent;
     public GameObject eventIndicator;
+
+    [Header("Health Bar")]
+    public float maxHealth;
+    public float health;
+    public Slider bar;
+
+    [Header("Tilt Indicator")]
+    private float maxVal = 180;
+    [Range(-90, 90)]
+    public float shipAngle = 0;
+    public Slider tiltBar;
+
+    [Header("Distance Tracker")]
+    public float distance = 0;
+    public TMP_Text text;
+
+    void Start()
+    {
+        updateMaxHealth(maxHealth);
+        tiltBar.maxValue = maxVal;
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,5 +53,23 @@ public class UIInterface : MonoBehaviour
         {
             eventIndicator.SetActive(false);
         }
+
+        health = Mathf.Clamp(health, 0, maxHealth);
+        bar.value = health;
+        setAngleUI();
+
+        text.text = distance.ToString() + 'm';
+    }
+
+    void updateMaxHealth(float val)
+    {
+        maxHealth = val;
+        bar.maxValue = val;
+    }
+
+    void setAngleUI()
+    {
+        float c = shipAngle + 90;
+        tiltBar.value = c;
     }
 }
