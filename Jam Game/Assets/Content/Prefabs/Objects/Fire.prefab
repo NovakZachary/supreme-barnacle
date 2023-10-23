@@ -133,8 +133,11 @@ MonoBehaviour:
   fireData: {fileID: 11400000, guid: 88e3bc8a302ac2d45bc8d7455b353291, type: 2}
   spreadAttemptCooldown: 1
   spreadChance: 0.05
-  checkRadius: 0.6
-  checkRange: 1
+  spreadCheckRadius: 0.6
+  spreadRange: 1
+  damage: 5
+  damageRadius: 0.5
+  damageCooldown: 1
 --- !u!58 &2691283495875305849
 CircleCollider2D:
   m_ObjectHideFlags: 0
