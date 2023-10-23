@@ -56,7 +56,12 @@ public class Fire : MonoBehaviour
         for (var i = 0; i < resultCount; i++)
         {
             var other = ColliderBuffer[i];
-            if (!other.isTrigger || other.TryGetComponent(out Fire fire))
+            if (!other.isTrigger && (other.attachedRigidbody && !other.attachedRigidbody.TryGetComponent(out Player _)))
+            {
+                return;
+            }
+            
+            if (other.TryGetComponent(out Fire _))
             {
                 return;
             }
