@@ -15,6 +15,16 @@ public class UIInterface : MonoBehaviour
     public bool isEvent;
     public GameObject eventIndicator;
 
+    [Header("Health Bar")]
+    public float maxHealth;
+    public float health;
+    public Slider bar;
+
+    void Start()
+    {
+        updateMaxHealth(maxHealth);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -33,5 +43,14 @@ public class UIInterface : MonoBehaviour
         {
             eventIndicator.SetActive(false);
         }
+
+        health = Mathf.Clamp(health, 0, maxHealth);
+        bar.value = health;
+    }
+
+    void updateMaxHealth(float val)
+    {
+        maxHealth = val;
+        bar.maxValue = val;
     }
 }

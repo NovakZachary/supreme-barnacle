@@ -1249,6 +1249,9 @@ MonoBehaviour:
   nightImage: {fileID: 21300000, guid: 6e2f8f9d208da4c45943eb8396998e01, type: 3}
   isEvent: 0
   eventIndicator: {fileID: 1854907075488321852}
+  maxHealth: 0
+  health: 0
+  bar: {fileID: 758543916868742299}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0
