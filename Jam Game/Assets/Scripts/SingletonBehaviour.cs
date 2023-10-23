@@ -14,7 +14,7 @@ public class SingletonBehaviour<T> : MonoBehaviour where T : SingletonBehaviour<
     {
         get
         {
-            if (instance)
+            if (!ReferenceEquals(instance, null))
             {
                 return instance;
             }
