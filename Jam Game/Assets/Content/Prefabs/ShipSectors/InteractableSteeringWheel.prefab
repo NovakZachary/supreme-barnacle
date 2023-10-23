@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1998659204733102036}
   - component: {fileID: 2424689946581544700}
   - component: {fileID: 1367336747256448202}
+  - component: {fileID: 1613924895749050787}
   m_Layer: 0
   m_Name: InteractableSteeringWheel
   m_TagString: Untagged
@@ -92,8 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c0c1d71476ced44a6c9040c12eb2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionItem: {fileID: 0}
   collider: {fileID: 5196986815099936866}
   timeAfterInteractionUntilStopsWorking: 0
+  stopsPlayerMovement: 1
+  removesItemWhenOutOfRange: 1
   lookoutTower: {fileID: 0}
   turnStrength: 5
   steeringSmoothTime: 1
@@ -110,9 +114,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adbbd634751610419a538a88b039743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionItem: {fileID: 0}
   collider: {fileID: 5196986815099936866}
   timeAfterInteractionUntilStopsWorking: 0
+  stopsPlayerMovement: 1
+  removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10
+--- !u!210 &1613924895749050787
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247394284411295044}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &7236180181099139638
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +160,7 @@ Transform:
   m_GameObject: {fileID: 7236180181099139638}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.039, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +186,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f1e4a4bf75c0b26408b1233413538a31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
