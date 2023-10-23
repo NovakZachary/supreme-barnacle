@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class UIInterface : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class UIInterface : MonoBehaviour
     [Range(-90, 90)]
     public float shipAngle = 0;
     public Slider tiltBar;
+
+    [Header("Distance Tracker")]
+    public float distance = 0;
+    public TMP_Text text;
 
     void Start()
     {
@@ -52,6 +57,8 @@ public class UIInterface : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
         bar.value = health;
         setAngleUI();
+
+        text.text = distance.ToString() + 'm';
     }
 
     void updateMaxHealth(float val)

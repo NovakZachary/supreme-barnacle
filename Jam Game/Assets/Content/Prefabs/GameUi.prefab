@@ -1254,6 +1254,7 @@ MonoBehaviour:
   bar: {fileID: 758543916868742299}
   shipAngle: 0
   tiltBar: {fileID: 6040231400842811701}
+  text: {fileID: 1592146058205604228}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0
