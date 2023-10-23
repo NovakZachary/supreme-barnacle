@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -84,6 +85,8 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-90, 90)]
     public float shipAngle = 0;
 
+    public HashSet<Func<float>> shipAngleLayers = new();
+
     private void Update()
     {
         UpdateShipHealth();
@@ -114,6 +117,12 @@ public class ShipState : SingletonBehaviour<ShipState>
 
     private void UpdateShipTilt()
     {
+        shipAngle = 0;
+        foreach (var layer in shipAngleLayers)
+        {
+            shipAngle += layer();
+        }
+
         var direction = Mathf.Sign(shipAngle);
         var effectiveAngle = Mathf.Clamp(Mathf.Abs(shipAngle) - gravityMinimumAngle, 0, 90);
         Physics2D.gravity = new Vector2(direction * Mathf.Sin(effectiveAngle * Mathf.Deg2Rad) * gravityStrength * 9.81f, 0);

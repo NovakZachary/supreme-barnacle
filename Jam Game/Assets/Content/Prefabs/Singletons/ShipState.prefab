@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8142620583195231420}
   - component: {fileID: 2789482432185050609}
+  - component: {fileID: 3050146000827357520}
   m_Layer: 0
   m_Name: ShipState
   m_TagString: Untagged
@@ -63,6 +64,20 @@ MonoBehaviour:
   shipMaxHealth: 1
   shipSinkThreshold: 0.4
   shipIntegrity: 1
-  gravityStrength: 5
+  gravityStrength: 1
   gravityMinimumAngle: 5
   shipAngle: 0
+--- !u!114 &3050146000827357520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146870754170319603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55468a97ab364745bd56807f09535589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  period: 5
+  amplitude: 8
