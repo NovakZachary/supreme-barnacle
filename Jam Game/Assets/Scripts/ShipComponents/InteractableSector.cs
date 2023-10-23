@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(ShipComponent))]
 public class InteractableSector : MonoBehaviour
@@ -10,6 +11,8 @@ public class InteractableSector : MonoBehaviour
     [Header("Configuration")]
     [SerializeField] private float timeAfterInteractionUntilStopsWorking;
     [SerializeField] private bool stopsPlayerMovement = true;
+    [FormerlySerializedAs("stopsInteractingWhenOutOfRange")]
+    [SerializeField] private bool removesItemWhenOutOfRange = true;
 
     public bool PlayerIsInteracting { get; private set; }
     public bool HasReset => resetTimer == 0;
@@ -76,7 +79,11 @@ public class InteractableSector : MonoBehaviour
     {
         ShipState.Instance.stopPlayerMovementRequests.Remove(this);
 
-        Player.Instance.items.heldItem = null;
+        if (removesItemWhenOutOfRange)
+        {
+            Player.Instance.items.heldItem = null;
+        }
+
         PlayerIsInteracting = false;
     }
 

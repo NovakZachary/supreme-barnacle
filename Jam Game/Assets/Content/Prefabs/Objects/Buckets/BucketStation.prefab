@@ -653,6 +653,8 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: 84a1837e6329e3a49b0065c64d279343, type: 2}
   collider: {fileID: 3543547240995750412}
   timeAfterInteractionUntilStopsWorking: 0
+  stopsPlayerMovement: 0
+  stopsInteractingWhenOutOfRange: 0
 --- !u!1 &4763743816456433977
 GameObject:
   m_ObjectHideFlags: 0

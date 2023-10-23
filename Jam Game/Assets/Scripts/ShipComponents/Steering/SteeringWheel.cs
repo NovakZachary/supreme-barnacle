@@ -23,7 +23,7 @@ public class SteeringWheel : InteractableSector
         ShipState.Instance.shipAngleLayers.Remove(CalculateShipAngle);
     }
 
-    private void Update()
+    protected override void Update()
     {
         base.Update();
         

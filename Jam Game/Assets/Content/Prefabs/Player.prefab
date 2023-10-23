@@ -274,8 +274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlot: {fileID: 7738452953226019266}
-  sprite: {fileID: 2859563715555661838}
-  heldItem: {fileID: 11400000, guid: 84a1837e6329e3a49b0065c64d279343, type: 2}
+  spriteRenderer: {fileID: 2859563715555661838}
+  heldItem: {fileID: 0}
 --- !u!114 &891004275469576380
 MonoBehaviour:
   m_ObjectHideFlags: 0
