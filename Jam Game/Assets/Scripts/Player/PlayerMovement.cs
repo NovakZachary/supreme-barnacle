@@ -7,11 +7,6 @@ using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private static readonly int IsWalkingRight = Animator.StringToHash("IsWalkingRight");
-    private static readonly int IsWalkingUp = Animator.StringToHash("IsWalkingUp");
-    private static readonly int IsWalkingLeft = Animator.StringToHash("IsWalkingLeft");
-    private static readonly int IsWalkingDown = Animator.StringToHash("IsWalkingDown");
-
     [Header("Dependencies")]
     public Rigidbody2D rb;
 
@@ -51,13 +46,15 @@ public class PlayerMovement : MonoBehaviour
     public float slipDuration = 0.25f;
     public float slipMaxRandomAngle = 30f;
 
-    [Header("Animations")]
-    public Animator animator;
-
     private float timeSpentWalkingInWaterWithoutSlipping = 0;
 
     private HashSet<IceArea> iceAreas = new();
     private HashSet<WaterPuddleArea> waterPuddleAreas = new();
+
+    [Header("Animations")]
+    public Animator animator;
+
+    private FaceDirection faceDirection = FaceDirection.Down;
 
     private void Update()
     {
@@ -96,7 +93,8 @@ public class PlayerMovement : MonoBehaviour
         // Apply velocity
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
 
-        UpdateWalkingAnimation(movementInput);
+        UpdateFacingDirection(movementInput);
+        UpdateAnimator(movementInput);
     }
 
     private void CalculateDrunkeness()
@@ -194,39 +192,100 @@ public class PlayerMovement : MonoBehaviour
         ShipState.Instance.stopPlayerMovementRequests.Remove(stopPlayerMovementRequest);
     }
 
-    private void UpdateWalkingAnimation(Vector2 movementInput)
+    private void UpdateFacingDirection(Vector2 movementInput)
     {
-        animator.SetBool(IsWalkingRight, false);
-        animator.SetBool(IsWalkingLeft, false);
-        animator.SetBool(IsWalkingUp, false);
-        animator.SetBool(IsWalkingDown, false);
-
         if (movementInput.x > 0)
         {
-            animator.SetBool(IsWalkingRight, true);
+            faceDirection = FaceDirection.Right;
 
             return;
         }
 
         if (movementInput.x < 0)
         {
-            animator.SetBool(IsWalkingLeft, true);
+            faceDirection = FaceDirection.Left;
 
             return;
         }
 
         if (movementInput.y > 0)
         {
-            animator.SetBool(IsWalkingUp, true);
+            faceDirection = FaceDirection.Up;
 
             return;
         }
 
         if (movementInput.y < 0)
         {
-            animator.SetBool(IsWalkingDown, true);
+            faceDirection = FaceDirection.Down;
 
             return;
+        }
+    }
+
+    private void UpdateAnimator(Vector2 movementInput)
+    {
+        var isWalking = movementInput != Vector2.zero;
+
+        if (isWalking)
+        {
+            switch (faceDirection)
+            {
+                case FaceDirection.Down:
+                {
+                    animator.Play("WalkDown");
+
+                    break;
+                }
+                case FaceDirection.Up:
+                {
+                    animator.Play("WalkUp");
+
+                    break;
+                }
+                case FaceDirection.Left:
+                {
+                    animator.Play("WalkLeft");
+
+                    break;
+                }
+                case FaceDirection.Right:
+                {
+                    animator.Play("WalkRight");
+
+                    break;
+                }
+            }
+        }
+        else
+        {
+            switch (faceDirection)
+            {
+                case FaceDirection.Down:
+                {
+                    animator.Play("IdleDown");
+
+                    break;
+                }
+                case FaceDirection.Up:
+                {
+                    animator.Play("IdleUp");
+
+                    break;
+                }
+                case FaceDirection.Left:
+                {
+                    animator.Play("IdleLeft");
+
+                    break;
+                }
+                case FaceDirection.Right:
+                {
+                    animator.Play("IdleRight");
+
+                    break;
+                }
+            }
         }
     }
 
@@ -264,5 +323,13 @@ public class PlayerMovement : MonoBehaviour
         public float offset;
         public bool multiply;
         public bool perlin;
+    }
+
+    private enum FaceDirection
+    {
+        Down,
+        Up,
+        Left,
+        Right,
     }
 }
