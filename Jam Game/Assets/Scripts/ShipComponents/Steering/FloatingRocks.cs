@@ -10,14 +10,8 @@ public class FloatingRocks : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     
     [Header("Configuration")]
-    public bool IsMatchingBoatSpeed = true;
     public float damageOnCollision;
 
-    [Header("Velocity relative to world")]
-    [SerializeField] private float speedUnitsPerSecond = 1f;
-    [SerializeField] private Vector3 velocityDirection;
-    [SerializeField] private Vector3 additionalVelocity = Vector3.zero;
-    
     [Header("Rotate around pivot")]
     [SerializeField] private float rotationDegreesPerSecond = 1f;
     [SerializeField] private Vector3 pivotPosition;
@@ -36,19 +30,9 @@ public class FloatingRocks : MonoBehaviour
 
     private void Update()
     {
-        if (IsMatchingBoatSpeed)
-        {
-            additionalVelocity = new Vector3(
-                    -ShipState.Instance.shipSpeed.x, //Ship turning left -> rock moves right. Vice versa. 
-                    additionalVelocity.y,
-                    additionalVelocity.z
-                );
-        }
-        
         transform.RotateAround(pivotPosition, Vector3.forward, rotationDegreesPerSecond * Time.deltaTime);
         
-        velocityDirection = Vector3.ClampMagnitude(velocityDirection, 1);
-        transform.position += (velocityDirection * speedUnitsPerSecond + additionalVelocity) * Time.deltaTime;
+        transform.position -= (Vector3)ShipState.Instance.shipVelocity * Time.deltaTime;
 
         if (destroyWhenFarFromPivot && Vector3.Distance(transform.position, pivotPosition) > distanceFromPivotUntilDestroyed)
         {

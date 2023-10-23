@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ShipState : SingletonBehaviour<ShipState>
 {
@@ -24,12 +25,13 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Header("Player movement")]
     public HashSet<object> stopPlayerMovementRequests = new HashSet<object>();
 
+    [FormerlySerializedAs("shipSpeed")]
     [Header("Ship movement")]
-    public Vector2 shipSpeed = Vector2.zero;
-    public bool MastLowered => Math.Abs(shipSpeed.y - maxYSpeed) < 0.1f;
-    public bool MastRaised => Math.Abs(shipSpeed.y - minYSpeed) < 0.1f;
-    public float minYSpeed = 1;
-    public float maxYSpeed = 10;
+    public Vector2 shipVelocity = Vector2.zero;
+    public bool MastLowered => Math.Abs(shipVelocity.y - maxYSpeed) < 0.1f;
+    public bool MastRaised => Math.Abs(shipVelocity.y - minYSpeed) < 0.1f;
+    public float minYSpeed = 10;
+    public float maxYSpeed = 40;
     public float distanceTraveled = 0;
 
     [Header("Time")]
@@ -114,6 +116,8 @@ public class ShipState : SingletonBehaviour<ShipState>
         }
         
         ReduceDrunknessOverTime();
+
+        shipVelocity.y = Mathf.Clamp(shipVelocity.y, minYSpeed, maxYSpeed);
     }
 
     public void RegisterShipComponent(ShipComponent component)

@@ -9,9 +9,9 @@ public class RaiseSail : InteractableSector
         base.Update();
         if (PlayerIsInteracting)
         {
-            ShipState.Instance.shipSpeed = new Vector2(
-                ShipState.Instance.shipSpeed.x,
-                Mathf.Clamp(ShipState.Instance.shipSpeed.y + raisePerSecond * Time.deltaTime, ShipState.Instance.minYSpeed, ShipState.Instance.maxYSpeed)
+            ShipState.Instance.shipVelocity = new Vector2(
+                ShipState.Instance.shipVelocity.x,
+                Mathf.Clamp(ShipState.Instance.shipVelocity.y + raisePerSecond * Time.deltaTime, ShipState.Instance.minYSpeed, ShipState.Instance.maxYSpeed)
             );
         }
     }

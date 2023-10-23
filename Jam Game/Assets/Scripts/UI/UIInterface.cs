@@ -59,7 +59,7 @@ public class UIInterface : MonoBehaviour
 
         healthBar.value = ShipState.Instance.shipIntegrity;
 
-        speed = ShipState.Instance.shipSpeed.y;
+        speed = ShipState.Instance.shipVelocity.y;
         speedText.text = $"{speed:F1} m/s";
 
         shipAngle = ShipState.Instance.shipAngle;

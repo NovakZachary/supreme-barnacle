@@ -49,9 +49,9 @@ public class SteeringWheel : InteractableSector
 
     private void TurnShip(float targetSpeed)
     {
-        ShipState.Instance.shipSpeed = new Vector2(
-                                Mathf.SmoothDamp(ShipState.Instance.shipSpeed.x, targetSpeed, ref horizontalVelocity, steeringSmoothTime),
-                                ShipState.Instance.shipSpeed.y
+        ShipState.Instance.shipVelocity = new Vector2(
+                                Mathf.SmoothDamp(ShipState.Instance.shipVelocity.x, targetSpeed, ref horizontalVelocity, steeringSmoothTime),
+                                ShipState.Instance.shipVelocity.y
                         );
     }
     
@@ -59,21 +59,21 @@ public class SteeringWheel : InteractableSector
     {
         lookoutTower.LookoutRequesters.Remove(this);
         
-        if (Mathf.Abs(ShipState.Instance.shipSpeed.x) > 0.001)
+        if (Mathf.Abs(ShipState.Instance.shipVelocity.x) > 0.001)
         {
             TurnShip(0);
         }
         else
         {
-            ShipState.Instance.shipSpeed = new Vector2(
+            ShipState.Instance.shipVelocity = new Vector2(
                 0,
-                ShipState.Instance.shipSpeed.y
+                ShipState.Instance.shipVelocity.y
             );
         }
     }
     
     private float CalculateShipAngle()
     {
-        return ShipState.Instance.shipSpeed.x * turnShipAngleMultiplier;
+        return ShipState.Instance.shipVelocity.x * turnShipAngleMultiplier;
     }
 }

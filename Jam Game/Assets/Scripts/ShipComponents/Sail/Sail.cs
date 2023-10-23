@@ -27,6 +27,6 @@ public class Sail : MonoBehaviour
             raised.SetActive(false);
         }
 
-        ShipState.Instance.distanceTraveled += ShipState.Instance.shipSpeed.y * Time.deltaTime;
+        ShipState.Instance.distanceTraveled += ShipState.Instance.shipVelocity.y * Time.deltaTime;
     }
 }

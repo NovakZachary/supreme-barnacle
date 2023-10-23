@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ShipComponent))]
@@ -38,12 +37,9 @@ public class InteractableSector : MonoBehaviour
         {
             playerInteract.CollidingWithInteractable(this);
         }
-        else
+        else if (playerInteract != null)
         {
-            if (playerInteract != null)
-            {
-                playerInteract.StopCollidingWithInteractable(this);
-            }
+            playerInteract.StopCollidingWithInteractable(this);
         }
 
         if (!PlayerIsInteracting)
