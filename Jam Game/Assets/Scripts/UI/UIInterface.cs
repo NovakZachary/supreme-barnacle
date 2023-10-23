@@ -55,12 +55,12 @@ public class UIInterface : MonoBehaviour
         }
 
         distance = ShipState.Instance.distanceTraveled;
-        distanceText.text = $"{distance} m";
+        distanceText.text = $"{distance:F1} m";
 
         healthBar.value = ShipState.Instance.shipIntegrity;
 
         speed = ShipState.Instance.shipSpeed.y;
-        speedText.text = $"{speed} m :Speed";
+        speedText.text = $"{speed:F1} m :Speed";
 
         shipAngle = ShipState.Instance.shipAngle;
         tiltBar.value = (shipAngle + 90) / 180;
