@@ -1141,6 +1141,7 @@ GameObject:
   - component: {fileID: 6229664157525367404}
   - component: {fileID: 8727909427229439629}
   - component: {fileID: 4877462300269254186}
+  - component: {fileID: 1287785970171126491}
   m_Layer: 5
   m_Name: GameUi
   m_TagString: Untagged
@@ -1254,6 +1255,7 @@ MonoBehaviour:
   bar: {fileID: 758543916868742299}
   shipAngle: 0
   tiltBar: {fileID: 6040231400842811701}
+  distance: 0
   text: {fileID: 1592146058205604228}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
@@ -1268,6 +1270,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scaler: {fileID: 2248422983445895332}
+--- !u!114 &1287785970171126491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7388160037103945702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6969661e1e99a234fac18289ed6e8ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiInterface: {fileID: 8727909427229439629}
 --- !u!1 &7446707372099906348
 GameObject:
   m_ObjectHideFlags: 0

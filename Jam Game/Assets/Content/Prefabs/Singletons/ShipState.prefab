@@ -53,9 +53,13 @@ MonoBehaviour:
     moveLeft: 97
     moveRight: 100
     interact: 101
+    repair: 114
   playerDrunkeness: 0
   playerDrunkenessNoise: 0
-  shipSpeed: {x: 0, y: 0}
+  shipSpeed: {x: 1, y: 0}
+  minYSpeed: 1
+  maxYSpeed: 10
+  distanceTraveled: 0
   timeSurvivedSeconds: 0
   secondsPerHour: 10
   startingHour: 8

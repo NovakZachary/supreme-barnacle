@@ -57,6 +57,8 @@ public class ShipState : SingletonBehaviour<ShipState>
     /// The current time of day, normalized to be in the range of [0, 1).
     /// </summary>
     public float currentDayTimeNormalized => currentDayTime / 24;
+    
+    public bool isNight => currentDayTime < 8 || currentDayTime > 20;
 
     [Header("Ship components")]
     [Tooltip("All damage taken by the ship will be multiplied by this")]

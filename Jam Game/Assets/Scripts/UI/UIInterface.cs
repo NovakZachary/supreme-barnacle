@@ -31,6 +31,7 @@ public class UIInterface : MonoBehaviour
 
     void Start()
     {
+        bar.minValue = 0;
         updateMaxHealth(maxHealth);
         tiltBar.maxValue = maxVal;
     }
@@ -61,7 +62,7 @@ public class UIInterface : MonoBehaviour
         text.text = distance.ToString() + 'm';
     }
 
-    void updateMaxHealth(float val)
+    public void updateMaxHealth(float val)
     {
         maxHealth = val;
         bar.maxValue = val;
