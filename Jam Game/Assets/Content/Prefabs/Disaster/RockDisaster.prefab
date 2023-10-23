@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 236268132784505855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: 130, z: 0}
+  m_LocalPosition: {x: 60, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 3825293201807724554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: 130, z: 0}
+  m_LocalPosition: {x: -60, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -111,8 +111,8 @@ MonoBehaviour:
   rockPrefab: {fileID: 499487470301489128, guid: caa69ad63660413418bd5f72ff54c757, type: 3}
   leftCreationPoint: {fileID: 7212150562207966849}
   rightCreationPoint: {fileID: 4593462652198934185}
-  minTimeDuringWaves: 20
-  maxTimeDuringWaves: 50
+  minTimeDuringWaves: 10
+  maxTimeDuringWaves: 30
   spawnInterval: 10
   minDistanceBetweenRocks: 5
   maxDistanceBetweenRocks: 50

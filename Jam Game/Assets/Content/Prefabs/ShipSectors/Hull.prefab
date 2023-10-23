@@ -52,7 +52,7 @@ MonoBehaviour:
   displayName: Hull
   health: 100
   maxHealth: 100
-  damageTakenPerSecond: 0.5
+  damageTakenPerSecond: 0.25
   isStructural: 1
 --- !u!114 &6305030233325244373
 MonoBehaviour:
@@ -71,7 +71,7 @@ MonoBehaviour:
   priority: -10
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
-  repairHealthPerSecond: 25
+  repairHealthPerSecond: 50
   waterPuddleArea: {fileID: 8910982825709168609, guid: e4447b52f08e5f542bb4ff9e7e9f0c89, type: 3}
   visualWhenBroken: {fileID: 5167223774026789505}
   floodTime: 10

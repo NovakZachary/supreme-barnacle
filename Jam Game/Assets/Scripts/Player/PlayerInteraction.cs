@@ -47,10 +47,6 @@ public class PlayerInteraction : MonoBehaviour
                 isInteracting = false;
             }
         }
-
-        touchedInteractables.Dump();
-        highestPriorityInteractable.Dump();
-        isInteracting.Dump();
     }
 
     private void UpdateHighestPriorityInteractable()

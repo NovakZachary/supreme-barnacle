@@ -3,7 +3,7 @@ using Random = UnityEngine.Random;
 
 public class Railing : MonoBehaviour
 {
-    public void DamageShip(float damage, Vector3 collisionPoint)
+    public void DamageShip(float damage)
     {
         var item = Random.Range(0, ShipState.Instance.ShipComponents.Count);
         var i = 0;

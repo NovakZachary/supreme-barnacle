@@ -58,8 +58,8 @@ MonoBehaviour:
   playerSoberingRate: 0.1
   playerDrunkenessNoise: 0
   shipVelocity: {x: 0, y: 0}
-  minYSpeed: 5
-  maxYSpeed: 40
+  minYSpeed: 2
+  maxYSpeed: 10
   distanceTraveled: 0
   timeSurvivedSeconds: 0
   secondsPerHour: 10

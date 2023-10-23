@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,7 +9,8 @@ public class FloatingRocks : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     
     [Header("Configuration")]
-    public float damageOnCollision;
+    public float damageOnCollision = 5;
+    public float rockYSpeedMultiplier = 0.25f;
 
     [Header("Rotate around pivot")]
     [SerializeField] private float rotationDegreesPerSecond = 1f;
@@ -31,8 +31,8 @@ public class FloatingRocks : MonoBehaviour
     private void Update()
     {
         transform.RotateAround(pivotPosition, Vector3.forward, rotationDegreesPerSecond * Time.deltaTime);
-        
-        transform.position -= (Vector3)ShipState.Instance.shipVelocity * Time.deltaTime;
+
+        transform.position -= new Vector3(ShipState.Instance.shipVelocity.x, ShipState.Instance.shipVelocity.y * rockYSpeedMultiplier, 0) * Time.deltaTime;
 
         if (destroyWhenFarFromPivot && Vector3.Distance(transform.position, pivotPosition) > distanceFromPivotUntilDestroyed)
         {
@@ -42,9 +42,19 @@ public class FloatingRocks : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.TryGetComponent<Railing>(out var railing))
+        var item = Random.Range(0, ShipState.Instance.ShipComponents.Count);
+        var i = 0;
+
+        foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
         {
-            railing.DamageShip(damageOnCollision, col.GetContact(0).point);
+            if (i == item)
+            {
+                instanceShipComponent.health -= damageOnCollision;
+                Debug.Log($"Damaged ship part: { instanceShipComponent.displayName }");
+                return;
+            }
         }
+
+        Destroy(gameObject);
     }
 }

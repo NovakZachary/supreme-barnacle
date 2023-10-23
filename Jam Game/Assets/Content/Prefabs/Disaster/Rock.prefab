@@ -123,11 +123,8 @@ MonoBehaviour:
   - {fileID: 129591225, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
   - {fileID: -627315896, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
   spriteRenderer: {fileID: 218330519714581752}
-  IsMatchingBoatSpeed: 1
-  damageOnCollision: 0
-  speedUnitsPerSecond: 1
-  velocityDirection: {x: 0, y: -1, z: 0}
-  additionalVelocity: {x: 0, y: 0, z: 0}
+  damageOnCollision: 50
+  rockYSpeedMultiplier: 0.25
   rotationDegreesPerSecond: 0
   pivotPosition: {x: 0, y: 0, z: 0}
   destroyWhenFarFromPivot: 0
