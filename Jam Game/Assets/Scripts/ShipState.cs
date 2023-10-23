@@ -14,6 +14,8 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Tooltip("How drunk the player is. Affects player movement.")]
     [Range(0, 1)]
     public float playerDrunkeness = 0;
+    [Range(0, 1)]
+    public float playerSoberingRate = 0.05f;
 
     [Tooltip("Automatically calculated. Higher when the player is more drunk.")]
     [Range(-1, 1)]
@@ -110,6 +112,8 @@ public class ShipState : SingletonBehaviour<ShipState>
         {
             Debug.Log("Game lost");
         }
+        
+        ReduceDrunknessOverTime();
     }
 
     public void RegisterShipComponent(ShipComponent component)
@@ -156,5 +160,11 @@ public class ShipState : SingletonBehaviour<ShipState>
         var direction = Mathf.Sign(shipAngle);
         var effectiveAngle = Mathf.Clamp(Mathf.Abs(shipAngle) - gravityMinimumAngle, 0, 90);
         Physics2D.gravity = new Vector2(direction * Mathf.Sin(effectiveAngle * Mathf.Deg2Rad) * gravityStrength * 9.81f, 0);
+    }
+
+    private void ReduceDrunknessOverTime()
+    {
+        Player.Instance.spriteRenderer.color = Color.Lerp(Color.white, Color.magenta, playerDrunkeness);
+        playerDrunkeness = Mathf.Clamp(playerDrunkeness - (playerSoberingRate * Time.deltaTime), 0, playerDrunkeness);
     }
 }

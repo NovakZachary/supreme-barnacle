@@ -173,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 11400000, guid: ae9c887b424df044f847e2edb3f2af58, type: 2}
   collider: {fileID: 5196986815099936866}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 0}
   collider: {fileID: 5196986815099936866}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
@@ -328,8 +330,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2, y: 2.8125}
+  m_Offset: {x: 0, y: -1.9355612}
+  m_Size: {x: 2, y: 2.000002}
   m_Direction: 0
 --- !u!114 &5196986815099936866
 MonoBehaviour:
