@@ -1121,7 +1121,6 @@ GameObject:
   - component: {fileID: 5597679382781943439}
   - component: {fileID: 2304356499231840105}
   - component: {fileID: 6672664041645419959}
-  - component: {fileID: 7622487739086826054}
   - component: {fileID: 3322278134382552403}
   m_Layer: 0
   m_Name: RaiseSail
@@ -1181,24 +1180,6 @@ MonoBehaviour:
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   raisePerSecond: 2
---- !u!114 &7622487739086826054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4897470075156351881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adbbd634751610419a538a88b039743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
-  collider: {fileID: 6761842228654602432}
-  priority: 0
-  stopsPlayerMovement: 1
-  removesItemWhenOutOfRange: 1
-  repairHealthPerSecond: 10
 --- !u!50 &3322278134382552403
 Rigidbody2D:
   serializedVersion: 4
@@ -1282,7 +1263,6 @@ GameObject:
   - component: {fileID: 803498353867480430}
   - component: {fileID: 6967897291020647438}
   - component: {fileID: 52332867391487188}
-  - component: {fileID: 8966891240851963067}
   - component: {fileID: 5915601971088283835}
   m_Layer: 0
   m_Name: LowerSail
@@ -1342,24 +1322,6 @@ MonoBehaviour:
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   lowerPerSecond: 2
---- !u!114 &8966891240851963067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6805343125237931549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adbbd634751610419a538a88b039743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
-  collider: {fileID: 2537265617477924016}
-  priority: 0
-  stopsPlayerMovement: 1
-  removesItemWhenOutOfRange: 1
-  repairHealthPerSecond: 10
 --- !u!50 &5915601971088283835
 Rigidbody2D:
   serializedVersion: 4

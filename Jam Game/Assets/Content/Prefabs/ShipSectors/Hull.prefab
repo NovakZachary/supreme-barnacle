@@ -52,7 +52,7 @@ MonoBehaviour:
   displayName: Hull
   health: 100
   maxHealth: 100
-  damageTakenPerSecond: 1
+  damageTakenPerSecond: 0.5
   isStructural: 1
 --- !u!114 &6305030233325244373
 MonoBehaviour:

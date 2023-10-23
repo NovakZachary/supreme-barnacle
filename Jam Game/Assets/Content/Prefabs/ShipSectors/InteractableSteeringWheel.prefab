@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 4152797944176732159}
   - component: {fileID: 1998659204733102036}
   - component: {fileID: 2424689946581544700}
-  - component: {fileID: 1367336747256448202}
   - component: {fileID: 1613924895749050787}
   m_Layer: 0
   m_Name: InteractableSteeringWheel
@@ -180,24 +179,6 @@ MonoBehaviour:
   turnStrength: 5
   steeringSmoothTime: 1
   turnShipAngleMultiplier: 10
---- !u!114 &1367336747256448202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4247394284411295044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adbbd634751610419a538a88b039743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
-  collider: {fileID: 5196986815099936866}
-  priority: 0
-  stopsPlayerMovement: 1
-  removesItemWhenOutOfRange: 1
-  repairHealthPerSecond: 10
 --- !u!210 &1613924895749050787
 SortingGroup:
   m_ObjectHideFlags: 0

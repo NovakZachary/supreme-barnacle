@@ -629,7 +629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3946784720710581438}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a54b42c373e4310b5433396c54b0c39, type: 3}
   m_Name: 
@@ -638,7 +638,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   damageTakenPerSecond: 1
-  isStructural: 1
+  isStructural: 0
 --- !u!114 &2029604672135143257
 MonoBehaviour:
   m_ObjectHideFlags: 0
