@@ -104,7 +104,7 @@ public class ShipState : SingletonBehaviour<ShipState>
     /// Collection of modifiers to shipAngle. Each layer/modifier is applied additively. Result is the sum of all layers.
     /// </summary>
     public HashSet<Func<float>> shipAngleLayers = new();
-
+    
     private void Update()
     {
         UpdateShipHealth();
