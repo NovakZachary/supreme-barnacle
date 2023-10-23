@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8847257564630220275}
   - component: {fileID: -6914529923550642807}
   - component: {fileID: 5679680440451254380}
+  - component: {fileID: 5060798147842725292}
   m_Layer: 0
   m_Name: Puddle_1
   m_TagString: Untagged
@@ -169,3 +170,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a22de74ea341bbafde8b652b7342c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5060798147842725292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604459260048283583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f245eb7fe5d4f488361b24664d8673a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 734875248981402035}
+  area: {fileID: 8910982825709168609}
+  duration: 20
+  areaDisableThreshold: 16
+  opacityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0009965831
+      value: 0.73021585
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9980469
+      value: 0.026378632
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
