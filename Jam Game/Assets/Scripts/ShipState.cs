@@ -74,10 +74,29 @@ public class ShipState : SingletonBehaviour<ShipState>
 
     public HashSet<ShipComponent> shipComponents = new();
 
+    [Header("Ship tilt")]
+    [Tooltip("Multiplier to how strong gravity is.")]
+    public float gravityStrength = 1f;
+    [Tooltip("Minimum angle at which gravity begins affecting objects on the ship.")]
+    [Range(0, 90)]
+    public float gravityMinimumAngle = 5f;
+    [Tooltip("Ship tilt angle in degrees.")]
+    [Range(-90, 90)]
+    public float shipAngle = 0;
+
     private void Update()
     {
-        // Probably better to not update values from here, but it's a game jam
+        UpdateShipHealth();
+        UpdateShipTilt();
 
+        if (shipIntegrity < float.Epsilon)
+        {
+            Debug.Log("Game lost");
+        }
+    }
+
+    private void UpdateShipHealth()
+    {
         timeSurvivedSeconds += Time.deltaTime;
         shipHealth = float.Epsilon;
         shipMaxHealth = float.Epsilon;
@@ -91,10 +110,12 @@ public class ShipState : SingletonBehaviour<ShipState>
         }
 
         shipIntegrity = (shipHealth - shipMaxHealth * shipSinkThreshold) / (shipMaxHealth - shipMaxHealth * shipSinkThreshold);
+    }
 
-        if (shipIntegrity < float.Epsilon)
-        {
-            Debug.Log("Game lost");
-        }
+    private void UpdateShipTilt()
+    {
+        var direction = Mathf.Sign(shipAngle);
+        var effectiveAngle = Mathf.Clamp(Mathf.Abs(shipAngle) - gravityMinimumAngle, 0, 90);
+        Physics2D.gravity = new Vector2(direction * Mathf.Sin(effectiveAngle * Mathf.Deg2Rad) * gravityStrength * 9.81f, 0);
     }
 }

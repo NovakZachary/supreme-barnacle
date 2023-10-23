@@ -45,4 +45,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
+  input:
+    sprint: 304
+    moveUp: 119
+    moveDown: 115
+    moveLeft: 97
+    moveRight: 100
+    interact: 101
   playerDrunkeness: 0
+  playerDrunkenessNoise: 0
+  shipSpeed: {x: 0, y: 0}
+  timeSurvivedSeconds: 0
+  secondsPerHour: 10
+  startingHour: 8
+  shipDamageTakenMultiplier: 1
+  shipHealth: 1
+  shipMaxHealth: 1
+  shipSinkThreshold: 0.4
+  shipIntegrity: 1
+  gravityStrength: 5
+  gravityMinimumAngle: 5
+  shipAngle: 0
