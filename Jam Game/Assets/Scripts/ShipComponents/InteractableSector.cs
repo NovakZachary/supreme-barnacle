@@ -34,7 +34,7 @@ public abstract class InteractableSector : MonoBehaviour
         if (collider.IsPlayerColliding(out var playerMovement))
         {
             Debug.Log($"Player is trigger colliding with interacted with {ShipComponent.displayName}");
-            if (Input.GetKey(GetInteractKey()))
+            if (Input.GetKeyDown(GetInteractKey()))
             {
                 Debug.Log($"Player has interacted with {ShipComponent.displayName}");
                 if (!PlayerIsInteracting)

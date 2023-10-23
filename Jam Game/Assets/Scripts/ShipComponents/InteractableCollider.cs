@@ -32,7 +32,7 @@ public class InteractableCollider : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.attachedRigidbody != null && other.attachedRigidbody.gameObject == playerMovement.gameObject)
+        if (other.attachedRigidbody != null && playerMovement != null && other.attachedRigidbody.gameObject == playerMovement.gameObject)
         {
             playerMovement = null;
         }

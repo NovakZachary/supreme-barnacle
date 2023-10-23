@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LookoutTower : InteractableSector
 {
+    public readonly HashSet<object> LookoutRequesters = new HashSet<object>();
     [SerializeField] private LookoutCameras lookoutCameras;
 
     [SerializeField] private int maxPriority = 100;
@@ -15,19 +16,32 @@ public class LookoutTower : InteractableSector
         DisableLookoutCameras();
     }
 
+    protected override void Update()
+    {
+        base.Update();
+        if (LookoutRequesters.Count > 0)
+        {
+            EnableLookoutCamera();
+        }
+        else
+        {
+            DisableLookoutCameras();
+        }
+    }
+
     public override void StartInteracting()
     {
         base.StartInteracting();
-        EnableLookoutCamera();
+        LookoutRequesters.Add(this);
     }
-    
+
     public override void StopInteracting()
     {
         base.StopInteracting();
-        DisableLookoutCameras();
+        LookoutRequesters.Remove(this);
     }
-    
-    public void EnableLookoutCamera()
+
+    private void EnableLookoutCamera()
     {
         if (HasReset)
         {
@@ -41,7 +55,7 @@ public class LookoutTower : InteractableSector
         }
     }
 
-    public void DisableLookoutCameras()
+    private void DisableLookoutCameras()
     {
         lookoutCameras.BasicLookoutCamera.Priority = minPriority;
         lookoutCameras.EnhancedLookoutCamera.Priority = minPriority;

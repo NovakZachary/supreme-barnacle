@@ -29,7 +29,7 @@ public class SteeringWheel : InteractableSector
         
         if (PlayerIsInteracting)
         {
-            lookoutTower.EnableLookoutCamera();
+            lookoutTower.LookoutRequesters.Add(this);
             
             if (Input.GetKey(ShipState.Instance.input.moveLeft))
             {
@@ -57,7 +57,7 @@ public class SteeringWheel : InteractableSector
     
     private void StopTurningShip()
     {
-        lookoutTower.DisableLookoutCameras();
+        lookoutTower.LookoutRequesters.Remove(this);
         
         if (Mathf.Abs(ShipState.Instance.shipSpeed.x) > 0.001)
         {
