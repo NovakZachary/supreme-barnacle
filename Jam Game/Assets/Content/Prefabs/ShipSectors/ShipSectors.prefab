@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableSail
       objectReference: {fileID: 0}
+    - target: {fileID: 5762668825254958229, guid: 40bf8b49fbca4754f9b369abf3bad43c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.54
+      objectReference: {fileID: 0}
     - target: {fileID: 8148311424999279291, guid: 40bf8b49fbca4754f9b369abf3bad43c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
