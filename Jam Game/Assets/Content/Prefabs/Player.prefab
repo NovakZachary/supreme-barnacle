@@ -384,6 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946173193878621480}
   - component: {fileID: 2782327140952514237}
+  - component: {fileID: 2020336426630895076}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -441,6 +442,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!70 &2020336426630895076
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326513249236723639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.415406}
+  m_Size: {x: 0.915406, y: 1.830812}
+  m_Direction: 0
 --- !u!1001 &4150892101505259192
 PrefabInstance:
   m_ObjectHideFlags: 0

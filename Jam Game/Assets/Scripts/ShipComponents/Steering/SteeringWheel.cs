@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SteeringWheel : InteractableSector
 {
+    [Header("Dependencies")] 
+    [SerializeField] private LookoutTower lookoutTower;
+    
     [Header("Configuration")]
     [SerializeField] private float turnStrength = 1f;
     [SerializeField] private float steeringSmoothTime = 0.1f;
@@ -26,6 +29,8 @@ public class SteeringWheel : InteractableSector
         
         if (PlayerIsInteracting)
         {
+            lookoutTower.EnableLookoutCamera();
+            
             if (Input.GetKey(ShipState.Instance.input.moveLeft))
             {
                 var targetSpeed = -turnStrength;
@@ -52,6 +57,8 @@ public class SteeringWheel : InteractableSector
     
     private void StopTurningShip()
     {
+        lookoutTower.DisableLookoutCameras();
+        
         if (Mathf.Abs(ShipState.Instance.shipSpeed.x) > 0.001)
         {
             TurnShip(0);
