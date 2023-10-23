@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7342162719698652380
+--- !u!1 &7162099257565874733
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8711375594465189644}
-  - component: {fileID: 355733358608030263}
-  - component: {fileID: -3959038033771209954}
+  - component: {fileID: 7015826778409327873}
+  - component: {fileID: 5834680011936044638}
   m_Layer: 0
-  m_Name: SunLight
+  m_Name: SmallLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8711375594465189644
+--- !u!4 &7015826778409327873
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342162719698652380}
+  m_GameObject: {fileID: 7162099257565874733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,27 +32,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355733358608030263
+--- !u!114 &5834680011936044638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342162719698652380}
+  m_GameObject: {fileID: 7162099257565874733}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_LightType: 4
+  m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: dbfd2e2ef12e2fd800000000ed17953ba52cf809
+  m_ApplyToSortingLayers: dbfd2e2ef12e2fd800000000a52cf809ed17953b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -71,8 +70,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 2.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -83,41 +82,3 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &-3959038033771209954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342162719698652380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f25f75a182645c2b044a2be59dc88a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetLight: {fileID: 355733358608030263}
-  brightnessAtHours:
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.025
-  - 0.5
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 0.5
-  - 0.025
-  - 0.025
