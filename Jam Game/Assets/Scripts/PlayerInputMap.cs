@@ -11,4 +11,5 @@ public class PlayerInputMap
     public KeyCode moveLeft = KeyCode.A;
     public KeyCode moveRight = KeyCode.D;
     public KeyCode interact = KeyCode.E;
+    public KeyCode repair = KeyCode.R;
 }

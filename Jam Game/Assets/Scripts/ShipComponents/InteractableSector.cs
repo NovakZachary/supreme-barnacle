@@ -11,17 +11,17 @@ public abstract class InteractableSector : MonoBehaviour
     [SerializeField] private InteractableCollider collider;
     
     [Header("Configuration")]
-    [SerializeField] private float timeUntilReset;
+    [SerializeField] private float timeAfterInteractionUntilStopsWorking;
 
     public bool PlayerIsInteracting { get; private set; }
     public bool HasReset => resetTimer == 0;
 
-    private ShipComponent shipComponent;
+    public ShipComponent ShipComponent { get; private set; }
     private float resetTimer;
 
     private void Awake()
     {
-        shipComponent = GetComponent<ShipComponent>();
+        ShipComponent = GetComponent<ShipComponent>();
         if (collider == null)
         {
             collider = GetComponentInChildren<InteractableCollider>();
@@ -33,10 +33,10 @@ public abstract class InteractableSector : MonoBehaviour
     {
         if (collider.IsPlayerColliding(out var playerMovement))
         {
-            Debug.Log($"Player is trigger colliding with interacted with {shipComponent.displayName}");
-            if (Input.GetKey(ShipState.Instance.input.interact))
+            Debug.Log($"Player is trigger colliding with interacted with {ShipComponent.displayName}");
+            if (Input.GetKey(GetInteractKey()))
             {
-                Debug.Log($"Player has interacted with {shipComponent.displayName}");
+                Debug.Log($"Player has interacted with {ShipComponent.displayName}");
                 if (!PlayerIsInteracting)
                 {
                     StartInteracting();
@@ -52,12 +52,6 @@ public abstract class InteractableSector : MonoBehaviour
             StopInteracting();
         }
 
-        if (PlayerIsInteracting == false && Input.GetKey(ShipState.Instance.input.interact))
-        {
-            StartInteracting();
-            PlayerIsInteracting = true;
-        }
-
         if (!PlayerIsInteracting)
         {
             resetTimer -= Time.deltaTime;
@@ -65,7 +59,7 @@ public abstract class InteractableSector : MonoBehaviour
         }
         else
         {
-            resetTimer = timeUntilReset;
+            resetTimer = timeAfterInteractionUntilStopsWorking;
         }
     }
 
@@ -79,5 +73,10 @@ public abstract class InteractableSector : MonoBehaviour
     {
         ShipState.Instance.stopPlayerMovementRequests.Remove(this);
         PlayerIsInteracting = false;
+    }
+
+    public virtual KeyCode GetInteractKey()
+    {
+        return ShipState.Instance.input.interact;
     }
 }
