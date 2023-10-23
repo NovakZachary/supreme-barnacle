@@ -79,6 +79,7 @@ public class PlayerInteraction : MonoBehaviour
         if (highestPriorityInteractable && isInteracting)
         {
             highestPriorityInteractable.StopInteracting();
+            isInteracting = false;
         }
 
         highestPriorityInteractable = interactable;
