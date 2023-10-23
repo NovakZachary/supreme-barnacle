@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LowerSail : InteractableSector
 {
-    [SerializeField] private float smoothTimeToLower = 5f;
+    [SerializeField] private float lowerPerSecond = 2f;
     
     private float verticalVelocity = 0f;
     
@@ -13,7 +13,7 @@ public class LowerSail : InteractableSector
         {
             ShipState.Instance.shipSpeed = new Vector2(
                 ShipState.Instance.shipSpeed.x,
-                Mathf.SmoothStep(ShipState.Instance.shipSpeed.y, ShipState.Instance.minYSpeed, smoothTimeToLower)
+                Mathf.Clamp(ShipState.Instance.shipSpeed.y - lowerPerSecond * Time.deltaTime, ShipState.Instance.minYSpeed, ShipState.Instance.maxYSpeed)
             );
         }
     }

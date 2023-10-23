@@ -25,6 +25,7 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Header("Ship movement")]
     public Vector2 shipSpeed = Vector2.zero;
     public bool MastLowered => Math.Abs(shipSpeed.y - maxYSpeed) < 0.1f;
+    public bool MastRaised => Math.Abs(shipSpeed.y - minYSpeed) < 0.1f;
     public float minYSpeed = 1;
     public float maxYSpeed = 10;
     public float distanceTraveled = 0;

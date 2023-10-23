@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RaiseSail : InteractableSector
 {
-    [SerializeField] private float smoothTimeToRaise = 5f;
+    [SerializeField] private float raisePerSecond = 2;
 
     protected override void Update()
     {
@@ -11,7 +11,7 @@ public class RaiseSail : InteractableSector
         {
             ShipState.Instance.shipSpeed = new Vector2(
                 ShipState.Instance.shipSpeed.x,
-                Mathf.SmoothStep(ShipState.Instance.shipSpeed.y, ShipState.Instance.maxYSpeed, smoothTimeToRaise)
+                Mathf.Clamp(ShipState.Instance.shipSpeed.y + raisePerSecond * Time.deltaTime, ShipState.Instance.minYSpeed, ShipState.Instance.maxYSpeed)
             );
         }
     }
