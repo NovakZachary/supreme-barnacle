@@ -23,10 +23,8 @@ public class SteeringWheel : InteractableSector
         ShipState.Instance.shipAngleLayers.Remove(CalculateShipAngle);
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
-        
         if (Player.Instance.interaction.activeInteractable == this)
         {
             lookoutTower.LookoutRequesters.Add(this);

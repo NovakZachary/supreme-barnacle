@@ -4,9 +4,8 @@ public class RepairableSector : InteractableSector
 {
     [SerializeField] private float repairHealthPerSecond = 10f;
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         if (Player.Instance.interaction.activeInteractable == this)
         {
             var healAmount = repairHealthPerSecond - (repairHealthPerSecond * ShipState.Instance.playerDrunkeness);

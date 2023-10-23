@@ -4,9 +4,8 @@ public class RaiseSail : InteractableSector
 {
     [SerializeField] private float raisePerSecond = 2;
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         if (Player.Instance.interaction.activeInteractable == this)
         {
             ShipState.Instance.shipVelocity = new Vector2(

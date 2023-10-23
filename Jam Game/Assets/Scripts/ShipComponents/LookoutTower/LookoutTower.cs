@@ -14,9 +14,8 @@ public class LookoutTower : InteractableSector
         DisableLookoutCameras();
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         if (LookoutRequesters.Count > 0)
         {
             EnableLookoutCamera();

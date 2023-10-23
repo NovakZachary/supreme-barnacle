@@ -27,11 +27,6 @@ public class InteractableSector : MonoBehaviour
         }
     }
 
-    protected virtual void Update()
-    {
-        // Empty for now
-    }
-
     public virtual void StartInteracting()
     {
         Player.Instance.items.heldItem = interactionItem;

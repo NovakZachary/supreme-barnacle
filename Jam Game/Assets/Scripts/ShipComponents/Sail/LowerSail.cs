@@ -6,9 +6,8 @@ public class LowerSail : InteractableSector
     
     private float verticalVelocity = 0f;
     
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         if (Player.Instance.interaction.activeInteractable == this)
         {
             ShipState.Instance.shipVelocity = new Vector2(

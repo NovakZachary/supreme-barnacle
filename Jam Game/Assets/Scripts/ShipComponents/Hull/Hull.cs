@@ -18,9 +18,8 @@ public class Hull : RepairableSector
         timeUntilNextFlood = floodTime;
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         timeUntilNextFlood -= Time.deltaTime;
         if (ShipComponent.IsBroken)
         {
