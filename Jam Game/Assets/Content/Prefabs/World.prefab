@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3914049666585151414}
   - component: {fileID: 7060400750649131374}
+  - component: {fileID: 8259195415039967192}
   m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
@@ -214,6 +215,18 @@ PolygonCollider2D:
       - {x: 7.5802274, y: -1.9480574}
       - {x: 5.760338, y: 2.1124978}
   m_UseDelaunayMesh: 0
+--- !u!114 &8259195415039967192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611070445259118461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a22de74ea341bbafde8b652b7342c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1842447059818774035
 GameObject:
   m_ObjectHideFlags: 0
@@ -11614,6 +11627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262792936548179451}
   - component: {fileID: 9141947712743481451}
+  - component: {fileID: 6603974185607620967}
   m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
@@ -11697,6 +11711,18 @@ PolygonCollider2D:
       - {x: 7.5802274, y: -1.9480574}
       - {x: 5.760338, y: 2.1124978}
   m_UseDelaunayMesh: 0
+--- !u!114 &6603974185607620967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8302190635740817140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a22de74ea341bbafde8b652b7342c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &838051898723994091
 PrefabInstance:
   m_ObjectHideFlags: 0
