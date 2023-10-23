@@ -9,7 +9,7 @@ public class InteractableSector : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private Item interactionItem;
-    [SerializeField] private InteractableCollider collider;
+    [SerializeField] protected InteractableCollider collider;
     
     [Header("Configuration")]
     [SerializeField] private float timeAfterInteractionUntilStopsWorking;
