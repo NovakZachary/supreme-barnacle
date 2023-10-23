@@ -15,12 +15,12 @@ public class ShipComponent : MonoBehaviour
 
     private void OnEnable()
     {
-        ShipState.Instance.shipComponents.Add(this);
+        ShipState.Instance.RegisterShipComponent(this);
     }
 
     private void OnDisable()
     {
-        ShipState.Instance.shipComponents.Remove(this);
+        ShipState.Instance.UnregisterShipComponent(this);
     }
 
     private void Awake()

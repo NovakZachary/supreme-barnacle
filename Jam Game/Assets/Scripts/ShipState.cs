@@ -80,7 +80,11 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(0, 1)]
     public float shipIntegrity;
 
-    public HashSet<ShipComponent> shipComponents = new();
+    private HashSet<ShipComponent> shipComponents = new();
+
+    public IReadOnlyCollection<ShipComponent> ShipComponents => shipComponents;
+    public event Action<ShipComponent> ShipComponentAdded;
+    public event Action<ShipComponent> ShipComponentRemoved;
 
     [Header("Ship tilt")]
     [Tooltip("Multiplier to how strong gravity is.")]
@@ -92,6 +96,9 @@ public class ShipState : SingletonBehaviour<ShipState>
     [Range(-90, 90)]
     public float shipAngle = 0;
 
+    /// <summary>
+    /// Collection of modifiers to shipAngle. Each layer/modifier is applied additively. Result is the sum of all layers.
+    /// </summary>
     public HashSet<Func<float>> shipAngleLayers = new();
 
     private void Update()
@@ -102,6 +109,22 @@ public class ShipState : SingletonBehaviour<ShipState>
         if (shipIntegrity < float.Epsilon)
         {
             Debug.Log("Game lost");
+        }
+    }
+
+    public void RegisterShipComponent(ShipComponent component)
+    {
+        if (shipComponents.Add(component))
+        {
+            ShipComponentAdded?.Invoke(component);
+        }
+    }
+
+    public void UnregisterShipComponent(ShipComponent component)
+    {
+        if (shipComponents.Remove(component))
+        {
+            ShipComponentRemoved?.Invoke(component);
         }
     }
 

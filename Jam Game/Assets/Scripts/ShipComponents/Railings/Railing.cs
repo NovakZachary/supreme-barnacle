@@ -5,10 +5,10 @@ public class Railing : MonoBehaviour
 {
     public void DamageShip(float damage, Vector3 collisionPoint)
     {
-        var item = Random.Range(0, ShipState.Instance.shipComponents.Count);
+        var item = Random.Range(0, ShipState.Instance.ShipComponents.Count);
         var i = 0;
         
-        foreach (var instanceShipComponent in ShipState.Instance.shipComponents)
+        foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
         {
             if (i == item)
             {
