@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bucket: {fileID: 8777674886351406409}
-  maxDistance: 10
+  maxDistance: 3
   speed: 10
   rotationSpeed: 1440
 --- !u!50 &2943925458019001097

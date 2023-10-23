@@ -11,33 +11,41 @@ public class PlayerItemController : MonoBehaviour
     public Item heldItem;
 
     private Item previousHeldItem;
+    private int lastChangeFrame;
 
     private void Update()
     {
-        if (previousHeldItem != heldItem && heldItem)
+        if (heldItem != previousHeldItem && heldItem)
         {
+            Debug.Log("Picked up");
+
             heldItem.OnPickup();
         }
 
-        if (previousHeldItem != heldItem && previousHeldItem)
+        if (heldItem != previousHeldItem && previousHeldItem)
         {
+            Debug.Log("Used");
+
             previousHeldItem.OnDrop();
         }
 
-        previousHeldItem = heldItem;
+        if (previousHeldItem != heldItem)
+        {
+            previousHeldItem = heldItem;
+            lastChangeFrame = Time.frameCount;
+        }
 
         itemSlot.SetActive(heldItem != null);
         spriteRenderer.sprite = heldItem == null ? null : heldItem.sprite;
-
         if (heldItem)
         {
             spriteRenderer.transform.localPosition = heldItem.position;
             spriteRenderer.transform.localScale = heldItem.scale;
+        }
 
-            if (Input.GetKey(ShipState.Instance.input.interact))
-            {
-                heldItem = null;
-            }
+        if (lastChangeFrame != Time.frameCount && Input.GetKeyDown(ShipState.Instance.input.interact))
+        {
+            heldItem = null;
         }
     }
 }

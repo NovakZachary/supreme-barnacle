@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Dependencies")]
     public Rigidbody2D rb;
+    public Collider2D feetCollider;
 
     [Header("Basic")]
     public float movementSpeed = 8f;
@@ -48,9 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float timeSpentWalkingInWaterWithoutSlipping = 0;
 
-    private HashSet<IceArea> iceAreas = new();
-    private HashSet<WaterPuddleArea> waterPuddleAreas = new();
-    private HashSet<SlowArea> slowAreas = new();
+    public HashSet<IceArea> iceAreas = new();
+    public HashSet<WaterPuddleArea> waterPuddleAreas = new();
+    public HashSet<SlowArea> slowAreas = new();
 
     [Header("Animations")]
     public Animator animator;
@@ -300,42 +301,6 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 }
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.TryGetComponent(out IceArea iceArea))
-        {
-            iceAreas.Add(iceArea);
-        }
-
-        if (other.TryGetComponent(out WaterPuddleArea waterPuddleArea))
-        {
-            waterPuddleAreas.Add(waterPuddleArea);
-        }
-
-        if (other.TryGetComponent(out SlowArea slowArea))
-        {
-            slowAreas.Add(slowArea);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.TryGetComponent(out IceArea iceArea))
-        {
-            iceAreas.Remove(iceArea);
-        }
-
-        if (other.TryGetComponent(out WaterPuddleArea waterPuddleArea))
-        {
-            waterPuddleAreas.Remove(waterPuddleArea);
-        }
-
-        if (other.TryGetComponent(out SlowArea slowArea))
-        {
-            slowAreas.Remove(slowArea);
         }
     }
 

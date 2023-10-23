@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.125}
+  m_Offset: {x: -0.0013727546, y: -0.1153909}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.84350944, y: 0.8654729}
   m_EdgeRadius: 0
 --- !u!114 &1872509591853010762
 MonoBehaviour:
@@ -193,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3378934531043109366, guid: 30f0d3c9dd1731042b9b453c33a38db6, type: 3}
       propertyPath: m_Name
-      value: PhysicsObject Variant
+      value: Crate_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
