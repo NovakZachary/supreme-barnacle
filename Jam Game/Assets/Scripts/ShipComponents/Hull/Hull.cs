@@ -4,6 +4,7 @@ public class Hull : InteractableSector
 {
     [Header("Dependencies")]
     [SerializeField] private WaterPuddleArea waterPuddleArea;
+    [SerializeField] private GameObject visualWhenBroken;
     
     [Header("Configuration")]
     [SerializeField] private float floodTime = 10f;
@@ -21,12 +22,20 @@ public class Hull : InteractableSector
     {
         base.Update();
         timeUntilNextFlood -= Time.deltaTime;
-        
-        if (ShipComponent.IsBroken && timeUntilNextFlood < 0 && floodCount < maxWaterAreasSpawned)
+        if (ShipComponent.IsBroken)
         {
-            Instantiate(waterPuddleArea, collider.RandomPointWithinColliderArea(), Quaternion.identity);
-            timeUntilNextFlood = floodTime;
-            floodCount++;
+            visualWhenBroken.SetActive(true);
+            
+            if (timeUntilNextFlood < 0 && floodCount < maxWaterAreasSpawned)
+            {
+                Instantiate(waterPuddleArea, collider.RandomPointWithinColliderArea(), Quaternion.identity);
+                timeUntilNextFlood = floodTime;
+                floodCount++;
+            }
+        }
+        else
+        {
+            visualWhenBroken.SetActive(false);
         }
     }
 }
