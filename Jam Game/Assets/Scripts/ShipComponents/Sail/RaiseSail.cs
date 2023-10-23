@@ -7,7 +7,7 @@ public class RaiseSail : InteractableSector
     protected override void Update()
     {
         base.Update();
-        if (PlayerIsInteracting)
+        if (Player.Instance.interaction.activeInteractable == this)
         {
             ShipState.Instance.shipVelocity = new Vector2(
                 ShipState.Instance.shipVelocity.x,

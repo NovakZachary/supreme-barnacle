@@ -7,7 +7,7 @@ public class RepairableSector : InteractableSector
     protected override void Update()
     {
         base.Update();
-        if (PlayerIsInteracting)
+        if (Player.Instance.interaction.activeInteractable == this)
         {
             var healAmount = repairHealthPerSecond - (repairHealthPerSecond * ShipState.Instance.playerDrunkeness);
             ShipComponent.health += healAmount * Time.deltaTime;
@@ -18,11 +18,6 @@ public class RepairableSector : InteractableSector
     {
         base.StartInteracting();
         ShipComponent.health += repairHealthPerSecond - (repairHealthPerSecond * ShipState.Instance.playerDrunkeness);
-    }
-
-    public override void StopInteracting()
-    {
-        base.StopInteracting();
     }
 
     public override KeyCode GetInteractKey()

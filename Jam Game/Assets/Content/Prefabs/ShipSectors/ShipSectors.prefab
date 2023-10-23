@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hull
       objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -253,6 +261,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hull (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -315,6 +331,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hull (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -376,6 +400,14 @@ PrefabInstance:
     - target: {fileID: 3037883298618742333, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_Name
       value: Hull (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -505,6 +537,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hull (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -566,6 +606,14 @@ PrefabInstance:
     - target: {fileID: 3037883298618742333, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_Name
       value: Hull (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683396503659857136, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5770477072945724143, guid: 21b6c3f2b927f464184d2c4640f1055a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -9,14 +9,10 @@ public class InteractableSector : MonoBehaviour
 
     [Header("Configuration")] 
     [SerializeField] private int priority;
-    [SerializeField] private float timeAfterInteractionUntilStopsWorking;
     [SerializeField] private bool stopsPlayerMovement = true;
     [SerializeField] private bool removesItemWhenOutOfRange = true;
 
-    private PlayerInteract playerInteract;
     public int Priority => priority;
-    public bool PlayerIsInteracting => playerInteract != null && playerInteract.CurrentInteractable == this;
-    public bool HasReset => resetTimer == 0;
 
     public ShipComponent ShipComponent { get; private set; }
     private float resetTimer;
@@ -33,29 +29,11 @@ public class InteractableSector : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (collider.IsPlayerColliding(out playerInteract))
-        {
-            playerInteract.CollidingWithInteractable(this);
-        }
-        else if (playerInteract != null)
-        {
-            playerInteract.StopCollidingWithInteractable(this);
-        }
-
-        if (!PlayerIsInteracting)
-        {
-            resetTimer -= Time.deltaTime;
-            resetTimer = Mathf.Clamp(resetTimer, 0, resetTimer);
-        }
-        else
-        {
-            resetTimer = timeAfterInteractionUntilStopsWorking;
-        }
+        // Empty for now
     }
 
     public virtual void StartInteracting()
     {
-        //PlayerIsInteracting = true;
         Player.Instance.items.heldItem = interactionItem;
 
         if (stopsPlayerMovement)

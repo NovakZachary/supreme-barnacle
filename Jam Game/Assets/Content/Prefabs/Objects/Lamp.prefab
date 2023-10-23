@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireData: {fileID: 11400000, guid: 88e3bc8a302ac2d45bc8d7455b353291, type: 2}
-  spreadAttemptCooldown: 7.5
+  spreadAttemptCooldown: 6
   spreadChance: 0.05
   spreadCheckRadius: 0.5
   spreadRange: 2

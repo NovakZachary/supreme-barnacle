@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Dependencies")]
     public Rigidbody2D rb;
-    public Collider2D feetCollider;
 
     [Header("Basic")]
     public float movementSpeed = 8f;

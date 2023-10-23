@@ -41,16 +41,8 @@ public class LookoutTower : InteractableSector
 
     private void EnableLookoutCamera()
     {
-        if (HasReset)
-        {
-            lookoutCameras.BasicLookoutCamera.Priority = maxPriority;
-            lookoutCameras.EnhancedLookoutCamera.Priority = minPriority;
-        }
-        else
-        {
-            lookoutCameras.BasicLookoutCamera.Priority = minPriority;
-            lookoutCameras.EnhancedLookoutCamera.Priority = maxPriority;
-        }
+        lookoutCameras.BasicLookoutCamera.Priority = minPriority;
+        lookoutCameras.EnhancedLookoutCamera.Priority = maxPriority;
     }
 
     private void DisableLookoutCameras()

@@ -1122,6 +1122,7 @@ GameObject:
   - component: {fileID: 2304356499231840105}
   - component: {fileID: 6672664041645419959}
   - component: {fileID: 7622487739086826054}
+  - component: {fileID: 3322278134382552403}
   m_Layer: 0
   m_Name: RaiseSail
   m_TagString: Untagged
@@ -1177,7 +1178,6 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 6761842228654602432}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   raisePerSecond: 2
@@ -1196,10 +1196,36 @@ MonoBehaviour:
   interactionItem: {fileID: 0}
   collider: {fileID: 6761842228654602432}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10
+--- !u!50 &3322278134382552403
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897470075156351881}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6249074787387411955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1283,7 @@ GameObject:
   - component: {fileID: 6967897291020647438}
   - component: {fileID: 52332867391487188}
   - component: {fileID: 8966891240851963067}
+  - component: {fileID: 5915601971088283835}
   m_Layer: 0
   m_Name: LowerSail
   m_TagString: Untagged
@@ -1312,7 +1339,6 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 2537265617477924016}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   lowerPerSecond: 2
@@ -1331,10 +1357,36 @@ MonoBehaviour:
   interactionItem: {fileID: 0}
   collider: {fileID: 2537265617477924016}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10
+--- !u!50 &5915601971088283835
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805343125237931549}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7706923135349394434
 GameObject:
   m_ObjectHideFlags: 0

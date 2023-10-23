@@ -597,6 +597,7 @@ GameObject:
   - component: {fileID: 5705077673662471992}
   - component: {fileID: 3990708090541457928}
   - component: {fileID: 2029604672135143257}
+  - component: {fileID: 6012661479032165978}
   m_Layer: 0
   m_Name: BucketStation
   m_TagString: Untagged
@@ -653,9 +654,35 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: 84a1837e6329e3a49b0065c64d279343, type: 2}
   collider: {fileID: 3543547240995750412}
   priority: 10
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 0
   removesItemWhenOutOfRange: 0
+--- !u!50 &6012661479032165978
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946784720710581438}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4763743816456433977
 GameObject:
   m_ObjectHideFlags: 0

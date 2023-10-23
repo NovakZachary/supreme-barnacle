@@ -174,7 +174,6 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: ae9c887b424df044f847e2edb3f2af58, type: 2}
   collider: {fileID: 5196986815099936866}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   lookoutTower: {fileID: 0}
@@ -196,7 +195,6 @@ MonoBehaviour:
   interactionItem: {fileID: 0}
   collider: {fileID: 5196986815099936866}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10

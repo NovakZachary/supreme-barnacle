@@ -27,7 +27,7 @@ public class SteeringWheel : InteractableSector
     {
         base.Update();
         
-        if (PlayerIsInteracting)
+        if (Player.Instance.interaction.activeInteractable == this)
         {
             lookoutTower.LookoutRequesters.Add(this);
             
@@ -41,7 +41,7 @@ public class SteeringWheel : InteractableSector
                 TurnShip(targetSpeed);
             }
         } 
-        else if(HasReset)
+        else
         {
             StopTurningShip();
         }

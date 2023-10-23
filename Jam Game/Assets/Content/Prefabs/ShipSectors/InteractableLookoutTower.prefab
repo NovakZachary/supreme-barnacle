@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 2547388063046382371}
   - component: {fileID: 158004323722725522}
   - component: {fileID: 2040522435714969204}
+  - component: {fileID: 4058831478849672887}
   m_Layer: 0
   m_Name: InteractableLookoutTower
   m_TagString: Untagged
@@ -446,7 +447,6 @@ MonoBehaviour:
   interactionItem: {fileID: 11400000, guid: cf1880d4ad9a8ba4995566de5d91518a, type: 2}
   collider: {fileID: 6021403723186379407}
   priority: 0
-  timeAfterInteractionUntilStopsWorking: 30
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   lookoutCameras: {fileID: 5914345425452438350}
@@ -464,6 +464,33 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!50 &4058831478849672887
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2700744237887464686}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 10
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4263761939635341753
 GameObject:
   m_ObjectHideFlags: 0

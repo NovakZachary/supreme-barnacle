@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class InteractableCollider : MonoBehaviour
 {
     private Collider2D collider2D;
-    private PlayerInteract playerInteract;
+    private PlayerInteraction playerInteract;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class InteractableCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.attachedRigidbody != null && col.attachedRigidbody.TryGetComponent<PlayerInteract>(out var player) && player != null)
+        if (col.attachedRigidbody != null && col.attachedRigidbody.TryGetComponent<PlayerInteraction>(out var player) && player != null)
         {
             playerInteract = player;
         }
@@ -29,7 +29,7 @@ public class InteractableCollider : MonoBehaviour
         }
     }
     
-    public bool IsPlayerColliding(out PlayerInteract player)
+    public bool IsPlayerColliding(out PlayerInteraction player)
     {
         player = playerInteract;
         return playerInteract != null;
