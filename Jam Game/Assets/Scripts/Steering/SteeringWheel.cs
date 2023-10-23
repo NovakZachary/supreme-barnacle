@@ -1,78 +1,44 @@
 using UnityEngine;
 
-public class SteeringWheel : MonoBehaviour
+public class SteeringWheel : InteractableSector
 {
     [Header("Configuration")]
     [SerializeField] private float turnStrength = 1f;
     [SerializeField] private float steeringSmoothTime = 0.1f;
+    [SerializeField] private float turnShipAngleMultiplier = 5f;
     
     private PlayerMovement playerMovement;
-    private bool playerSteering = false;
     private float horizontalVelocity;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnEnable()
     {
-        Debug.Log("Hello");
-        if (col.attachedRigidbody != null && col.attachedRigidbody.TryGetComponent<PlayerMovement>(out var player) && player != null)
-        {
-            playerMovement = player;
-        }
+        ShipState.Instance.shipAngleLayers.Add(CalculateShipAngle);
     }
-    
-    private void OnTriggerExit2D(Collider2D other)
+
+    private void OnDisable()
     {
-        if (other.gameObject == playerMovement.gameObject)
-        {
-            playerMovement = null;
-        }
+        ShipState.Instance.shipAngleLayers.Remove(CalculateShipAngle);
     }
 
     private void Update()
     {
-        if (playerMovement == null) return;
+        base.Update();
         
-        if (Input.GetKey(ShipState.Instance.input.interact))
+        if (PlayerIsInteracting)
         {
-            HandleInteract();
-        }
-        
-        if (playerSteering)
-        {
-            //Left
             if (Input.GetKey(ShipState.Instance.input.moveLeft))
             {
                 var targetSpeed = -turnStrength;
                 TurnShip(targetSpeed);
-            } 
-            
-            if (Input.GetKey(ShipState.Instance.input.moveRight))
+            } else if (Input.GetKey(ShipState.Instance.input.moveRight))
             {
                 var targetSpeed = turnStrength; 
                 TurnShip(targetSpeed);
             }
-        }
-        else if(Mathf.Abs(ShipState.Instance.shipSpeed.x) > 0.001)
-        {
-            TurnShip(0);
-        }
-        else
+        } 
+        else if(HasReset)
         {
             StopTurningShip();
-        }
-    }
-
-    private void HandleInteract()
-    {
-        if (!playerSteering)
-        {
-            //TODO: Guaranteed way to disable/lock player decided by player. Perhaps state machine.
-            ShipState.Instance.stopPlayerMovementRequests.Add(this);
-            playerSteering = true;
-        }
-        else
-        {
-            ShipState.Instance.stopPlayerMovementRequests.Remove(this);
-            playerSteering = false;
         }
     }
 
@@ -81,13 +47,26 @@ public class SteeringWheel : MonoBehaviour
         ShipState.Instance.shipSpeed = new Vector2(
                                 Mathf.SmoothDamp(ShipState.Instance.shipSpeed.x, targetSpeed, ref horizontalVelocity, steeringSmoothTime),
                                 ShipState.Instance.shipSpeed.y
-                        ); 
+                        );
     }
+    
     private void StopTurningShip()
     {
-        ShipState.Instance.shipSpeed = new Vector2(
-            0,
-            ShipState.Instance.shipSpeed.y
-        ); 
+        if (Mathf.Abs(ShipState.Instance.shipSpeed.x) > 0.001)
+        {
+            TurnShip(0);
+        }
+        else
+        {
+            ShipState.Instance.shipSpeed = new Vector2(
+                0,
+                ShipState.Instance.shipSpeed.y
+            );
+        }
+    }
+    
+    private float CalculateShipAngle()
+    {
+        return ShipState.Instance.shipSpeed.x * turnShipAngleMultiplier;
     }
 }
