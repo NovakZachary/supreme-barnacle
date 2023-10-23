@@ -385,7 +385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ecdf9fde9744088a547add0e51734a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarPrefab: {fileID: 1903887509778283728, guid: ebffbb10625c94519b61f74dd1afe563, type: 3}
+  healthBarPrefab: {fileID: 1903887509778283728, guid: ebffbb10625c94519b61f74dd1afe563,
+    type: 3}
 --- !u!1 &1854907075488321852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1304,8 @@ MonoBehaviour:
   tiltBar: {fileID: 6040231400842811701}
   distance: 0
   distanceText: {fileID: 1592146058205604228}
+  speed: 0
+  speedText: {fileID: 1085534045678420099}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1543,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
