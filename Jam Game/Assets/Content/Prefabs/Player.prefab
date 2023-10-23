@@ -294,6 +294,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   movement: {fileID: 5007939473288746762}
   items: {fileID: 542805643816041597}
+  spriteRenderer: {fileID: 5923932621876055268}
 --- !u!114 &4531182772521504165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentInteractable: {fileID: 0}
+  interacting: 0
 --- !u!1 &3737671472140729957
 GameObject:
   m_ObjectHideFlags: 0

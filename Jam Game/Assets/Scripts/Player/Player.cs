@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : SingletonBehaviour<Player>
@@ -5,4 +6,5 @@ public class Player : SingletonBehaviour<Player>
     [Header("Dependencies")]
     public PlayerMovement movement;
     public PlayerItemController items;
+    public SpriteRenderer spriteRenderer;
 }

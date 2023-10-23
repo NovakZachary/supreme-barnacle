@@ -55,6 +55,7 @@ MonoBehaviour:
     interact: 101
     repair: 114
   playerDrunkeness: 0
+  playerSoberingRate: 0.1
   playerDrunkenessNoise: 0
   shipSpeed: {x: 1, y: 0}
   minYSpeed: 1
