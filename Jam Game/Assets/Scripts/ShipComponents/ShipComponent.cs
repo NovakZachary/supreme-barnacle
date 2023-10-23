@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ShipComponent : MonoBehaviour
 {
+    public bool IsBroken => health == 0;
+    
     public string displayName = "Ship Component";
 
     public float health = 100;
