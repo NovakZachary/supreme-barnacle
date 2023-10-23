@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 734875248981402035}
   - component: {fileID: 8910982825709168609}
   - component: {fileID: 8847257564630220275}
+  - component: {fileID: -6914529923550642807}
+  - component: {fileID: 5679680440451254380}
   m_Layer: 0
   m_Name: Puddle_1
   m_TagString: Untagged
@@ -143,3 +145,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-6914529923550642807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604459260048283583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb727b99c8c64a63b8cb5c316182c0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5679680440451254380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604459260048283583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a22de74ea341bbafde8b652b7342c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

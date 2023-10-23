@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private HashSet<IceArea> iceAreas = new();
     private HashSet<WaterPuddleArea> waterPuddleAreas = new();
+    private HashSet<SlowArea> slowAreas = new();
 
     [Header("Animations")]
     public Animator animator;
@@ -60,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var movementInput = Vector2.zero;
         var targetVelocity = Vector2.zero;
-        var targetMovementSpeed = movementSpeed;
+        var effectiveMovementSpeed = movementSpeed;
         var effectiveMovementSpeedSmoothTime = movementSpeedSmoothTime;
         var isSprinting = Input.GetKey(ShipState.Instance.input.sprint);
         var canMove = ShipState.Instance.stopPlayerMovementRequests.Count == 0;
@@ -78,23 +79,24 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply drunkeness
         CalculateDrunkeness();
-        ApplyDrunkeness(ref targetVelocity, ref targetMovementSpeed);
+        ApplyDrunkeness(ref targetVelocity, ref effectiveMovementSpeed);
 
         // Apply slipperyness
         ApplyIceSlipping(ref effectiveMovementSpeedSmoothTime);
         ApplyWaterPuddleSlipping(targetVelocity, isSprinting);
+        ApplySlowArea(ref effectiveMovementSpeed);
 
         // Apply sprinting
-        targetMovementSpeed *= isSprinting ? sprintMovementSpeedMultiplier : 1f;
+        effectiveMovementSpeed *= isSprinting ? sprintMovementSpeedMultiplier : 1f;
 
         // Apply movement speed
-        targetVelocity *= targetMovementSpeed;
+        targetVelocity *= effectiveMovementSpeed;
 
         // Apply velocity
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
 
         UpdateFacingDirection(movementInput);
-        UpdateAnimator(movementInput, targetMovementSpeed);
+        UpdateAnimator(movementInput, effectiveMovementSpeed);
     }
 
     private void CalculateDrunkeness()
@@ -133,11 +135,11 @@ public class PlayerMovement : MonoBehaviour
         ShipState.Instance.playerDrunkenessNoise = drunkeness;
     }
 
-    private void ApplyDrunkeness(ref Vector2 targetVelocity, ref float targetMovementSpeed)
+    private void ApplyDrunkeness(ref Vector2 targetVelocity, ref float effectiveMovementSpeed)
     {
         var drunkeness = ShipState.Instance.playerDrunkenessNoise;
 
-        targetMovementSpeed = Mathf.Lerp(targetMovementSpeed, Mathf.Lerp(0, targetMovementSpeed, (drunkeness + 1) / 2), drunkenessMovementSpeedIntensity);
+        effectiveMovementSpeed = Mathf.Lerp(effectiveMovementSpeed, Mathf.Lerp(0, effectiveMovementSpeed, (drunkeness + 1) / 2), drunkenessMovementSpeedIntensity);
         targetVelocity = Quaternion.AngleAxis(drunkeness * drunkenessMaxAngle, Vector3.forward) * targetVelocity;
     }
 
@@ -192,6 +194,17 @@ public class PlayerMovement : MonoBehaviour
         ShipState.Instance.stopPlayerMovementRequests.Remove(stopPlayerMovementRequest);
     }
 
+    private void ApplySlowArea(ref float effectiveMovementSpeed)
+    {
+        var movementSpeedMultiplier = 1f;
+        foreach (var area in slowAreas)
+        {
+            movementSpeedMultiplier = Mathf.Min(movementSpeedMultiplier, area.movementSpeedMultiplier);
+        }
+
+        effectiveMovementSpeed *= movementSpeedMultiplier;
+    }
+
     private void UpdateFacingDirection(Vector2 movementInput)
     {
         if (movementInput.x > 0)
@@ -223,9 +236,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void UpdateAnimator(Vector2 movementInput, float targetMovementSpeed)
+    private void UpdateAnimator(Vector2 movementInput, float effectiveMovementSpeed)
     {
-        animator.SetFloat("MovementSpeed", targetMovementSpeed);
+        animator.SetFloat("MovementSpeed", effectiveMovementSpeed);
 
         var isWalking = movementInput != Vector2.zero;
         if (isWalking)
@@ -301,6 +314,11 @@ public class PlayerMovement : MonoBehaviour
         {
             waterPuddleAreas.Add(waterPuddleArea);
         }
+
+        if (other.TryGetComponent(out SlowArea slowArea))
+        {
+            slowAreas.Add(slowArea);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -313,6 +331,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.TryGetComponent(out WaterPuddleArea waterPuddleArea))
         {
             waterPuddleAreas.Remove(waterPuddleArea);
+        }
+
+        if (other.TryGetComponent(out SlowArea slowArea))
+        {
+            slowAreas.Remove(slowArea);
         }
     }
 
