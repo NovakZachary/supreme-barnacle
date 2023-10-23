@@ -18,9 +18,16 @@ public class UIInterface : MonoBehaviour
     public float health;
     public Slider bar;
 
+    [Header("Tilt Indicator")]
+    private float maxVal = 180;
+    [Range(-90, 90)]
+    public float shipAngle = 0;
+    public Slider tiltBar;
+
     void Start()
     {
         updateMaxHealth(maxHealth);
+        tiltBar.maxValue = maxVal;
     }
 
     // Update is called once per frame
@@ -44,11 +51,18 @@ public class UIInterface : MonoBehaviour
 
         health = Mathf.Clamp(health, 0, maxHealth);
         bar.value = health;
+        setAngleUI();
     }
 
     void updateMaxHealth(float val)
     {
         maxHealth = val;
         bar.maxValue = val;
+    }
+
+    void setAngleUI()
+    {
+        float c = shipAngle + 90;
+        tiltBar.value = c;
     }
 }

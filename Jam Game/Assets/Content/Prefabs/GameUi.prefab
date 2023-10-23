@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 2030526724882224850}
   - component: {fileID: 6040231400842811701}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: Tilt Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1252,6 +1252,8 @@ MonoBehaviour:
   maxHealth: 0
   health: 0
   bar: {fileID: 758543916868742299}
+  shipAngle: 0
+  tiltBar: {fileID: 6040231400842811701}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0

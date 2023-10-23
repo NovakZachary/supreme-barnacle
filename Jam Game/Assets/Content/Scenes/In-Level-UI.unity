@@ -303,6 +303,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8727909427229439629, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
+      propertyPath: shipAngle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8740226041509732367, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
