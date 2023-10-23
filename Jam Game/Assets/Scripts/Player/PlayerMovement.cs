@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         ApplyIceSlipping(ref effectiveMovementSpeedSmoothTime);
         ApplyWaterPuddleSlipping(targetVelocity, isSprinting);
         ApplySlowArea(ref effectiveMovementSpeed);
+        CleanUpAreas();
 
         // Apply sprinting
         effectiveMovementSpeed *= isSprinting ? sprintMovementSpeedMultiplier : 1f;
@@ -204,6 +205,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         effectiveMovementSpeed *= movementSpeedMultiplier;
+    }
+
+    private void CleanUpAreas()
+    {
+        iceAreas.RemoveWhere(area => !area || !area.enabled);
+        waterPuddleAreas.RemoveWhere(area => !area || !area.enabled);
+        slowAreas.RemoveWhere(area => !area || !area.enabled);
     }
 
     private void UpdateFacingDirection(Vector2 movementInput)

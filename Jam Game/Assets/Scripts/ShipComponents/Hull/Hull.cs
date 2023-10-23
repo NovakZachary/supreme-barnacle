@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Hull : InteractableSector
+public class Hull : RepairableSector
 {
     [Header("Dependencies")]
     [SerializeField] private WaterPuddleArea waterPuddleArea;

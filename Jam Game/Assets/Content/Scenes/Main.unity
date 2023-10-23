@@ -188,14 +188,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 577737384495987238, guid: 1feb0de716bc9184c97b7cb8a7be9c15, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1905630800085972156, guid: 1feb0de716bc9184c97b7cb8a7be9c15, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.54
-      objectReference: {fileID: 0}
     - target: {fileID: 3816836584455748444, guid: 1feb0de716bc9184c97b7cb8a7be9c15, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -614,14 +606,6 @@ PrefabInstance:
     - target: {fileID: 6312208749999381001, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6701531949279830713, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6701531949279830713, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7388160037103945702, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_Name
@@ -1388,18 +1372,6 @@ PrefabInstance:
     - target: {fileID: 5944417574958095970, guid: 24028b2008eaac34c84184f1b53f534e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8859199731732977742, guid: 24028b2008eaac34c84184f1b53f534e, type: 3}
-      propertyPath: field of view
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8859199731732977742, guid: 24028b2008eaac34c84184f1b53f534e, type: 3}
-      propertyPath: far clip plane
-      value: 5000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8859199731732977742, guid: 24028b2008eaac34c84184f1b53f534e, type: 3}
-      propertyPath: near clip plane
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

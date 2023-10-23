@@ -1,11 +1,11 @@
-using UnityEngine.UI;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class UIInterface : MonoBehaviour
 {
     [Header("Day Night Indicator")]
-    public bool isNight;
     public Image DayNightIndicator;
     public Sprite dayImage;
     public Sprite nightImage;
@@ -14,63 +14,55 @@ public class UIInterface : MonoBehaviour
     public bool isEvent;
     public GameObject eventIndicator;
 
+    [FormerlySerializedAs("bar")]
     [Header("Health Bar")]
-    public float maxHealth;
-    public float health;
-    public Slider bar;
+    public Slider healthBar;
 
     [Header("Tilt Indicator")]
-    private float maxVal = 180;
     [Range(-90, 90)]
     public float shipAngle = 0;
     public Slider tiltBar;
 
     [Header("Distance Tracker")]
     public float distance = 0;
-    public TMP_Text text;
+    [FormerlySerializedAs("text")]
+    public TMP_Text distanceText;
 
-    void Start()
-    {
-        bar.minValue = 0;
-        updateMaxHealth(maxHealth);
-        tiltBar.maxValue = maxVal;
-    }
+    [Header("Speed Tracker")]
+    public float speed;
+    public TMP_Text speedText;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (isNight) 
+        // Day/night indicator
+        if (ShipState.Instance.isNight)
         {
             DayNightIndicator.sprite = nightImage;
-        } else 
+        }
+        else
         {
             DayNightIndicator.sprite = dayImage;
         }
 
-        if (isEvent) 
+        // Event indicator
+        if (isEvent)
         {
             eventIndicator.SetActive(true);
-        } else 
+        }
+        else
         {
             eventIndicator.SetActive(false);
         }
 
-        health = Mathf.Clamp(health, 0, maxHealth);
-        bar.value = health;
-        setAngleUI();
+        distance = ShipState.Instance.distanceTraveled;
+        distanceText.text = $"{distance} m";
 
-        text.text = distance.ToString() + 'm';
-    }
+        healthBar.value = ShipState.Instance.shipIntegrity;
 
-    public void updateMaxHealth(float val)
-    {
-        maxHealth = val;
-        bar.maxValue = val;
-    }
+        speed = ShipState.Instance.shipSpeed.y;
+        speedText.text = $"{speed} m :Speed";
 
-    void setAngleUI()
-    {
-        float c = shipAngle + 90;
-        tiltBar.value = c;
+        shipAngle = ShipState.Instance.shipAngle;
+        tiltBar.value = (shipAngle + 90) / 180;
     }
 }

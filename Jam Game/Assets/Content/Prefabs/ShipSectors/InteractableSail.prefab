@@ -1099,12 +1099,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373614ba4c6c36249bd713e99a59fa71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
+  interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 6761842228654602432}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
-  smoothTimeToRaise: 5
+  raisePerSecond: 2
 --- !u!114 &7622487739086826054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 0}
   collider: {fileID: 6761842228654602432}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
@@ -1232,12 +1234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b831c0569cf3a93468711b89c2ec62b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 11400000, guid: ae9c887b424df044f847e2edb3f2af58, type: 2}
+  interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 2537265617477924016}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
-  smoothTimeToLower: 5
+  lowerPerSecond: 2
 --- !u!114 &8966891240851963067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,6 +1255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 0}
   collider: {fileID: 2537265617477924016}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1

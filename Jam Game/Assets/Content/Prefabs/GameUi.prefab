@@ -337,6 +337,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1523841230042335494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818752861286219494}
+  - component: {fileID: 7782862765391114316}
+  m_Layer: 5
+  m_Name: HealthBars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1818752861286219494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523841230042335494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6312208749999381001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7782862765391114316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523841230042335494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ecdf9fde9744088a547add0e51734a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 1903887509778283728, guid: ebffbb10625c94519b61f74dd1afe563,
+    type: 3}
 --- !u!1 &1854907075488321852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1191,6 @@ GameObject:
   - component: {fileID: 6229664157525367404}
   - component: {fileID: 8727909427229439629}
   - component: {fileID: 4877462300269254186}
-  - component: {fileID: 1287785970171126491}
   m_Layer: 5
   m_Name: GameUi
   m_TagString: Untagged
@@ -1161,6 +1210,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1818752861286219494}
   - {fileID: 8483908790172376488}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1244,19 +1294,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023eff4adecae4b3eaf74d73c8e6e69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNight: 0
   DayNightIndicator: {fileID: 3150741528131970119}
   dayImage: {fileID: 21300000, guid: ec3eb9bb4dda14e2d856f1a5dd29c02e, type: 3}
   nightImage: {fileID: 21300000, guid: 6e2f8f9d208da4c45943eb8396998e01, type: 3}
   isEvent: 0
   eventIndicator: {fileID: 1854907075488321852}
-  maxHealth: 0
-  health: 0
-  bar: {fileID: 758543916868742299}
+  healthBar: {fileID: 758543916868742299}
   shipAngle: 0
   tiltBar: {fileID: 6040231400842811701}
   distance: 0
-  text: {fileID: 1592146058205604228}
+  distanceText: {fileID: 1592146058205604228}
+  speed: 0
+  speedText: {fileID: 1085534045678420099}
 --- !u!114 &4877462300269254186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,19 +1319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scaler: {fileID: 2248422983445895332}
---- !u!114 &1287785970171126491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7388160037103945702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6969661e1e99a234fac18289ed6e8ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiInterface: {fileID: 8727909427229439629}
 --- !u!1 &7446707372099906348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,7 +1543,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5770477072945724143}
   - component: {fileID: 8855875808587114431}
   - component: {fileID: 6305030233325244373}
-  - component: {fileID: 3674273190522505344}
   m_Layer: 0
   m_Name: Hull
   m_TagString: Untagged
@@ -65,33 +64,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8c227ecc9e7c244ba824ec0b00a1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
+  interactionItem: {fileID: 11400000, guid: b94d9616d3f896347906b30bc15ea09e, type: 2}
   collider: {fileID: 4187556446672284905}
-  timeAfterInteractionUntilStopsWorking: 0
-  stopsPlayerMovement: 1
-  removesItemWhenOutOfRange: 1
-  waterPuddleArea: {fileID: 8910982825709168609, guid: e4447b52f08e5f542bb4ff9e7e9f0c89, type: 3}
-  visualWhenBroken: {fileID: 5167223774026789505}
-  floodTime: 10
-  maxWaterAreasSpawned: 3
---- !u!114 &3674273190522505344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3037883298618742333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adbbd634751610419a538a88b039743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
-  collider: {fileID: 4187556446672284905}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10
+  waterPuddleArea: {fileID: 8910982825709168609, guid: e4447b52f08e5f542bb4ff9e7e9f0c89, type: 3}
+  visualWhenBroken: {fileID: 5167223774026789505}
+  floodTime: 10
+  maxWaterAreasSpawned: 3
 --- !u!1 &4629235607587056439
 GameObject:
   m_ObjectHideFlags: 0

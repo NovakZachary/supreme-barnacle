@@ -443,8 +443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b5e8309c18690438d486efa4c6617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
+  interactionItem: {fileID: 11400000, guid: cf1880d4ad9a8ba4995566de5d91518a, type: 2}
   collider: {fileID: 6021403723186379407}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 30
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
