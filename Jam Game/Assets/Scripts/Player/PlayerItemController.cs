@@ -17,6 +17,11 @@ public class PlayerItemController : MonoBehaviour
             heldItem.OnPickup();
         }
 
+        if (previousHeldItem != heldItem && previousHeldItem)
+        {
+            previousHeldItem.OnDrop();
+        }
+
         previousHeldItem = heldItem;
 
         itemSlot.SetActive(heldItem != null);
@@ -24,7 +29,6 @@ public class PlayerItemController : MonoBehaviour
 
         if (heldItem && Input.GetKey(ShipState.Instance.input.interact))
         {
-            heldItem.OnDrop();
             heldItem = null;
         }
     }
