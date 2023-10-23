@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_0
+      name: Character_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_1
+      name: Character_1
       rect:
         serializedVersion: 2
         x: 26
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_2
+      name: Character_2
       rect:
         serializedVersion: 2
         x: 52
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_3
+      name: Character_3
       rect:
         serializedVersion: 2
         x: 0
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_4
+      name: Character_4
       rect:
         serializedVersion: 2
         x: 26
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_5
+      name: Character_5
       rect:
         serializedVersion: 2
         x: 52
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_6
+      name: Character_6
       rect:
         serializedVersion: 2
         x: 0
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_7
+      name: Character_7
       rect:
         serializedVersion: 2
         x: 26
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_8
+      name: Character_8
       rect:
         serializedVersion: 2
         x: 52
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_9
+      name: Character_9
       rect:
         serializedVersion: 2
         x: 0
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_10
+      name: Character_10
       rect:
         serializedVersion: 2
         x: 26
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_11
+      name: Character_11
       rect:
         serializedVersion: 2
         x: 52
@@ -372,18 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character_0: -503211681
-      character_1: -40214442
-      character_10: 2079346221
-      character_11: 20737015
-      character_2: 2056237197
-      character_3: 11099549
-      character_4: -970494116
-      character_5: 498459393
-      character_6: 1645323855
-      character_7: -2045669238
-      character_8: -2058644157
-      character_9: -1644131574
+      Character_0: -503211681
+      Character_1: -40214442
+      Character_10: 2079346221
+      Character_11: 20737015
+      Character_2: 2056237197
+      Character_3: 11099549
+      Character_4: -970494116
+      Character_5: 498459393
+      Character_6: 1645323855
+      Character_7: -2045669238
+      Character_8: -2058644157
+      Character_9: -1644131574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flags_0
+      name: Flags_0
       rect:
         serializedVersion: 2
         x: 64
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_1
+      name: Flags_1
       rect:
         serializedVersion: 2
         x: 192
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_2
+      name: Flags_2
       rect:
         serializedVersion: 2
         x: 16
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_3
+      name: Flags_3
       rect:
         serializedVersion: 2
         x: 32
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_4
+      name: Flags_4
       rect:
         serializedVersion: 2
         x: 48
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_5
+      name: Flags_5
       rect:
         serializedVersion: 2
         x: 64
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_6
+      name: Flags_6
       rect:
         serializedVersion: 2
         x: 80
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_7
+      name: Flags_7
       rect:
         serializedVersion: 2
         x: 96
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_8
+      name: Flags_8
       rect:
         serializedVersion: 2
         x: 112
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_9
+      name: Flags_9
       rect:
         serializedVersion: 2
         x: 144
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_10
+      name: Flags_10
       rect:
         serializedVersion: 2
         x: 160
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_11
+      name: Flags_11
       rect:
         serializedVersion: 2
         x: 176
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_12
+      name: Flags_12
       rect:
         serializedVersion: 2
         x: 192
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_13
+      name: Flags_13
       rect:
         serializedVersion: 2
         x: 208
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_14
+      name: Flags_14
       rect:
         serializedVersion: 2
         x: 224
@@ -425,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_15
+      name: Flags_15
       rect:
         serializedVersion: 2
         x: 240
@@ -446,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_16
+      name: Flags_16
       rect:
         serializedVersion: 2
         x: 64
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_17
+      name: Flags_17
       rect:
         serializedVersion: 2
         x: 192
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_18
+      name: Flags_18
       rect:
         serializedVersion: 2
         x: 16
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_19
+      name: Flags_19
       rect:
         serializedVersion: 2
         x: 32
@@ -530,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_20
+      name: Flags_20
       rect:
         serializedVersion: 2
         x: 48
@@ -551,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_21
+      name: Flags_21
       rect:
         serializedVersion: 2
         x: 64
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_22
+      name: Flags_22
       rect:
         serializedVersion: 2
         x: 80
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_23
+      name: Flags_23
       rect:
         serializedVersion: 2
         x: 96
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_24
+      name: Flags_24
       rect:
         serializedVersion: 2
         x: 112
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_25
+      name: Flags_25
       rect:
         serializedVersion: 2
         x: 144
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_26
+      name: Flags_26
       rect:
         serializedVersion: 2
         x: 160
@@ -677,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_27
+      name: Flags_27
       rect:
         serializedVersion: 2
         x: 176
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_28
+      name: Flags_28
       rect:
         serializedVersion: 2
         x: 192
@@ -719,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_29
+      name: Flags_29
       rect:
         serializedVersion: 2
         x: 208
@@ -740,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_30
+      name: Flags_30
       rect:
         serializedVersion: 2
         x: 224
@@ -761,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_31
+      name: Flags_31
       rect:
         serializedVersion: 2
         x: 240
@@ -782,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_32
+      name: Flags_32
       rect:
         serializedVersion: 2
         x: 16
@@ -803,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_33
+      name: Flags_33
       rect:
         serializedVersion: 2
         x: 32
@@ -824,7 +824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_34
+      name: Flags_34
       rect:
         serializedVersion: 2
         x: 48
@@ -845,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_35
+      name: Flags_35
       rect:
         serializedVersion: 2
         x: 64
@@ -866,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_36
+      name: Flags_36
       rect:
         serializedVersion: 2
         x: 80
@@ -887,7 +887,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_37
+      name: Flags_37
       rect:
         serializedVersion: 2
         x: 96
@@ -908,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_38
+      name: Flags_38
       rect:
         serializedVersion: 2
         x: 112
@@ -929,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_39
+      name: Flags_39
       rect:
         serializedVersion: 2
         x: 144
@@ -950,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_40
+      name: Flags_40
       rect:
         serializedVersion: 2
         x: 160
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_41
+      name: Flags_41
       rect:
         serializedVersion: 2
         x: 176
@@ -992,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_42
+      name: Flags_42
       rect:
         serializedVersion: 2
         x: 192
@@ -1013,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_43
+      name: Flags_43
       rect:
         serializedVersion: 2
         x: 208
@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_44
+      name: Flags_44
       rect:
         serializedVersion: 2
         x: 224
@@ -1055,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_45
+      name: Flags_45
       rect:
         serializedVersion: 2
         x: 240
@@ -1076,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_46
+      name: Flags_46
       rect:
         serializedVersion: 2
         x: 16
@@ -1097,7 +1097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_47
+      name: Flags_47
       rect:
         serializedVersion: 2
         x: 32
@@ -1118,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_48
+      name: Flags_48
       rect:
         serializedVersion: 2
         x: 48
@@ -1139,7 +1139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_49
+      name: Flags_49
       rect:
         serializedVersion: 2
         x: 64
@@ -1160,7 +1160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_50
+      name: Flags_50
       rect:
         serializedVersion: 2
         x: 80
@@ -1181,7 +1181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_51
+      name: Flags_51
       rect:
         serializedVersion: 2
         x: 96
@@ -1202,7 +1202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_52
+      name: Flags_52
       rect:
         serializedVersion: 2
         x: 112
@@ -1223,7 +1223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_53
+      name: Flags_53
       rect:
         serializedVersion: 2
         x: 144
@@ -1244,7 +1244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_54
+      name: Flags_54
       rect:
         serializedVersion: 2
         x: 160
@@ -1265,7 +1265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_55
+      name: Flags_55
       rect:
         serializedVersion: 2
         x: 176
@@ -1286,7 +1286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_56
+      name: Flags_56
       rect:
         serializedVersion: 2
         x: 192
@@ -1307,7 +1307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_57
+      name: Flags_57
       rect:
         serializedVersion: 2
         x: 208
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_58
+      name: Flags_58
       rect:
         serializedVersion: 2
         x: 224
@@ -1349,7 +1349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_59
+      name: Flags_59
       rect:
         serializedVersion: 2
         x: 240
@@ -1370,7 +1370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_60
+      name: Flags_60
       rect:
         serializedVersion: 2
         x: 16
@@ -1391,7 +1391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_61
+      name: Flags_61
       rect:
         serializedVersion: 2
         x: 32
@@ -1412,7 +1412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_62
+      name: Flags_62
       rect:
         serializedVersion: 2
         x: 48
@@ -1433,7 +1433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_63
+      name: Flags_63
       rect:
         serializedVersion: 2
         x: 64
@@ -1454,7 +1454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_64
+      name: Flags_64
       rect:
         serializedVersion: 2
         x: 80
@@ -1475,7 +1475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_65
+      name: Flags_65
       rect:
         serializedVersion: 2
         x: 96
@@ -1496,7 +1496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_66
+      name: Flags_66
       rect:
         serializedVersion: 2
         x: 112
@@ -1517,7 +1517,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_67
+      name: Flags_67
       rect:
         serializedVersion: 2
         x: 144
@@ -1538,7 +1538,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_68
+      name: Flags_68
       rect:
         serializedVersion: 2
         x: 160
@@ -1559,7 +1559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_69
+      name: Flags_69
       rect:
         serializedVersion: 2
         x: 176
@@ -1580,7 +1580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_70
+      name: Flags_70
       rect:
         serializedVersion: 2
         x: 192
@@ -1601,7 +1601,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_71
+      name: Flags_71
       rect:
         serializedVersion: 2
         x: 208
@@ -1622,7 +1622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_72
+      name: Flags_72
       rect:
         serializedVersion: 2
         x: 224
@@ -1643,7 +1643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_73
+      name: Flags_73
       rect:
         serializedVersion: 2
         x: 240
@@ -1664,7 +1664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_74
+      name: Flags_74
       rect:
         serializedVersion: 2
         x: 16
@@ -1685,7 +1685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_75
+      name: Flags_75
       rect:
         serializedVersion: 2
         x: 32
@@ -1706,7 +1706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_76
+      name: Flags_76
       rect:
         serializedVersion: 2
         x: 48
@@ -1727,7 +1727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_77
+      name: Flags_77
       rect:
         serializedVersion: 2
         x: 64
@@ -1748,7 +1748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_78
+      name: Flags_78
       rect:
         serializedVersion: 2
         x: 80
@@ -1769,7 +1769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_79
+      name: Flags_79
       rect:
         serializedVersion: 2
         x: 96
@@ -1790,7 +1790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_80
+      name: Flags_80
       rect:
         serializedVersion: 2
         x: 112
@@ -1811,7 +1811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_81
+      name: Flags_81
       rect:
         serializedVersion: 2
         x: 144
@@ -1832,7 +1832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_82
+      name: Flags_82
       rect:
         serializedVersion: 2
         x: 160
@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_83
+      name: Flags_83
       rect:
         serializedVersion: 2
         x: 176
@@ -1874,7 +1874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_84
+      name: Flags_84
       rect:
         serializedVersion: 2
         x: 192
@@ -1895,7 +1895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_85
+      name: Flags_85
       rect:
         serializedVersion: 2
         x: 208
@@ -1916,7 +1916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_86
+      name: Flags_86
       rect:
         serializedVersion: 2
         x: 224
@@ -1937,7 +1937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_87
+      name: Flags_87
       rect:
         serializedVersion: 2
         x: 240
@@ -1958,7 +1958,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_88
+      name: Flags_88
       rect:
         serializedVersion: 2
         x: 64
@@ -1979,7 +1979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_89
+      name: Flags_89
       rect:
         serializedVersion: 2
         x: 192
@@ -2000,7 +2000,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_90
+      name: Flags_90
       rect:
         serializedVersion: 2
         x: 16
@@ -2021,7 +2021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_91
+      name: Flags_91
       rect:
         serializedVersion: 2
         x: 32
@@ -2042,7 +2042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_92
+      name: Flags_92
       rect:
         serializedVersion: 2
         x: 48
@@ -2063,7 +2063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_93
+      name: Flags_93
       rect:
         serializedVersion: 2
         x: 64
@@ -2084,7 +2084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_94
+      name: Flags_94
       rect:
         serializedVersion: 2
         x: 80
@@ -2105,7 +2105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_95
+      name: Flags_95
       rect:
         serializedVersion: 2
         x: 96
@@ -2126,7 +2126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_96
+      name: Flags_96
       rect:
         serializedVersion: 2
         x: 112
@@ -2147,7 +2147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_97
+      name: Flags_97
       rect:
         serializedVersion: 2
         x: 144
@@ -2168,7 +2168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_98
+      name: Flags_98
       rect:
         serializedVersion: 2
         x: 160
@@ -2189,7 +2189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_99
+      name: Flags_99
       rect:
         serializedVersion: 2
         x: 176
@@ -2210,7 +2210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_100
+      name: Flags_100
       rect:
         serializedVersion: 2
         x: 192
@@ -2231,7 +2231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_101
+      name: Flags_101
       rect:
         serializedVersion: 2
         x: 208
@@ -2252,7 +2252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_102
+      name: Flags_102
       rect:
         serializedVersion: 2
         x: 224
@@ -2273,7 +2273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_103
+      name: Flags_103
       rect:
         serializedVersion: 2
         x: 240
@@ -2294,7 +2294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_104
+      name: Flags_104
       rect:
         serializedVersion: 2
         x: 16
@@ -2315,7 +2315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_105
+      name: Flags_105
       rect:
         serializedVersion: 2
         x: 32
@@ -2336,7 +2336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_106
+      name: Flags_106
       rect:
         serializedVersion: 2
         x: 48
@@ -2357,7 +2357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_107
+      name: Flags_107
       rect:
         serializedVersion: 2
         x: 64
@@ -2378,7 +2378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_108
+      name: Flags_108
       rect:
         serializedVersion: 2
         x: 80
@@ -2399,7 +2399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_109
+      name: Flags_109
       rect:
         serializedVersion: 2
         x: 96
@@ -2420,7 +2420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_110
+      name: Flags_110
       rect:
         serializedVersion: 2
         x: 112
@@ -2441,7 +2441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_111
+      name: Flags_111
       rect:
         serializedVersion: 2
         x: 144
@@ -2462,7 +2462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_112
+      name: Flags_112
       rect:
         serializedVersion: 2
         x: 160
@@ -2483,7 +2483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_113
+      name: Flags_113
       rect:
         serializedVersion: 2
         x: 176
@@ -2504,7 +2504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_114
+      name: Flags_114
       rect:
         serializedVersion: 2
         x: 192
@@ -2525,7 +2525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_115
+      name: Flags_115
       rect:
         serializedVersion: 2
         x: 208
@@ -2546,7 +2546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_116
+      name: Flags_116
       rect:
         serializedVersion: 2
         x: 224
@@ -2567,7 +2567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_117
+      name: Flags_117
       rect:
         serializedVersion: 2
         x: 240
@@ -2588,7 +2588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_118
+      name: Flags_118
       rect:
         serializedVersion: 2
         x: 16
@@ -2609,7 +2609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_119
+      name: Flags_119
       rect:
         serializedVersion: 2
         x: 32
@@ -2630,7 +2630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_120
+      name: Flags_120
       rect:
         serializedVersion: 2
         x: 48
@@ -2651,7 +2651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_121
+      name: Flags_121
       rect:
         serializedVersion: 2
         x: 64
@@ -2672,7 +2672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_122
+      name: Flags_122
       rect:
         serializedVersion: 2
         x: 80
@@ -2693,7 +2693,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_123
+      name: Flags_123
       rect:
         serializedVersion: 2
         x: 96
@@ -2714,7 +2714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_124
+      name: Flags_124
       rect:
         serializedVersion: 2
         x: 112
@@ -2735,7 +2735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_125
+      name: Flags_125
       rect:
         serializedVersion: 2
         x: 144
@@ -2756,7 +2756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_126
+      name: Flags_126
       rect:
         serializedVersion: 2
         x: 160
@@ -2777,7 +2777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_127
+      name: Flags_127
       rect:
         serializedVersion: 2
         x: 176
@@ -2798,7 +2798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_128
+      name: Flags_128
       rect:
         serializedVersion: 2
         x: 192
@@ -2819,7 +2819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_129
+      name: Flags_129
       rect:
         serializedVersion: 2
         x: 208
@@ -2840,7 +2840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_130
+      name: Flags_130
       rect:
         serializedVersion: 2
         x: 224
@@ -2861,7 +2861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_131
+      name: Flags_131
       rect:
         serializedVersion: 2
         x: 240
@@ -2882,7 +2882,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_132
+      name: Flags_132
       rect:
         serializedVersion: 2
         x: 16
@@ -2903,7 +2903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_133
+      name: Flags_133
       rect:
         serializedVersion: 2
         x: 32
@@ -2924,7 +2924,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_134
+      name: Flags_134
       rect:
         serializedVersion: 2
         x: 48
@@ -2945,7 +2945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_135
+      name: Flags_135
       rect:
         serializedVersion: 2
         x: 64
@@ -2966,7 +2966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_136
+      name: Flags_136
       rect:
         serializedVersion: 2
         x: 80
@@ -2987,7 +2987,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_137
+      name: Flags_137
       rect:
         serializedVersion: 2
         x: 96
@@ -3008,7 +3008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_138
+      name: Flags_138
       rect:
         serializedVersion: 2
         x: 112
@@ -3029,7 +3029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_139
+      name: Flags_139
       rect:
         serializedVersion: 2
         x: 144
@@ -3050,7 +3050,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_140
+      name: Flags_140
       rect:
         serializedVersion: 2
         x: 160
@@ -3071,7 +3071,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_141
+      name: Flags_141
       rect:
         serializedVersion: 2
         x: 176
@@ -3092,7 +3092,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_142
+      name: Flags_142
       rect:
         serializedVersion: 2
         x: 192
@@ -3113,7 +3113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_143
+      name: Flags_143
       rect:
         serializedVersion: 2
         x: 208
@@ -3134,7 +3134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_144
+      name: Flags_144
       rect:
         serializedVersion: 2
         x: 224
@@ -3155,7 +3155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_145
+      name: Flags_145
       rect:
         serializedVersion: 2
         x: 240
@@ -3176,7 +3176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_146
+      name: Flags_146
       rect:
         serializedVersion: 2
         x: 16
@@ -3197,7 +3197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_147
+      name: Flags_147
       rect:
         serializedVersion: 2
         x: 32
@@ -3218,7 +3218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_148
+      name: Flags_148
       rect:
         serializedVersion: 2
         x: 48
@@ -3239,7 +3239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_149
+      name: Flags_149
       rect:
         serializedVersion: 2
         x: 64
@@ -3260,7 +3260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_150
+      name: Flags_150
       rect:
         serializedVersion: 2
         x: 80
@@ -3281,7 +3281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_151
+      name: Flags_151
       rect:
         serializedVersion: 2
         x: 96
@@ -3302,7 +3302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_152
+      name: Flags_152
       rect:
         serializedVersion: 2
         x: 112
@@ -3323,7 +3323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_153
+      name: Flags_153
       rect:
         serializedVersion: 2
         x: 144
@@ -3344,7 +3344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_154
+      name: Flags_154
       rect:
         serializedVersion: 2
         x: 160
@@ -3365,7 +3365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_155
+      name: Flags_155
       rect:
         serializedVersion: 2
         x: 176
@@ -3386,7 +3386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_156
+      name: Flags_156
       rect:
         serializedVersion: 2
         x: 192
@@ -3407,7 +3407,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_157
+      name: Flags_157
       rect:
         serializedVersion: 2
         x: 208
@@ -3428,7 +3428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_158
+      name: Flags_158
       rect:
         serializedVersion: 2
         x: 224
@@ -3449,7 +3449,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: flags_159
+      name: Flags_159
       rect:
         serializedVersion: 2
         x: 240
@@ -3480,166 +3480,166 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      flags_0: 513480060
-      flags_1: 161405012
-      flags_10: 1682738268
-      flags_100: 1226458511
-      flags_101: 1412480285
-      flags_102: -1339210846
-      flags_103: -90102110
-      flags_104: 1707465201
-      flags_105: -1534791025
-      flags_106: 1914747205
-      flags_107: -1087958756
-      flags_108: 1794978121
-      flags_109: -711901774
-      flags_11: -684023416
-      flags_110: 1733162962
-      flags_111: -982576958
-      flags_112: -714814547
-      flags_113: -322473412
-      flags_114: -1816279559
-      flags_115: -1564664402
-      flags_116: 1929919323
-      flags_117: 942481450
-      flags_118: 783982513
-      flags_119: -456634167
-      flags_12: 737569114
-      flags_120: -749706275
-      flags_121: 161173618
-      flags_122: -189087704
-      flags_123: -931264654
-      flags_124: -204646785
-      flags_125: -1338227042
-      flags_126: 205240674
-      flags_127: -1233945410
-      flags_128: 1650195618
-      flags_129: 452753833
-      flags_13: -271779257
-      flags_130: 1160068338
-      flags_131: 63422012
-      flags_132: -253789887
-      flags_133: -79092854
-      flags_134: -868721001
-      flags_135: -252626001
-      flags_136: 1599907856
-      flags_137: -2009695685
-      flags_138: 1630862252
-      flags_139: -689282980
-      flags_14: -589206337
-      flags_140: 594788746
-      flags_141: -314168089
-      flags_142: -335412668
-      flags_143: 1606683715
-      flags_144: 1148274579
-      flags_145: 130577536
-      flags_146: 206872797
-      flags_147: 1523570839
-      flags_148: 1289773339
-      flags_149: 771441624
-      flags_15: 910768539
-      flags_150: 2018389555
-      flags_151: -1297979401
-      flags_152: -101836982
-      flags_153: 1802049985
-      flags_154: 875032443
-      flags_155: -1085358718
-      flags_156: 887974586
-      flags_157: -1082125070
-      flags_158: -472842798
-      flags_159: -860834246
-      flags_16: 735812521
-      flags_17: 42500369
-      flags_18: -2137253525
-      flags_19: -239409238
-      flags_2: -1830474843
-      flags_20: 1771349056
-      flags_21: 1629090172
-      flags_22: 500394457
-      flags_23: -1101696625
-      flags_24: -1548998780
-      flags_25: -1631265488
-      flags_26: 724972424
-      flags_27: -280132006
-      flags_28: -1992899611
-      flags_29: 1692126040
-      flags_3: -1001613238
-      flags_30: -1533301786
-      flags_31: -1258915920
-      flags_32: 445049794
-      flags_33: -1895801979
-      flags_34: -1034323506
-      flags_35: 1592743653
-      flags_36: -1015113483
-      flags_37: 640216218
-      flags_38: -1213086152
-      flags_39: -732423078
-      flags_4: -727745798
-      flags_40: 1084962609
-      flags_41: 433249654
-      flags_42: -848548672
-      flags_43: 1935571840
-      flags_44: 1799167048
-      flags_45: -574458451
-      flags_46: 364697056
-      flags_47: 1775100941
-      flags_48: 855969646
-      flags_49: -795530216
-      flags_5: 661329517
-      flags_50: -70125763
-      flags_51: 1115562250
-      flags_52: -1584868388
-      flags_53: -1407920527
-      flags_54: 640237511
-      flags_55: -349600473
-      flags_56: 1133871783
-      flags_57: -1347851857
-      flags_58: -448294784
-      flags_59: 1204194815
-      flags_6: -402448159
-      flags_60: -2078944619
-      flags_61: 1911043086
-      flags_62: 579317965
-      flags_63: -62770269
-      flags_64: 61233040
-      flags_65: -162964232
-      flags_66: 1119200895
-      flags_67: 2031547577
-      flags_68: -146525279
-      flags_69: 339033610
-      flags_7: 1749799198
-      flags_70: 208710449
-      flags_71: 413606016
-      flags_72: 133130210
-      flags_73: -805501221
-      flags_74: 559123643
-      flags_75: -1516841968
-      flags_76: -1140731127
-      flags_77: -1099502286
-      flags_78: -850051766
-      flags_79: 2102687069
-      flags_8: 239886810
-      flags_80: 1102799936
-      flags_81: -484149839
-      flags_82: 1104829918
-      flags_83: 1759409229
-      flags_84: -792030184
-      flags_85: -1298772651
-      flags_86: 253172256
-      flags_87: 1744128046
-      flags_88: 579483237
-      flags_89: -1203408402
-      flags_9: -43746865
-      flags_90: 1655084888
-      flags_91: -852950289
-      flags_92: 1658550373
-      flags_93: 1730091006
-      flags_94: 1278132399
-      flags_95: -1706077098
-      flags_96: 1115976471
-      flags_97: -313903970
-      flags_98: -1792566039
-      flags_99: -1505388708
+      Flags_0: 513480060
+      Flags_1: 161405012
+      Flags_10: 1682738268
+      Flags_100: 1226458511
+      Flags_101: 1412480285
+      Flags_102: -1339210846
+      Flags_103: -90102110
+      Flags_104: 1707465201
+      Flags_105: -1534791025
+      Flags_106: 1914747205
+      Flags_107: -1087958756
+      Flags_108: 1794978121
+      Flags_109: -711901774
+      Flags_11: -684023416
+      Flags_110: 1733162962
+      Flags_111: -982576958
+      Flags_112: -714814547
+      Flags_113: -322473412
+      Flags_114: -1816279559
+      Flags_115: -1564664402
+      Flags_116: 1929919323
+      Flags_117: 942481450
+      Flags_118: 783982513
+      Flags_119: -456634167
+      Flags_12: 737569114
+      Flags_120: -749706275
+      Flags_121: 161173618
+      Flags_122: -189087704
+      Flags_123: -931264654
+      Flags_124: -204646785
+      Flags_125: -1338227042
+      Flags_126: 205240674
+      Flags_127: -1233945410
+      Flags_128: 1650195618
+      Flags_129: 452753833
+      Flags_13: -271779257
+      Flags_130: 1160068338
+      Flags_131: 63422012
+      Flags_132: -253789887
+      Flags_133: -79092854
+      Flags_134: -868721001
+      Flags_135: -252626001
+      Flags_136: 1599907856
+      Flags_137: -2009695685
+      Flags_138: 1630862252
+      Flags_139: -689282980
+      Flags_14: -589206337
+      Flags_140: 594788746
+      Flags_141: -314168089
+      Flags_142: -335412668
+      Flags_143: 1606683715
+      Flags_144: 1148274579
+      Flags_145: 130577536
+      Flags_146: 206872797
+      Flags_147: 1523570839
+      Flags_148: 1289773339
+      Flags_149: 771441624
+      Flags_15: 910768539
+      Flags_150: 2018389555
+      Flags_151: -1297979401
+      Flags_152: -101836982
+      Flags_153: 1802049985
+      Flags_154: 875032443
+      Flags_155: -1085358718
+      Flags_156: 887974586
+      Flags_157: -1082125070
+      Flags_158: -472842798
+      Flags_159: -860834246
+      Flags_16: 735812521
+      Flags_17: 42500369
+      Flags_18: -2137253525
+      Flags_19: -239409238
+      Flags_2: -1830474843
+      Flags_20: 1771349056
+      Flags_21: 1629090172
+      Flags_22: 500394457
+      Flags_23: -1101696625
+      Flags_24: -1548998780
+      Flags_25: -1631265488
+      Flags_26: 724972424
+      Flags_27: -280132006
+      Flags_28: -1992899611
+      Flags_29: 1692126040
+      Flags_3: -1001613238
+      Flags_30: -1533301786
+      Flags_31: -1258915920
+      Flags_32: 445049794
+      Flags_33: -1895801979
+      Flags_34: -1034323506
+      Flags_35: 1592743653
+      Flags_36: -1015113483
+      Flags_37: 640216218
+      Flags_38: -1213086152
+      Flags_39: -732423078
+      Flags_4: -727745798
+      Flags_40: 1084962609
+      Flags_41: 433249654
+      Flags_42: -848548672
+      Flags_43: 1935571840
+      Flags_44: 1799167048
+      Flags_45: -574458451
+      Flags_46: 364697056
+      Flags_47: 1775100941
+      Flags_48: 855969646
+      Flags_49: -795530216
+      Flags_5: 661329517
+      Flags_50: -70125763
+      Flags_51: 1115562250
+      Flags_52: -1584868388
+      Flags_53: -1407920527
+      Flags_54: 640237511
+      Flags_55: -349600473
+      Flags_56: 1133871783
+      Flags_57: -1347851857
+      Flags_58: -448294784
+      Flags_59: 1204194815
+      Flags_6: -402448159
+      Flags_60: -2078944619
+      Flags_61: 1911043086
+      Flags_62: 579317965
+      Flags_63: -62770269
+      Flags_64: 61233040
+      Flags_65: -162964232
+      Flags_66: 1119200895
+      Flags_67: 2031547577
+      Flags_68: -146525279
+      Flags_69: 339033610
+      Flags_7: 1749799198
+      Flags_70: 208710449
+      Flags_71: 413606016
+      Flags_72: 133130210
+      Flags_73: -805501221
+      Flags_74: 559123643
+      Flags_75: -1516841968
+      Flags_76: -1140731127
+      Flags_77: -1099502286
+      Flags_78: -850051766
+      Flags_79: 2102687069
+      Flags_8: 239886810
+      Flags_80: 1102799936
+      Flags_81: -484149839
+      Flags_82: 1104829918
+      Flags_83: 1759409229
+      Flags_84: -792030184
+      Flags_85: -1298772651
+      Flags_86: 253172256
+      Flags_87: 1744128046
+      Flags_88: 579483237
+      Flags_89: -1203408402
+      Flags_9: -43746865
+      Flags_90: 1655084888
+      Flags_91: -852950289
+      Flags_92: 1658550373
+      Flags_93: 1730091006
+      Flags_94: 1278132399
+      Flags_95: -1706077098
+      Flags_96: 1115976471
+      Flags_97: -313903970
+      Flags_98: -1792566039
+      Flags_99: -1505388708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

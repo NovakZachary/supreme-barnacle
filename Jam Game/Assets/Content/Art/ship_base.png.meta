@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ship_base_0
+      name: Ship_Base_0
       rect:
         serializedVersion: 2
         x: 48
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_1
+      name: Ship_Base_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_2
+      name: Ship_Base_2
       rect:
         serializedVersion: 2
         x: 32
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_3
+      name: Ship_Base_3
       rect:
         serializedVersion: 2
         x: 48
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_4
+      name: Ship_Base_4
       rect:
         serializedVersion: 2
         x: 64
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_5
+      name: Ship_Base_5
       rect:
         serializedVersion: 2
         x: 80
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_6
+      name: Ship_Base_6
       rect:
         serializedVersion: 2
         x: 16
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_7
+      name: Ship_Base_7
       rect:
         serializedVersion: 2
         x: 32
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_8
+      name: Ship_Base_8
       rect:
         serializedVersion: 2
         x: 48
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_9
+      name: Ship_Base_9
       rect:
         serializedVersion: 2
         x: 64
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_10
+      name: Ship_Base_10
       rect:
         serializedVersion: 2
         x: 80
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_11
+      name: Ship_Base_11
       rect:
         serializedVersion: 2
         x: 96
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_12
+      name: Ship_Base_12
       rect:
         serializedVersion: 2
         x: 16
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_13
+      name: Ship_Base_13
       rect:
         serializedVersion: 2
         x: 32
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_14
+      name: Ship_Base_14
       rect:
         serializedVersion: 2
         x: 48
@@ -425,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_15
+      name: Ship_Base_15
       rect:
         serializedVersion: 2
         x: 64
@@ -446,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_16
+      name: Ship_Base_16
       rect:
         serializedVersion: 2
         x: 80
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_17
+      name: Ship_Base_17
       rect:
         serializedVersion: 2
         x: 96
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_18
+      name: Ship_Base_18
       rect:
         serializedVersion: 2
         x: 0
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_19
+      name: Ship_Base_19
       rect:
         serializedVersion: 2
         x: 16
@@ -530,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_20
+      name: Ship_Base_20
       rect:
         serializedVersion: 2
         x: 48
@@ -551,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_21
+      name: Ship_Base_21
       rect:
         serializedVersion: 2
         x: 64
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_22
+      name: Ship_Base_22
       rect:
         serializedVersion: 2
         x: 96
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_23
+      name: Ship_Base_23
       rect:
         serializedVersion: 2
         x: 112
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_24
+      name: Ship_Base_24
       rect:
         serializedVersion: 2
         x: 0
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_25
+      name: Ship_Base_25
       rect:
         serializedVersion: 2
         x: 16
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_26
+      name: Ship_Base_26
       rect:
         serializedVersion: 2
         x: 48
@@ -677,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_27
+      name: Ship_Base_27
       rect:
         serializedVersion: 2
         x: 64
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_28
+      name: Ship_Base_28
       rect:
         serializedVersion: 2
         x: 96
@@ -719,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_29
+      name: Ship_Base_29
       rect:
         serializedVersion: 2
         x: 112
@@ -740,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_30
+      name: Ship_Base_30
       rect:
         serializedVersion: 2
         x: 0
@@ -761,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_31
+      name: Ship_Base_31
       rect:
         serializedVersion: 2
         x: 16
@@ -782,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_32
+      name: Ship_Base_32
       rect:
         serializedVersion: 2
         x: 32
@@ -803,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_33
+      name: Ship_Base_33
       rect:
         serializedVersion: 2
         x: 96
@@ -824,7 +824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_34
+      name: Ship_Base_34
       rect:
         serializedVersion: 2
         x: 112
@@ -845,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_35
+      name: Ship_Base_35
       rect:
         serializedVersion: 2
         x: 0
@@ -866,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_36
+      name: Ship_Base_36
       rect:
         serializedVersion: 2
         x: 16
@@ -887,7 +887,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_37
+      name: Ship_Base_37
       rect:
         serializedVersion: 2
         x: 32
@@ -908,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_38
+      name: Ship_Base_38
       rect:
         serializedVersion: 2
         x: 48
@@ -929,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_39
+      name: Ship_Base_39
       rect:
         serializedVersion: 2
         x: 64
@@ -950,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_40
+      name: Ship_Base_40
       rect:
         serializedVersion: 2
         x: 80
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_41
+      name: Ship_Base_41
       rect:
         serializedVersion: 2
         x: 96
@@ -992,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_42
+      name: Ship_Base_42
       rect:
         serializedVersion: 2
         x: 112
@@ -1013,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_43
+      name: Ship_Base_43
       rect:
         serializedVersion: 2
         x: 0
@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_44
+      name: Ship_Base_44
       rect:
         serializedVersion: 2
         x: 16
@@ -1055,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_45
+      name: Ship_Base_45
       rect:
         serializedVersion: 2
         x: 32
@@ -1076,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_46
+      name: Ship_Base_46
       rect:
         serializedVersion: 2
         x: 48
@@ -1097,7 +1097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_47
+      name: Ship_Base_47
       rect:
         serializedVersion: 2
         x: 64
@@ -1118,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_48
+      name: Ship_Base_48
       rect:
         serializedVersion: 2
         x: 80
@@ -1139,7 +1139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_49
+      name: Ship_Base_49
       rect:
         serializedVersion: 2
         x: 96
@@ -1160,7 +1160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_50
+      name: Ship_Base_50
       rect:
         serializedVersion: 2
         x: 112
@@ -1181,7 +1181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_51
+      name: Ship_Base_51
       rect:
         serializedVersion: 2
         x: 0
@@ -1202,7 +1202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_52
+      name: Ship_Base_52
       rect:
         serializedVersion: 2
         x: 16
@@ -1223,7 +1223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_53
+      name: Ship_Base_53
       rect:
         serializedVersion: 2
         x: 32
@@ -1244,7 +1244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_54
+      name: Ship_Base_54
       rect:
         serializedVersion: 2
         x: 64
@@ -1265,7 +1265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_55
+      name: Ship_Base_55
       rect:
         serializedVersion: 2
         x: 80
@@ -1286,7 +1286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_56
+      name: Ship_Base_56
       rect:
         serializedVersion: 2
         x: 96
@@ -1307,7 +1307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_57
+      name: Ship_Base_57
       rect:
         serializedVersion: 2
         x: 112
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_58
+      name: Ship_Base_58
       rect:
         serializedVersion: 2
         x: 0
@@ -1349,7 +1349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_59
+      name: Ship_Base_59
       rect:
         serializedVersion: 2
         x: 16
@@ -1370,7 +1370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_60
+      name: Ship_Base_60
       rect:
         serializedVersion: 2
         x: 32
@@ -1391,7 +1391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_61
+      name: Ship_Base_61
       rect:
         serializedVersion: 2
         x: 48
@@ -1412,7 +1412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_62
+      name: Ship_Base_62
       rect:
         serializedVersion: 2
         x: 64
@@ -1433,7 +1433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_63
+      name: Ship_Base_63
       rect:
         serializedVersion: 2
         x: 80
@@ -1454,7 +1454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_64
+      name: Ship_Base_64
       rect:
         serializedVersion: 2
         x: 96
@@ -1475,7 +1475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_65
+      name: Ship_Base_65
       rect:
         serializedVersion: 2
         x: 112
@@ -1496,7 +1496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_66
+      name: Ship_Base_66
       rect:
         serializedVersion: 2
         x: 0
@@ -1517,7 +1517,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_67
+      name: Ship_Base_67
       rect:
         serializedVersion: 2
         x: 16
@@ -1538,7 +1538,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_68
+      name: Ship_Base_68
       rect:
         serializedVersion: 2
         x: 32
@@ -1559,7 +1559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_69
+      name: Ship_Base_69
       rect:
         serializedVersion: 2
         x: 48
@@ -1580,7 +1580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_70
+      name: Ship_Base_70
       rect:
         serializedVersion: 2
         x: 64
@@ -1601,7 +1601,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_71
+      name: Ship_Base_71
       rect:
         serializedVersion: 2
         x: 80
@@ -1622,7 +1622,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_72
+      name: Ship_Base_72
       rect:
         serializedVersion: 2
         x: 96
@@ -1643,7 +1643,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_73
+      name: Ship_Base_73
       rect:
         serializedVersion: 2
         x: 112
@@ -1664,7 +1664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_74
+      name: Ship_Base_74
       rect:
         serializedVersion: 2
         x: 0
@@ -1685,7 +1685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_75
+      name: Ship_Base_75
       rect:
         serializedVersion: 2
         x: 32
@@ -1706,7 +1706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_76
+      name: Ship_Base_76
       rect:
         serializedVersion: 2
         x: 64
@@ -1727,7 +1727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_77
+      name: Ship_Base_77
       rect:
         serializedVersion: 2
         x: 80
@@ -1748,7 +1748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_78
+      name: Ship_Base_78
       rect:
         serializedVersion: 2
         x: 112
@@ -1769,7 +1769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_79
+      name: Ship_Base_79
       rect:
         serializedVersion: 2
         x: 0
@@ -1790,7 +1790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_80
+      name: Ship_Base_80
       rect:
         serializedVersion: 2
         x: 16
@@ -1811,7 +1811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_81
+      name: Ship_Base_81
       rect:
         serializedVersion: 2
         x: 32
@@ -1832,7 +1832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_82
+      name: Ship_Base_82
       rect:
         serializedVersion: 2
         x: 48
@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_83
+      name: Ship_Base_83
       rect:
         serializedVersion: 2
         x: 64
@@ -1874,7 +1874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_84
+      name: Ship_Base_84
       rect:
         serializedVersion: 2
         x: 80
@@ -1895,7 +1895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_85
+      name: Ship_Base_85
       rect:
         serializedVersion: 2
         x: 96
@@ -1916,7 +1916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_86
+      name: Ship_Base_86
       rect:
         serializedVersion: 2
         x: 112
@@ -1937,7 +1937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_87
+      name: Ship_Base_87
       rect:
         serializedVersion: 2
         x: 0
@@ -1958,7 +1958,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_88
+      name: Ship_Base_88
       rect:
         serializedVersion: 2
         x: 16
@@ -1979,7 +1979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_89
+      name: Ship_Base_89
       rect:
         serializedVersion: 2
         x: 32
@@ -2000,7 +2000,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_90
+      name: Ship_Base_90
       rect:
         serializedVersion: 2
         x: 48
@@ -2021,7 +2021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_91
+      name: Ship_Base_91
       rect:
         serializedVersion: 2
         x: 64
@@ -2042,7 +2042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_92
+      name: Ship_Base_92
       rect:
         serializedVersion: 2
         x: 80
@@ -2063,7 +2063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_93
+      name: Ship_Base_93
       rect:
         serializedVersion: 2
         x: 96
@@ -2084,7 +2084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_94
+      name: Ship_Base_94
       rect:
         serializedVersion: 2
         x: 112
@@ -2105,7 +2105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_95
+      name: Ship_Base_95
       rect:
         serializedVersion: 2
         x: 0
@@ -2126,7 +2126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_96
+      name: Ship_Base_96
       rect:
         serializedVersion: 2
         x: 16
@@ -2147,7 +2147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_97
+      name: Ship_Base_97
       rect:
         serializedVersion: 2
         x: 32
@@ -2168,7 +2168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_98
+      name: Ship_Base_98
       rect:
         serializedVersion: 2
         x: 48
@@ -2189,7 +2189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_99
+      name: Ship_Base_99
       rect:
         serializedVersion: 2
         x: 64
@@ -2210,7 +2210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_100
+      name: Ship_Base_100
       rect:
         serializedVersion: 2
         x: 80
@@ -2231,7 +2231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_101
+      name: Ship_Base_101
       rect:
         serializedVersion: 2
         x: 96
@@ -2252,7 +2252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_base_102
+      name: Ship_Base_102
       rect:
         serializedVersion: 2
         x: 112
@@ -2283,109 +2283,109 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ship_base_0: -1875533624
-      ship_base_1: 113599068
-      ship_base_10: 1383730968
-      ship_base_100: -613609655
-      ship_base_101: 1267072442
-      ship_base_102: -1297146556
-      ship_base_11: 612076813
-      ship_base_12: -713671836
-      ship_base_13: 1765834173
-      ship_base_14: 1084278660
-      ship_base_15: -923113451
-      ship_base_16: 1225286599
-      ship_base_17: -261292241
-      ship_base_18: -1913459665
-      ship_base_19: -1174703629
-      ship_base_2: 1849223454
-      ship_base_20: -914811150
-      ship_base_21: 2031591314
-      ship_base_22: 687343381
-      ship_base_23: 1224775558
-      ship_base_24: -276758307
-      ship_base_25: -1495540496
-      ship_base_26: 1505227470
-      ship_base_27: -313818454
-      ship_base_28: 1741529122
-      ship_base_29: 1482504848
-      ship_base_3: -366863363
-      ship_base_30: -1434340612
-      ship_base_31: -439169869
-      ship_base_32: -104521014
-      ship_base_33: 1377294055
-      ship_base_34: -1071743983
-      ship_base_35: -765774698
-      ship_base_36: 793106672
-      ship_base_37: 1349784530
-      ship_base_38: -1655840500
-      ship_base_39: 185630736
-      ship_base_4: 581155701
-      ship_base_40: 400442678
-      ship_base_41: 1742899926
-      ship_base_42: 670227639
-      ship_base_43: -886309476
-      ship_base_44: 1097630110
-      ship_base_45: -108634126
-      ship_base_46: 881038285
-      ship_base_47: 432908935
-      ship_base_48: -2024364305
-      ship_base_49: 1084938291
-      ship_base_5: -1224602185
-      ship_base_50: 1459734887
-      ship_base_51: 2137325123
-      ship_base_52: 555128375
-      ship_base_53: 1519664941
-      ship_base_54: 329571606
-      ship_base_55: -2091707382
-      ship_base_56: -1306579592
-      ship_base_57: 1383932510
-      ship_base_58: -511047063
-      ship_base_59: 1189363776
-      ship_base_6: 2120387747
-      ship_base_60: 35413627
-      ship_base_61: 1906168882
-      ship_base_62: 14027976
-      ship_base_63: 86589351
-      ship_base_64: -1628982792
-      ship_base_65: 1842343153
-      ship_base_66: -434381290
-      ship_base_67: -1429344818
-      ship_base_68: 387393107
-      ship_base_69: -453866044
-      ship_base_7: 663598905
-      ship_base_70: 918089205
-      ship_base_71: -1909258026
-      ship_base_72: -506809283
-      ship_base_73: -1696657026
-      ship_base_74: -97180909
-      ship_base_75: -1820595728
-      ship_base_76: 587379127
-      ship_base_77: -646755798
-      ship_base_78: -894328570
-      ship_base_79: 1974807866
-      ship_base_8: 916808400
-      ship_base_80: 532724384
-      ship_base_81: -2071826720
-      ship_base_82: 738874533
-      ship_base_83: -1740186605
-      ship_base_84: 716210723
-      ship_base_85: 1611661643
-      ship_base_86: -7315889
-      ship_base_87: -609289393
-      ship_base_88: -1552190149
-      ship_base_89: -869152469
-      ship_base_9: 808710761
-      ship_base_90: 823104640
-      ship_base_91: 1988806255
-      ship_base_92: -962388034
-      ship_base_93: 1362673719
-      ship_base_94: 832344794
-      ship_base_95: -1379652284
-      ship_base_96: 2130408817
-      ship_base_97: 464512136
-      ship_base_98: 719756208
-      ship_base_99: -746430084
+      Ship_Base_0: -1875533624
+      Ship_Base_1: 113599068
+      Ship_Base_10: 1383730968
+      Ship_Base_100: -613609655
+      Ship_Base_101: 1267072442
+      Ship_Base_102: -1297146556
+      Ship_Base_11: 612076813
+      Ship_Base_12: -713671836
+      Ship_Base_13: 1765834173
+      Ship_Base_14: 1084278660
+      Ship_Base_15: -923113451
+      Ship_Base_16: 1225286599
+      Ship_Base_17: -261292241
+      Ship_Base_18: -1913459665
+      Ship_Base_19: -1174703629
+      Ship_Base_2: 1849223454
+      Ship_Base_20: -914811150
+      Ship_Base_21: 2031591314
+      Ship_Base_22: 687343381
+      Ship_Base_23: 1224775558
+      Ship_Base_24: -276758307
+      Ship_Base_25: -1495540496
+      Ship_Base_26: 1505227470
+      Ship_Base_27: -313818454
+      Ship_Base_28: 1741529122
+      Ship_Base_29: 1482504848
+      Ship_Base_3: -366863363
+      Ship_Base_30: -1434340612
+      Ship_Base_31: -439169869
+      Ship_Base_32: -104521014
+      Ship_Base_33: 1377294055
+      Ship_Base_34: -1071743983
+      Ship_Base_35: -765774698
+      Ship_Base_36: 793106672
+      Ship_Base_37: 1349784530
+      Ship_Base_38: -1655840500
+      Ship_Base_39: 185630736
+      Ship_Base_4: 581155701
+      Ship_Base_40: 400442678
+      Ship_Base_41: 1742899926
+      Ship_Base_42: 670227639
+      Ship_Base_43: -886309476
+      Ship_Base_44: 1097630110
+      Ship_Base_45: -108634126
+      Ship_Base_46: 881038285
+      Ship_Base_47: 432908935
+      Ship_Base_48: -2024364305
+      Ship_Base_49: 1084938291
+      Ship_Base_5: -1224602185
+      Ship_Base_50: 1459734887
+      Ship_Base_51: 2137325123
+      Ship_Base_52: 555128375
+      Ship_Base_53: 1519664941
+      Ship_Base_54: 329571606
+      Ship_Base_55: -2091707382
+      Ship_Base_56: -1306579592
+      Ship_Base_57: 1383932510
+      Ship_Base_58: -511047063
+      Ship_Base_59: 1189363776
+      Ship_Base_6: 2120387747
+      Ship_Base_60: 35413627
+      Ship_Base_61: 1906168882
+      Ship_Base_62: 14027976
+      Ship_Base_63: 86589351
+      Ship_Base_64: -1628982792
+      Ship_Base_65: 1842343153
+      Ship_Base_66: -434381290
+      Ship_Base_67: -1429344818
+      Ship_Base_68: 387393107
+      Ship_Base_69: -453866044
+      Ship_Base_7: 663598905
+      Ship_Base_70: 918089205
+      Ship_Base_71: -1909258026
+      Ship_Base_72: -506809283
+      Ship_Base_73: -1696657026
+      Ship_Base_74: -97180909
+      Ship_Base_75: -1820595728
+      Ship_Base_76: 587379127
+      Ship_Base_77: -646755798
+      Ship_Base_78: -894328570
+      Ship_Base_79: 1974807866
+      Ship_Base_8: 916808400
+      Ship_Base_80: 532724384
+      Ship_Base_81: -2071826720
+      Ship_Base_82: 738874533
+      Ship_Base_83: -1740186605
+      Ship_Base_84: 716210723
+      Ship_Base_85: 1611661643
+      Ship_Base_86: -7315889
+      Ship_Base_87: -609289393
+      Ship_Base_88: -1552190149
+      Ship_Base_89: -869152469
+      Ship_Base_9: 808710761
+      Ship_Base_90: 823104640
+      Ship_Base_91: 1988806255
+      Ship_Base_92: -962388034
+      Ship_Base_93: 1362673719
+      Ship_Base_94: 832344794
+      Ship_Base_95: -1379652284
+      Ship_Base_96: 2130408817
+      Ship_Base_97: 464512136
+      Ship_Base_98: 719756208
+      Ship_Base_99: -746430084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
