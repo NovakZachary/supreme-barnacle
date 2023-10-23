@@ -4,7 +4,6 @@ using Random = UnityEngine.Random;
 
 public class Fire : MonoBehaviour
 {
-    private static Collider2D[] ColliderBuffer = new Collider2D[10];
 
     public FireData fireData;
     public float spreadAttemptCooldown = 1f;
@@ -63,15 +62,15 @@ public class Fire : MonoBehaviour
             useTriggers = true,
         };
 
-        var resultCount = Physics2D.OverlapCircle(targetPosition, spreadCheckRadius, filter, ColliderBuffer);
-        if (resultCount == ColliderBuffer.Length)
+        var resultCount = Physics2D.OverlapCircle(targetPosition, spreadCheckRadius, filter, PhysicsBuffers.Buffer);
+        if (resultCount == PhysicsBuffers.Buffer.Length)
         {
             return;
         }
 
         for (var i = 0; i < resultCount; i++)
         {
-            var other = ColliderBuffer[i];
+            var other = PhysicsBuffers.Buffer[i];
             if (other.TryGetComponent(out BlocksFire _))
             {
                 return;
@@ -88,10 +87,10 @@ public class Fire : MonoBehaviour
             useTriggers = true,
         };
 
-        var resultCount = Physics2D.OverlapCircle(transform.position, damageRadius, filter, ColliderBuffer);
+        var resultCount = Physics2D.OverlapCircle(transform.position, damageRadius, filter, PhysicsBuffers.Buffer);
         for (var i = 0; i < resultCount; i++)
         {
-            var other = ColliderBuffer[i];
+            var other = PhysicsBuffers.Buffer[i];
             if (other.attachedRigidbody && other.attachedRigidbody.TryGetComponent(out ShipComponent component))
             {
                 component.health -= damage;

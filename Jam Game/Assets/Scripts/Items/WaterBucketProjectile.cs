@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class WaterBucketProjectile : MonoBehaviour
@@ -24,7 +25,17 @@ public class WaterBucketProjectile : MonoBehaviour
         if (!hasPuddleSpawned && distanceTraveled > puddleSpawnDistance)
         {
             hasPuddleSpawned = true;
-            Instantiate(puddlePrefab, transform.position, Quaternion.identity);
+
+            var resultCount = Physics2D.OverlapPointNonAlloc(transform.position, PhysicsBuffers.Buffer);
+            for (var i = 0; i < resultCount; i++)
+            {
+                if (PhysicsBuffers.Buffer[i].TryGetComponent(out ShipArea _))
+                {
+                    Instantiate(puddlePrefab, transform.position, Quaternion.identity);
+
+                    break;
+                }
+            }
         }
 
         if (distanceTraveled > maxDistance)
