@@ -68,8 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 11400000, guid: b94d9616d3f896347906b30bc15ea09e, type: 2}
   collider: {fileID: 4187556446672284905}
-  priority: 0
-  timeAfterInteractionUntilStopsWorking: 0
+  priority: -10
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
   repairHealthPerSecond: 10
