@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6330962948648bbb29ef7c4827e0627, type: 3}
   m_Name: Repair
   m_EditorClassIdentifier: 
-  sprite: {fileID: -984262824, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
+  sprite: {fileID: 881038285, guid: 46d6d3cbd0f70b540a7474576991cd99, type: 3}
   position: {x: 0, y: 0, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  scale: {x: 0.5, y: 0.5, z: 1}
