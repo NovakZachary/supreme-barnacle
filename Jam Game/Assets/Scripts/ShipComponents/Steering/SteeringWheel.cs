@@ -41,6 +41,8 @@ public class SteeringWheel : InteractableSector
         } 
         else
         {
+            lookoutTower.LookoutRequesters.Remove(this);
+
             StopTurningShip();
         }
     }

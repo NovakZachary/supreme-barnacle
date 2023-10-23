@@ -162,8 +162,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableLookoutTower
       objectReference: {fileID: 0}
+    - target: {fileID: 5914345425452438350, guid: 8bdac60faa7eaa54b985bff0709238e8, type: 3}
+      propertyPath: BasicLookoutCamera
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4263761939635341753, guid: 8bdac60faa7eaa54b985bff0709238e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bdac60faa7eaa54b985bff0709238e8, type: 3}

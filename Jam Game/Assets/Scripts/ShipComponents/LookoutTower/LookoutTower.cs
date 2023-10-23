@@ -6,8 +6,8 @@ public class LookoutTower : InteractableSector
     public readonly HashSet<object> LookoutRequesters = new HashSet<object>();
     [SerializeField] private LookoutCameras lookoutCameras;
 
-    [SerializeField] private int maxPriority = 100;
-    [SerializeField] private int minPriority = -1;
+    [SerializeField] private int enabledPriority = 100;
+    [SerializeField] private int disabledPriority = -1;
     
     private void Start()
     {
@@ -40,13 +40,11 @@ public class LookoutTower : InteractableSector
 
     private void EnableLookoutCamera()
     {
-        lookoutCameras.BasicLookoutCamera.Priority = minPriority;
-        lookoutCameras.EnhancedLookoutCamera.Priority = maxPriority;
+        lookoutCameras.EnhancedLookoutCamera.Priority = enabledPriority;
     }
 
     private void DisableLookoutCameras()
     {
-        lookoutCameras.BasicLookoutCamera.Priority = minPriority;
-        lookoutCameras.EnhancedLookoutCamera.Priority = minPriority;
+        lookoutCameras.EnhancedLookoutCamera.Priority = disabledPriority;
     }
 }
