@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 5391473459278295756}
   - component: {fileID: 2691283495875305849}
   - component: {fileID: 7248119154715994244}
+  - component: {fileID: 9043656988564967911}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -130,11 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a35cc98b7c449c5be3963a3385f2554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireData: {fileID: 11400000, guid: 88e3bc8a302ac2d45bc8d7455b353291, type: 2}
-  spreadAttemptCooldown: 1
-  spreadChance: 0.05
-  spreadCheckRadius: 0.6
-  spreadRange: 1
   damage: 5
   damageRadius: 0.5
   damageCooldown: 1
@@ -185,6 +181,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a22de74ea341bbafde8b652b7342c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9043656988564967911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628108055542542334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b9b771f87d4c869c4e35f981a1d8f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireData: {fileID: 11400000, guid: 88e3bc8a302ac2d45bc8d7455b353291, type: 2}
+  spreadAttemptCooldown: 1
+  spreadChance: 0.05
+  spreadCheckRadius: 0.6
+  spreadRange: 1
 --- !u!1 &8369384202866232802
 GameObject:
   m_ObjectHideFlags: 0
