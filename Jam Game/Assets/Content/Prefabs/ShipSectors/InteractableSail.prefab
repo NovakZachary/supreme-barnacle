@@ -202,7 +202,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -984262824, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
+  m_Sprite: {fileID: 77016938, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
   m_Color: {r: 1, g: 0.7311321, b: 0.7311321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 3801743395594925336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7199998, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -977,7 +977,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -984262824, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
+  m_Sprite: {fileID: 77016938, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
   m_Color: {r: 0.8235294, g: 1, b: 0.7882353, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -1063,8 +1063,8 @@ Transform:
   m_GameObject: {fileID: 4897470075156351881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 3, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 10.83, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6125966223956029084}
@@ -1099,12 +1099,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373614ba4c6c36249bd713e99a59fa71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 0}
+  interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 6761842228654602432}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
-  smoothTimeToRaise: 5
+  raisePerSecond: 2
 --- !u!114 &7622487739086826054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 0}
   collider: {fileID: 6761842228654602432}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
@@ -1197,7 +1199,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: 3, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5424593204629582055}
@@ -1232,12 +1234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b831c0569cf3a93468711b89c2ec62b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionItem: {fileID: 11400000, guid: ae9c887b424df044f847e2edb3f2af58, type: 2}
+  interactionItem: {fileID: 11400000, guid: 7b50123da413c6d44ad48fc83e750005, type: 2}
   collider: {fileID: 2537265617477924016}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1
-  smoothTimeToLower: 5
+  lowerPerSecond: 2
 --- !u!114 &8966891240851963067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1252,6 +1255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionItem: {fileID: 0}
   collider: {fileID: 2537265617477924016}
+  priority: 0
   timeAfterInteractionUntilStopsWorking: 0
   stopsPlayerMovement: 1
   removesItemWhenOutOfRange: 1

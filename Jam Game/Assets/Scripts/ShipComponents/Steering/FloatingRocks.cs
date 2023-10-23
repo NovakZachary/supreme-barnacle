@@ -1,8 +1,14 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
 public class FloatingRocks : MonoBehaviour
 {
+    [SerializeField] private List<Sprite> randomSprite;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    
     [Header("Configuration")]
     public bool IsMatchingBoatSpeed = true;
     public float damageOnCollision;
@@ -19,7 +25,15 @@ public class FloatingRocks : MonoBehaviour
     [Header("Destroy self")]
     [SerializeField] private bool destroyWhenFarFromPivot = true;
     [SerializeField] private float distanceFromPivotUntilDestroyed = 10f;
-    
+
+    private void Awake()
+    {
+        if (randomSprite.Count > 0)
+        {
+            spriteRenderer.sprite = randomSprite[Random.Range(0, randomSprite.Count)];
+        }
+    }
+
     private void Update()
     {
         if (IsMatchingBoatSpeed)

@@ -109,6 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bb1e20bbcd4eb4d8bcb2c2546b686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomSprite:
+  - {fileID: -1767693606, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -1845304520, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -1219873207, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -261809017, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: 616270591, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -159520140, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: 55614041, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: 1529677542, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -342263178, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -380348559, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: 129591225, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  - {fileID: -627315896, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
+  spriteRenderer: {fileID: 218330519714581752}
   IsMatchingBoatSpeed: 1
   damageOnCollision: 0
   speedUnitsPerSecond: 1
@@ -191,7 +205,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -261809017, guid: 4fb677994c0ecdf43a9fbe196d993678, type: 3}
   m_Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
   m_FlipX: 0
   m_FlipY: 0

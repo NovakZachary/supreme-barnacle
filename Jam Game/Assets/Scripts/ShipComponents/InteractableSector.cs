@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ShipComponent))]
@@ -6,13 +7,16 @@ public class InteractableSector : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private Item interactionItem;
     [SerializeField] protected InteractableCollider collider;
-    
-    [Header("Configuration")]
+
+    [Header("Configuration")] 
+    [SerializeField] private int priority;
     [SerializeField] private float timeAfterInteractionUntilStopsWorking;
     [SerializeField] private bool stopsPlayerMovement = true;
     [SerializeField] private bool removesItemWhenOutOfRange = true;
 
-    public bool PlayerIsInteracting { get; private set; }
+    private PlayerInteract playerInteract;
+    public int Priority => priority;
+    public bool PlayerIsInteracting => playerInteract != null && playerInteract.CurrentInteractable == this;
     public bool HasReset => resetTimer == 0;
 
     public ShipComponent ShipComponent { get; private set; }
@@ -30,25 +34,16 @@ public class InteractableSector : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (collider.IsPlayerColliding(out var playerMovement))
+        if (collider.IsPlayerColliding(out playerInteract))
         {
-            // Debug.Log($"Player is trigger colliding with interacted with {ShipComponent.displayName}");
-            if (Input.GetKeyDown(GetInteractKey()))
-            {
-                Debug.Log($"Player has interacted with {ShipComponent.displayName}");
-                if (!PlayerIsInteracting)
-                {
-                    StartInteracting();
-                }
-                else
-                {
-                    StopInteracting();
-                }
-            }
+            playerInteract.CollidingWithInteractable(this);
         }
-        else //Player has been pushed out of interaction collider
+        else
         {
-            StopInteracting();
+            if (playerInteract != null)
+            {
+                playerInteract.StopCollidingWithInteractable(this);
+            }
         }
 
         if (!PlayerIsInteracting)
@@ -64,7 +59,7 @@ public class InteractableSector : MonoBehaviour
 
     public virtual void StartInteracting()
     {
-        PlayerIsInteracting = true;
+        //PlayerIsInteracting = true;
         Player.Instance.items.heldItem = interactionItem;
 
         if (stopsPlayerMovement)
@@ -81,8 +76,6 @@ public class InteractableSector : MonoBehaviour
         {
             Player.Instance.items.heldItem = null;
         }
-
-        PlayerIsInteracting = false;
     }
 
     public virtual KeyCode GetInteractKey()
