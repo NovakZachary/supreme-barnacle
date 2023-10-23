@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref velocitySmoothing, effectiveMovementSpeedSmoothTime);
 
         UpdateFacingDirection(movementInput);
-        UpdateAnimator(movementInput);
+        UpdateAnimator(movementInput, targetMovementSpeed);
     }
 
     private void CalculateDrunkeness()
@@ -223,10 +223,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void UpdateAnimator(Vector2 movementInput)
+    private void UpdateAnimator(Vector2 movementInput, float targetMovementSpeed)
     {
-        var isWalking = movementInput != Vector2.zero;
+        animator.SetFloat("MovementSpeed", targetMovementSpeed);
 
+        var isWalking = movementInput != Vector2.zero;
         if (isWalking)
         {
             switch (faceDirection)
