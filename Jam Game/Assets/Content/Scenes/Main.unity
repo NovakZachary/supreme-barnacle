@@ -617,11 +617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701531949279830713, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6701531949279830713, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7388160037103945702, guid: 24dc97772cfd1b2428ad102f00a2a069, type: 3}
       propertyPath: m_Name
