@@ -60,7 +60,7 @@ public class UIInterface : MonoBehaviour
         healthBar.value = ShipState.Instance.shipIntegrity;
 
         speed = ShipState.Instance.shipSpeed.y;
-        speedText.text = $"{speed:F1} m :Speed";
+        speedText.text = $"{speed:F1} m/s";
 
         shipAngle = ShipState.Instance.shipAngle;
         tiltBar.value = (shipAngle + 90) / 180;
