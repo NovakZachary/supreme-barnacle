@@ -13,6 +13,7 @@ public class InteractableSector : MonoBehaviour
     
     [Header("Configuration")]
     [SerializeField] private float timeAfterInteractionUntilStopsWorking;
+    [SerializeField] private bool stopsPlayerMovement = true;
 
     public bool PlayerIsInteracting { get; private set; }
     public bool HasReset => resetTimer == 0;
@@ -34,7 +35,7 @@ public class InteractableSector : MonoBehaviour
     {
         if (collider.IsPlayerColliding(out var playerMovement))
         {
-            Debug.Log($"Player is trigger colliding with interacted with {ShipComponent.displayName}");
+            // Debug.Log($"Player is trigger colliding with interacted with {ShipComponent.displayName}");
             if (Input.GetKeyDown(GetInteractKey()))
             {
                 Debug.Log($"Player has interacted with {ShipComponent.displayName}");
@@ -66,15 +67,20 @@ public class InteractableSector : MonoBehaviour
 
     public virtual void StartInteracting()
     {
-        Player.Instance.items.heldItem = interactionItem;
-        ShipState.Instance.stopPlayerMovementRequests.Add(this);
         PlayerIsInteracting = true;
+        Player.Instance.items.heldItem = interactionItem;
+
+        if (stopsPlayerMovement)
+        {
+            ShipState.Instance.stopPlayerMovementRequests.Add(this);
+        }
     }
 
     public virtual void StopInteracting()
     {
-        Player.Instance.items.heldItem = null;
         ShipState.Instance.stopPlayerMovementRequests.Remove(this);
+
+        Player.Instance.items.heldItem = null;
         PlayerIsInteracting = false;
     }
 

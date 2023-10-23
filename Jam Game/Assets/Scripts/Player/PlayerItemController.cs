@@ -34,7 +34,7 @@ public class PlayerItemController : MonoBehaviour
             spriteRenderer.transform.localPosition = heldItem.position;
             spriteRenderer.transform.localScale = heldItem.scale;
 
-            if (Input.GetKey(ShipState.Instance.input.interact))
+            if (Input.GetKeyDown(ShipState.Instance.input.interact))
             {
                 heldItem = null;
             }
