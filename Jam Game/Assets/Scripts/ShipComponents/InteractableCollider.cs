@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 public class InteractableCollider : MonoBehaviour
 {
     private Collider2D collider2D;
-    private PlayerInteraction playerInteract;
 
     private void Awake()
     {
@@ -13,28 +12,7 @@ public class InteractableCollider : MonoBehaviour
         collider2D.isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.attachedRigidbody != null && col.attachedRigidbody.TryGetComponent<PlayerInteraction>(out var player) && player != null)
-        {
-            playerInteract = player;
-        }
-    }
-    
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.attachedRigidbody != null && playerInteract != null && other.attachedRigidbody.gameObject == playerInteract.gameObject)
-        {
-            playerInteract = null;
-        }
-    }
-    
-    public bool IsPlayerColliding(out PlayerInteraction player)
-    {
-        player = playerInteract;
-        return playerInteract != null;
-    }
-
+    // This really should be here. Single usage in Hull
     public Vector3 RandomPointWithinColliderArea()
     {
         var bounds = collider2D.bounds;
