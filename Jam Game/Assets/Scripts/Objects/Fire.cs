@@ -60,7 +60,7 @@ public class Fire : MonoBehaviour
             {
                 return;
             }
-            
+
             if (other.TryGetComponent(out Fire _))
             {
                 return;
