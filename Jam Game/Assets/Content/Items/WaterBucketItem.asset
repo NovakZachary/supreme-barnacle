@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: WaterBucketItem
   m_EditorClassIdentifier: 
   sprite: {fileID: -1159382768, guid: 58cd3f4d785454c4695fea4bd13767c1, type: 3}
+  position: {x: 0, y: 0.11, z: 0}
+  scale: {x: 0.75, y: 0.75, z: 1}
   projectilePrefab: {fileID: 27095435438515864, guid: f3ece72c9ab4d3f429c848cdfc1dbb20, type: 3}

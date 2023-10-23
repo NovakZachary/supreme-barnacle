@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerItemController : MonoBehaviour
 {
     [Header("Dependencies")]
     [SerializeField] private GameObject itemSlot;
-    [SerializeField] private SpriteRenderer sprite;
+    [FormerlySerializedAs("sprite")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     public Item heldItem;
 
@@ -17,15 +19,25 @@ public class PlayerItemController : MonoBehaviour
             heldItem.OnPickup();
         }
 
+        if (previousHeldItem != heldItem && previousHeldItem)
+        {
+            previousHeldItem.OnDrop();
+        }
+
         previousHeldItem = heldItem;
 
         itemSlot.SetActive(heldItem != null);
-        sprite.sprite = heldItem == null ? null : heldItem.sprite;
+        spriteRenderer.sprite = heldItem == null ? null : heldItem.sprite;
 
-        if (heldItem && Input.GetKey(ShipState.Instance.input.interact))
+        if (heldItem)
         {
-            heldItem.OnDrop();
-            heldItem = null;
+            spriteRenderer.transform.localPosition = heldItem.position;
+            spriteRenderer.transform.localScale = heldItem.scale;
+
+            if (Input.GetKey(ShipState.Instance.input.interact))
+            {
+                heldItem = null;
+            }
         }
     }
 }
