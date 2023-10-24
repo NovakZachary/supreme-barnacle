@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 423924373208231845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.871, y: -0.107, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireData: {fileID: 11400000, guid: 88e3bc8a302ac2d45bc8d7455b353291, type: 2}
-  spreadAttemptCooldown: 6
+  spreadAttemptCooldown: 8
   spreadChance: 0.05
   spreadCheckRadius: 0.5
   spreadRange: 2

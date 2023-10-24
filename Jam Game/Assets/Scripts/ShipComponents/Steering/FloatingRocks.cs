@@ -42,21 +42,24 @@ public class FloatingRocks : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D col)
     {
-        var item = Random.Range(0, ShipState.Instance.ShipComponents.Count);
-        var i = 0;
-
-        foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
+        if (col.collider.TryGetComponent(out Railing _))
         {
-            if (i == item)
+            var item = Random.Range(0, ShipState.Instance.ShipComponents.Count);
+            var i = 0;
+
+            foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
             {
-                instanceShipComponent.health -= damageOnCollision;
-                Debug.Log($"Damaged ship part: { instanceShipComponent.displayName }");
-                return;
+                if (i == item)
+                {
+                    instanceShipComponent.health -= damageOnCollision;
+                    Debug.Log($"Damaged ship part: { instanceShipComponent.displayName }");
+                    break;
+                }
+
+                i++;
             }
 
-            i++;
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }

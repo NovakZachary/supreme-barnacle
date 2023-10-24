@@ -111,8 +111,8 @@ MonoBehaviour:
   rockPrefab: {fileID: 499487470301489128, guid: caa69ad63660413418bd5f72ff54c757, type: 3}
   leftCreationPoint: {fileID: 7212150562207966849}
   rightCreationPoint: {fileID: 4593462652198934185}
-  minTimeDuringWaves: 10
-  maxTimeDuringWaves: 30
+  minTimeDuringWaves: 20
+  maxTimeDuringWaves: 50
   spawnInterval: 10
   minDistanceBetweenRocks: 5
   maxDistanceBetweenRocks: 50
