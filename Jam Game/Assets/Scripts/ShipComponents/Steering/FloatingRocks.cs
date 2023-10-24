@@ -47,13 +47,14 @@ public class FloatingRocks : MonoBehaviour
 
         foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
         {
-            i++;
             if (i == item)
             {
                 instanceShipComponent.health -= damageOnCollision;
                 Debug.Log($"Damaged ship part: { instanceShipComponent.displayName }");
                 return;
             }
+
+            i++;
         }
 
         Destroy(gameObject);
