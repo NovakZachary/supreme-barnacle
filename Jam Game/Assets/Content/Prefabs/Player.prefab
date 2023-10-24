@@ -190,7 +190,7 @@ MonoBehaviour:
   rb: {fileID: 418987177290881145}
   movementSpeed: 8
   movementSpeedSmoothTime: 0.03
-  sprintMovementSpeedMultiplier: 1.5
+  sprintMovementSpeedMultiplier: 2
   drunkenessLayers:
   - amplitude: 0.7
     speed: -1
