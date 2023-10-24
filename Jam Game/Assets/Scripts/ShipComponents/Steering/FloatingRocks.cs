@@ -47,6 +47,7 @@ public class FloatingRocks : MonoBehaviour
 
         foreach (var instanceShipComponent in ShipState.Instance.ShipComponents)
         {
+            i++;
             if (i == item)
             {
                 instanceShipComponent.health -= damageOnCollision;
