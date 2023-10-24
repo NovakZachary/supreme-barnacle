@@ -8,4 +8,5 @@ public class Player : SingletonBehaviour<Player>
     public PlayerItemController items;
     public PlayerInteraction interaction;
     public SpriteRenderer spriteRenderer;
+    
 }
